@@ -1,0 +1,22 @@
+<mxfile host="Electron" modified="2023-11-19T01:39:09.803Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="YIe4sM6IVImBoU4tmSpe" version="22.1.2" type="device">
+  <diagram name="Page-1" id="LCvjpSdJBNEwHRx-Zz6U">
+    <mxGraphModel dx="930" dy="336" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="J-yrTGczLjJKPa5p3NA1-1" value="Logistic Map" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=4;" vertex="1" parent="1">
+          <mxGeometry x="-66" y="42" width="177" height="182" as="geometry" />
+        </mxCell>
+        <mxCell id="J-yrTGczLjJKPa5p3NA1-3" value="&lt;b style=&quot;&quot;&gt;&lt;font face=&quot;Lucida Console&quot;&gt;en&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-67" y="171" width="38" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="J-yrTGczLjJKPa5p3NA1-4" value="&lt;font face=&quot;Lucida Console&quot;&gt;&lt;b&gt;value&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-67" y="59.5" width="68" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="J-yrTGczLjJKPa5p3NA1-5" value="&lt;font face=&quot;Courier New&quot;&gt;&lt;b&gt;result&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="36" y="59" width="76" height="33" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

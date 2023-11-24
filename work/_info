@@ -1,0 +1,123 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dG:/Projects/DCSK
+T_opt
+!s110 1700613811
+VD^ZE>3YHRh06MSC[zLGPO2
+04 13 4 work chaos_xpander fast 0
+=1-98fa9bd5c19f-655d4eb1-3f-904
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.1;73
+vchaos_xpander
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 DXx4 work 17 wire_shuffler_pkg 0 22 ATZ;Ez4`N=_[nYifeVGgo2
+DXx4 work 21 chaos_xpander_sv_unit 0 22 TPV^6CHoi4KL=Dmm:lIU83
+Z4 !s110 1700613796
+VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 e6IY:n8SbWLW>R_2S6F=_2
+Imhia?hE<MRdHN<M0D1oo^1
+!s105 chaos_xpander_sv_unit
+S1
+R0
+Z5 w1700613219
+Z6 8G:/Projects/DCSK/hdl/modulator/chaos_xpander.sv
+Z7 FG:/Projects/DCSK/hdl/modulator/chaos_xpander.sv
+!i122 23
+L0 13 26
+Z8 OL;L;2021.1;73
+31
+Z9 !s108 1700613796.000000
+Z10 !s107 G:/Projects/DCSK/hdl/modulator/chaos_xpander.sv|
+Z11 !s90 -work|work|-vopt|-sv|-stats=none|G:/Projects/DCSK/hdl/modulator/chaos_xpander.sv|
+!i113 0
+Z12 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+Xchaos_xpander_sv_unit
+R2
+R3
+R4
+VTPV^6CHoi4KL=Dmm:lIU83
+r1
+!s85 0
+!i10b 1
+!s100 2^NNKF7ke7MT_D@f2@PPI2
+ITPV^6CHoi4KL=Dmm:lIU83
+!i103 1
+S1
+R0
+R5
+R6
+R7
+!i122 23
+L0 12 0
+R8
+31
+R9
+R10
+R11
+!i113 0
+R12
+R1
+Xwire_shuffler
+R2
+!s110 1700612366
+!i10b 1
+!s100 SczLYKBn_zchEH=BXJ5h23
+InX1zNgocUYeFg5C6Ygf9R0
+S1
+R0
+w1700612360
+8pkgs/wire_shuffler.sv
+Fpkgs/wire_shuffler.sv
+!i122 8
+Z13 L0 16 0
+VnX1zNgocUYeFg5C6Ygf9R0
+R8
+r1
+!s85 0
+31
+!s108 1700612366.000000
+!s107 hdl/modulator/modulator.sv|hdl/modulator/chaos_xpander.sv|pkgs/wire_shuffler.sv|
+Z14 !s90 -f|filelist.f|
+!i113 0
+Z15 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+Xwire_shuffler_pkg
+R2
+!s110 1700613226
+!i10b 1
+!s100 9D:hE6iJVQ@=6G5T8QBZ41
+IATZ;Ez4`N=_[nYifeVGgo2
+S1
+R0
+w1700612395
+8pkgs/wire_shuffler_pkg.sv
+Fpkgs/wire_shuffler_pkg.sv
+!i122 21
+R13
+VATZ;Ez4`N=_[nYifeVGgo2
+R8
+r1
+!s85 0
+31
+!s108 1700613226.000000
+!s107 hdl/modulator/modulator.sv|hdl/modulator/chaos_xpander.sv|pkgs/wire_shuffler_pkg.sv|
+R14
+!i113 0
+R15
+R1
