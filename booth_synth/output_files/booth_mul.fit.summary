@@ -1,0 +1,20 @@
+Fitter Status : Successful - Wed Nov 29 03:35:28 2023
+Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Revision Name : booth_mul
+Top-level Entity Name : booth_mul
+Family : Cyclone V
+Device : 5CEFA2U19I7
+Timing Models : Final
+Logic utilization (in ALMs) : 61 / 9,430 ( < 1 % )
+Total registers : 32
+Total pins : 34 / 224 ( 15 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 1,802,240 ( 0 % )
+Total RAM Blocks : 0 / 176 ( 0 % )
+Total DSP Blocks : 0 / 25 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 4 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )
