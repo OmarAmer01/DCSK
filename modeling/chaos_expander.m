@@ -10,11 +10,11 @@ function expanded_chaos = chaos_expander(chaos_bitstream, shuffler_array)
     % Use the chaos to modulate the chaos.
     original_length = length(chaos_bitstream);
     expanded_chaos = [];
-    original_chaos = fi(NaN, 0, 16, 0);
+    original_chaos = fi(NaN, 0, original_length, 0);
     original_chaos.bin = chaos_bitstream;
     
     for bit = 1:1:original_length
-        if chaos_bitstream(bit)-48 == 0
+        if original_chaos.bin(bit) == '0'
             expanded_chaos = [expanded_chaos, bitcmp(original_chaos).bin];
         else
             expanded_chaos = [expanded_chaos, original_chaos.bin];
@@ -27,4 +27,4 @@ function expanded_chaos = chaos_expander(chaos_bitstream, shuffler_array)
     for bit_idx = 1:1:length(expanded_chaos)
         shuffled_chaos(shuffler_array(bit_idx)+1) = expanded_chaos(bit_idx);
     end
-    expanded_chaos = shuffled_chaos;
+    expanded_chaos = shuffled_chaos-48;

@@ -189,6 +189,35 @@ R0
 R0
 R0
 R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
 !s11f MIXED_VERSIONS
 13
 !s112 1.1
@@ -198,40 +227,51 @@ R0
 cModel Technology
 Z1 dG:/Projects/DCSK
 T_opt
-!s110 1701106337
-Vbz9lT_L_5^>BPUcR4b?lK1
-Z2 04 12 4 work booth_mul_tb fast 0
-=1-98fa9bd5c19f-6564d2a1-126-99c
+!s110 1701448880
+VFhe0e[bZa??:Zh_09D=^R0
+Z2 04 16 4 work chaos_xpander_tb fast 0
+=1-98fa9bd5c19f-656a0caf-232-29a0
 Z3 !s124 OEM100
-o-quiet -auto_acc_if_foreign -work work
-Z4 tCvgOpt 0
+Z4 o-quiet -auto_acc_if_foreign -work work -debugdb
+Z5 tCvgOpt 0
 n@_opt
-Z5 OL;O;2021.1;73
+Z6 OL;O;2021.1;73
 R1
 T_opt1
-!s110 1701221582
-VeRRodEkAUd@0S3LlSzaDJ3
+!s110 1701448544
+VP39:G;5]9e3m0eI6bb^:12
 R2
-=1-98fa9bd5c19f-656694cd-31d-c84
+=1-98fa9bd5c19f-656a0b60-bf-d9c
 R3
-Z6 o-quiet -auto_acc_if_foreign -work work -debugdb
 R4
+R5
 n@_opt1
-R5
-T_opt2
-!s110 1701220713
-V?f?=1W_B8_ozCAB;TJgJW1
-04 23 4 work calc_partial_product_tb fast 0
-=1-98fa9bd5c19f-65669169-1bd-1bd0
-R3
 R6
-R4
-n@_opt2
-R5
 R1
+T_opt2
+!s110 1701447953
+Ve?8Id5iLzZCf1eUMT[WEg2
+R2
+=1-98fa9bd5c19f-656a090e-361-25b4
+R3
+R4
+R5
+n@_opt2
+R6
+R1
+T_opt3
+!s110 1701452301
+VL=o7N4VY7m8Pdd_hQC5@l0
+R2
+=1-98fa9bd5c19f-656a1a0c-331-4c34
+R3
+R4
+R5
+n@_opt3
+R6
 vbooth_mul
 Z7 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z8 !s110 1701221578
+Z8 !s110 1701452298
 !i10b 1
 !s100 aQX;KfKoS6l0G2VHjIl^e1
 ITkM7CWA0c>9S>3Q4=<DOX2
@@ -240,19 +280,19 @@ Z9 dG:/Projects/DCSK/DCSK/DCSK
 w1701221577
 8./hdl/booth/booth_mul.sv
 F./hdl/booth/booth_mul.sv
-!i122 286
+!i122 333
 L0 13 52
 Z10 VDg1SIo80bB@j0V0VzS_@n1
 Z11 OL;L;2021.1;73
 r1
 !s85 0
 31
-Z12 !s108 1701221578.000000
-Z13 !s107 ./ver/booth/calc_partial_product_tb.sv|./ver/booth/booth_mul_tb.sv|./hdl/booth/calc_partial_product.sv|./hdl/booth/booth_mul.sv|./hdl/pkgs/wire_shuffler_pkg.sv|
+Z12 !s108 1701452298.000000
+Z13 !s107 ./ver/modulator/chaos_xpander_tb.sv|./ver/booth/calc_partial_product_tb.sv|./ver/booth/booth_mul_tb.sv|./hdl/modulator/chaos_xpander.sv|./hdl/booth/calc_partial_product.sv|./hdl/booth/booth_mul.sv|./hdl/pkgs/wire_shuffler_pkg.sv|
 Z14 !s90 -f|.\filelist.f|
 !i113 0
 Z15 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R4
+R5
 vbooth_mul_tb
 R7
 R8
@@ -264,7 +304,7 @@ R9
 w1701221067
 8./ver/booth/booth_mul_tb.sv
 F./ver/booth/booth_mul_tb.sv
-!i122 286
+!i122 333
 L0 13 48
 R10
 R11
@@ -276,7 +316,7 @@ R13
 R14
 !i113 0
 R15
-R4
+R5
 vcalc_partial_product
 R7
 R8
@@ -288,7 +328,7 @@ R9
 w1701220052
 8./hdl/booth/calc_partial_product.sv
 F./hdl/booth/calc_partial_product.sv
-!i122 286
+!i122 333
 L0 16 51
 R10
 R11
@@ -300,7 +340,7 @@ R13
 R14
 !i113 0
 R15
-R4
+R5
 vcalc_partial_product_tb
 R7
 R8
@@ -312,7 +352,7 @@ R9
 w1701220710
 8./ver/booth/calc_partial_product_tb.sv
 F./ver/booth/calc_partial_product_tb.sv
-!i122 286
+!i122 333
 L0 14 69
 R10
 R11
@@ -324,60 +364,85 @@ R13
 R14
 !i113 0
 R15
-R4
+R5
 vchaos_xpander
 R7
-Z16 DXx4 work 17 wire_shuffler_pkg 0 22 ATZ;Ez4`N=_[nYifeVGgo2
-DXx4 work 21 chaos_xpander_sv_unit 0 22 TPV^6CHoi4KL=Dmm:lIU83
-Z17 !s110 1700613796
+Z16 DXx4 work 17 wire_shuffler_pkg 0 22 99zg@UXM=Ho@IA;>iMXkh3
+DXx4 work 21 chaos_xpander_sv_unit 0 22 BJ;QLQV?6WF@`I:D;PkOg3
+R8
 R10
 r1
 !s85 0
 !i10b 1
-!s100 e6IY:n8SbWLW>R_2S6F=_2
-Imhia?hE<MRdHN<M0D1oo^1
+!s100 :Pkb?3G:9afM`HNJ3:ihY2
+IaH^]8eOI0J^b4KW02;G1^0
 !s105 chaos_xpander_sv_unit
 S1
-R1
-Z18 w1700613219
-Z19 8G:/Projects/DCSK/hdl/modulator/chaos_xpander.sv
-Z20 FG:/Projects/DCSK/hdl/modulator/chaos_xpander.sv
-!i122 23
-L0 13 26
+R9
+Z17 w1701450075
+Z18 8./hdl/modulator/chaos_xpander.sv
+Z19 F./hdl/modulator/chaos_xpander.sv
+!i122 333
+L0 13 25
 R11
 31
-Z21 !s108 1700613796.000000
-Z22 !s107 G:/Projects/DCSK/hdl/modulator/chaos_xpander.sv|
-Z23 !s90 -work|work|-vopt|-sv|-stats=none|G:/Projects/DCSK/hdl/modulator/chaos_xpander.sv|
+R12
+R13
+R14
 !i113 0
-Z24 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R4
+R15
+R5
 Xchaos_xpander_sv_unit
 R7
 R16
-R17
-VTPV^6CHoi4KL=Dmm:lIU83
+R8
+VBJ;QLQV?6WF@`I:D;PkOg3
 r1
 !s85 0
 !i10b 1
-!s100 2^NNKF7ke7MT_D@f2@PPI2
-ITPV^6CHoi4KL=Dmm:lIU83
+!s100 oO82kLzJb4fTOgWkQUg@z2
+IBJ;QLQV?6WF@`I:D;PkOg3
 !i103 1
 S1
-R1
+R9
+R17
 R18
 R19
-R20
-!i122 23
+!i122 333
 L0 12 0
 R11
 31
-R21
-R22
-R23
+R12
+R13
+R14
 !i113 0
-R24
-R4
+R15
+R5
+vchaos_xpander_tb
+R7
+R16
+R8
+!i10b 1
+!s100 ZC0R=aTNAI15O7j650Gco1
+IN:8DlL@g5dg5[3f5PnF3=3
+S1
+R9
+w1701452295
+8./ver/modulator/chaos_xpander_tb.sv
+F./ver/modulator/chaos_xpander_tb.sv
+!i122 333
+L0 16 20
+R10
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+R5
 Xwire_shuffler
 R7
 !s110 1700612366
@@ -390,7 +455,7 @@ w1700612360
 8pkgs/wire_shuffler.sv
 Fpkgs/wire_shuffler.sv
 !i122 8
-Z25 L0 16 0
+Z20 L0 16 0
 VnX1zNgocUYeFg5C6Ygf9R0
 R11
 r1
@@ -401,21 +466,21 @@ r1
 !s90 -f|filelist.f|
 !i113 0
 R15
-R4
+R5
 Xwire_shuffler_pkg
 R7
 R8
 !i10b 1
-!s100 9D:hE6iJVQ@=6G5T8QBZ41
-IRXQ7eGNi9=aB:LTZlTD2m3
+!s100 Y7]=EbK1b8XRFA:Z0R^<73
+I99zg@UXM=Ho@IA;>iMXkh3
 S1
 R9
-w1700612395
+w1701450388
 8./hdl/pkgs/wire_shuffler_pkg.sv
 F./hdl/pkgs/wire_shuffler_pkg.sv
-!i122 286
-R25
-VRXQ7eGNi9=aB:LTZlTD2m3
+!i122 333
+R20
+V99zg@UXM=Ho@IA;>iMXkh3
 R11
 r1
 !s85 0
@@ -425,4 +490,4 @@ R13
 R14
 !i113 0
 R15
-R4
+R5
