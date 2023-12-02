@@ -1,0 +1,37 @@
+\documentclass[a4paper, 12pt]{report}
+\usepackage[a4paper, width=150mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[C]{Page \thepage}
+\usepackage{authblk}
+\usepackage{graphicx}
+\graphicspath{{graphics/}{../../diagrams/}}
+\usepackage{amsmath, amssymb}
+\usepackage{xcolor, array}
+
+\begin{document}
+    \input{title_page.tex}
+    \pagestyle{fancy}
+    \chapter*{Abstract}
+    TODO: Write Abstract.
+
+
+    \chapter*{Preface}
+    \input{chapters/preface.tex}
+
+    \chapter*{Technical Specs}
+    %TODO: Write This.
+    % spreafing factor = etc..
+
+    \tableofcontents
+    \listoffigures
+    \listoftables
+
+    \chapter{Introduction}
+    \input{chapters/introduction.tex}
+
+    \chapter{Architecture}
+    \input{chapters/arch.tex}
+
+\end{document}
+

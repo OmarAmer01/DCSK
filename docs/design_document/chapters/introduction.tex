@@ -1,0 +1,43 @@
+\vfill
+\textit{This chapter discusses the following:}
+\begin{itemize}
+    \item Introduction to Differential Chaos Shift-Keying.
+    \item Logistic Map Overview.
+    \item Proposed Architecture.
+\end{itemize}
+\vfill
+\newpage
+
+\section{Introduction to DCSK}
+Differential chaos shift-keying (\textbf{DCSK}) is a modulation scheme based on using \textit{chaos} to modulate a signal
+instead of a sinusoidal carrier. The reference signal (chaos) is sent over the channel, then after half a $T_s$ the reference signal is
+modulated with the infromation signal and sent to the RX side. The composition of a DCSK frame
+can be seen in the Equation. \ref{eqn:dcsk_frame}.
+
+\begin{equation} \label{eqn:dcsk_frame}
+    e_k =
+        \begin{cases}
+            x_k & \text{for } 1 < k < \beta\\
+            s_i x_{k-\beta}  & \text{for } \beta < k \le 2\beta
+        \end{cases}
+\end{equation}
+Where $\beta$ is an integer and $k$ is the chip index.\\
+
+$e_k$ is sent over an AWGN channel, the signal at the RX side is given by:
+\begin{equation}
+    r_{sig} = e_k + n_k
+\end{equation}
+
+The received signal is correlated with a delayed version of itself (delayed by half a symbol's duartion) and then
+the sign of the result is the demodulated infromation bit.
+
+\section{An Overview of the Logistic Map}
+Many methods exists to generate a chaotic signal. The Logistic Map is the most simple to understand and is the least complex to implement.
+The Logistic Map is given by the following equation:
+\begin{equation} \label{eqn:logistic_map}
+    n_{i+1} = r \times n_i(1-n_i)
+\end{equation}
+
+Most values of $r$ beyond $\approx 3.56995$ exhibit chaotic behavior. We can see in Figure \ref{fig:logistic_map}
+The effect of different values of $r$ on $n_{i+1}$.\\
+\textcolor{red}{insert diagram here}\\
