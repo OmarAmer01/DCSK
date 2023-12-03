@@ -9,7 +9,7 @@ reg en;
 
 assign en = ~chaos_empty & send; 
 
-always @(posedge clk or negedge rstn) begin : counter
+always @(posedge clk) begin : counter
 	if (~rstn) begin
 		chip_index <= 0;
 	end 
