@@ -1,10 +1,6 @@
-# vsim chaos_xpander_tb -do ".\ver\modulator\chaos_xpander_tb.do" -debugDB=+ACC -c 
-# Start time: 19:38:20 on Dec 01,2023
-# ** Warning: (vsim-4308) Enabling visibility using +acc is recommended with debug flow.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Note: (vsim-8611) Generating debug db.
-# ** Warning: (vopt-4308) Enabling visibility using +acc is recommended with debug flow.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# vsim logistic_map_tb -debugDB=+ACC -do "./ver/tx/chaos_gen/lmap.do" -displaymsgmode both -msgmode both -c 
+# Start time: 00:31:09 on Dec 06,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt3
 # //  Questa Sim-64
 # //  Version 2021.1 win64 Jan 19 2021
 # //
@@ -20,13 +16,22 @@
 # //  18 U.S.C. Section 1905.
 # //
 # Loading sv_std.std
-# Loading work.wire_shuffler_pkg(fast)
-# Loading work.chaos_xpander_tb(fast)
-# Loading work.chaos_xpander_sv_unit(fast)
-# Loading work.chaos_xpander(fast)
-# ** Note: (vsim-8900) Creating design debug database +ACC.
-# do {.\ver\modulator\chaos_xpander_tb.do}
-# ** Note: $finish    : ./ver/modulator/chaos_xpander_tb.sv(32)
-#    Time: 65536 ns  Iteration: 0  Instance: /chaos_xpander_tb
-# End time: 19:38:23 on Dec 01,2023, Elapsed time: 0:00:03
-# Errors: 0, Warnings: 2
+# Loading work.logistic_map_tb(fast)
+# Loading work.logistic_map(fast)
+# Loading work.booth_mul(fast)
+# Loading work.calc_partial_product(fast)
+# ** Note: (vsim-8716) Reusing existing debug database +ACC.
+# do ./ver/tx/chaos_gen/lmap.do
+# configure wave not supported in batch mode
+# 
+# 
+# 
+# [TEST 1] 0 Failed (256 Passed) Out of 256 Cases.
+# [TEST 2] 0 Failed (256 Passed) Out of 256 Cases.
+# 
+# 
+# 
+# ** Note: $finish    : ./ver/tx/chaos_gen/logistic_map_tb.sv(117)
+#    Time: 51400 ns  Iteration: 0  Instance: /logistic_map_tb
+# End time: 00:31:10 on Dec 06,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

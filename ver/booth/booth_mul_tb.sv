@@ -13,10 +13,10 @@
 module booth_mul_tb();
     localparam WORD_LEN = 8;
     localparam TEST_ITERATIONS = 1000;
-    logic                            i_clk, i_rstn;
+    logic                            i_clk, i_arst_n;
     logic signed  [WORD_LEN-1:0]     i_multiplier;
     logic signed  [WORD_LEN-1:0]     i_multiplicand;
-    logic signed  [(2*WORD_LEN)-1:0] o_reg_result;
+    logic signed  [(2*WORD_LEN)-1:0] o_result;
 
     booth_mul #(WORD_LEN) UUT (.*);
 
@@ -27,12 +27,12 @@ module booth_mul_tb();
     task automatic report_fail();
         $error("[FAIL] %0d * %0d\n    Found: %0d\n    Expected: %0d", i_multiplier,
                                                                       i_multiplicand,
-                                                                      o_reg_result,
+                                                                      o_result,
                                                                       (i_multiplicand*i_multiplier));
     endtask
 
     task automatic report_pass();
-        $display("[PASS] %0d * %0d = %0d", i_multiplier, i_multiplicand, o_reg_result);
+        $display("[PASS] %0d * %0d = %0d", i_multiplier, i_multiplicand, o_result);
     endtask
 
 
@@ -41,15 +41,15 @@ module booth_mul_tb();
 
     initial begin
         i_clk = 0;
-        i_rstn = 0;
-        #PERIOD i_rstn = 1;
+        i_arst_n = 0;
+        #PERIOD i_arst_n = 1;
         $info("RESET DEASSERTED");
 
         for (int i = 0; i < TEST_ITERATIONS; i++) begin
             i_multiplicand = $urandom();
             i_multiplier = $urandom();
             #(2*PERIOD);
-            assert (o_reg_result == (i_multiplicand*i_multiplier)) report_pass();
+            assert (o_result == (i_multiplicand*i_multiplier)) report_pass();
             else   report_fail();
         end
 

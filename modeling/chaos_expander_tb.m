@@ -1,45 +1,48 @@
 %% Chaos Expander Testbench
-% This script verifies the output csv file from the SystemVerilog
-% testbench.
+% This script generates all 2^16 expansions of an 8-bit number and puts them
+% in a CSV file.
+
 % Author: Omar T. Amer
 % Date 12/01/2023
 
 clear
 clc
-%% Read the CSV file.
 
-csv_path = "..\ver\modulator\hdl_model_xpnd.csv";
-fid = fopen(csv_path, 'r');
+%% Generate Expansions
+num_cases = 2^16;
+result_arr = cell(num_cases, 3);
+shuffler_matrix = readmatrix('rand_wires.txt');
 
-format_spec = '%s,%s';
-
-hdl_results = readmatrix(csv_path, 'OutputType', 'string')
-
-
-%% Compare with MATLAB's output
-shuffler_array = readmatrix("rand_wires.txt");
-
-for i = 1:1:2^16
-    input = dec2bin(hex2dec(hdl_results{i}), 16);
-    hdl_result = hdl_results {i + 2^16};
+for num = 1:1:num_cases
+    [shuffled, xpanded] = chaos_expander(dec2bin(num-1, 16), shuffler_matrix);
     
-    model_result = chaos_expander(input, shuffler_array);
-    % Define the chunk size
-    chunk_size = 4;
-
-    % Split the binary string into chunks
-    chunks = cellstr(reshape(strrep(num2str(model_result), ' ', ''), chunk_size, [])');
-
-    % Convert each chunk to hexadecimal
-    hex_chunks = cellfun(@(chunk) dec2hex(bin2dec(chunk), numel(chunk) / 4), chunks, 'UniformOutput', false);
-
-    % Concatenate the hexadecimal chunks
-    model_result = cat(2, hex_chunks{:}); % Meow
-    err_msg = sprintf("[FAIL] Test %d\nFound %s\nExpected %s\nINPUT: %x", i, hdl_result, model_result, input);
-    if (strcmpi(model_result, hdl_result))
-        disp("[PASS]")
-    else
-        disp(err_msg)
-    end
+    xpanded = num2str(xpanded);
+    xpanded(xpanded == ' ') = '';
+    hex_xpanded_fi = fi (NaN, 0, 256, 0);
+    hex_xpanded_fi.bin = xpanded;
+    hex_xpanded = hex_xpanded_fi.hex;
+     
+    
+    
+    
+    shuffled= num2str(shuffled);
+    shuffled(shuffled == ' ') = '';
+    hex_shuffled_fi = fi (NaN, 0, 256, 0);
+    hex_shuffled_fi.bin = shuffled;
+    hex_shuffled = hex_shuffled_fi.hex;
+    
+    hex_num = dec2hex(num-1,4);
+    
+    result_arr{num, 1} = hex_num;
+    result_arr{num, 2} = hex_xpanded;
+    result_arr{num, 3} = hex_shuffled;
+    
+    clc
+    fprintf("[%d/%d] Cases Generated.", num, num_cases);
 end
+
+fprintf("\nGenerating Output File: xpander.csv\n");
+result_arr = cell2table(result_arr);
+writetable(result_arr, "xpander.csv", 'Delimiter', ',', 'WriteVariableNames', false);
+fprintf("xpander.csv Generated. Exiting.\n");
 
