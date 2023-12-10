@@ -1,6 +1,10 @@
-# vsim logistic_map_tb -debugDB=+ACC -do "./ver/tx/chaos_gen/lmap.do" -displaymsgmode both -msgmode both -c 
-# Start time: 00:31:09 on Dec 06,2023
-# ** Note: (vsim-8009) Loading existing optimized design _opt3
+# vsim tx_tb -debugDB=+ACC -do "./ver/tx/tx.do" -msgmode both -displaymsgmode both -c 
+# Start time: 23:58:51 on Dec 10,2023
+# ** Warning: (vsim-4308) Enabling visibility using +acc is recommended with debug flow.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-4308) Enabling visibility using +acc is recommended with debug flow.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
 # //  Questa Sim-64
 # //  Version 2021.1 win64 Jan 19 2021
 # //
@@ -16,22 +20,48 @@
 # //  18 U.S.C. Section 1905.
 # //
 # Loading sv_std.std
-# Loading work.logistic_map_tb(fast)
+# Loading work.tx_if(fast)
+# Loading work.spreading_factors_pkg(fast)
+# Loading work.modem_pkg(fast)
+# Loading work.tx_tb_sv_unit(fast)
+# Loading work.tx_tb(fast)
+# Loading work.tx_if(fast__2)
+# Loading work.tx(fast)
+# Loading work.chaos_gen(fast)
 # Loading work.logistic_map(fast)
 # Loading work.booth_mul(fast)
 # Loading work.calc_partial_product(fast)
-# ** Note: (vsim-8716) Reusing existing debug database +ACC.
-# do ./ver/tx/chaos_gen/lmap.do
+# Loading work.wire_shuffler_pkg(fast)
+# Loading work.chaos_xpander_sv_unit(fast)
+# Loading work.chaos_xpander(fast)
+# Loading work.piso(fast)
+# Loading work.chip_ctr_sv_unit(fast)
+# Loading work.chip_ctr(fast)
+# Loading work.modulator_sv_unit(fast)
+# Loading work.modulator(fast)
+# Loading work.piso(fast__1)
+# ** Note: (vsim-8900) Creating design debug database +ACC.
+# do ./ver/tx/tx.do
 # configure wave not supported in batch mode
-# 
-# 
-# 
-# [TEST 1] 0 Failed (256 Passed) Out of 256 Cases.
-# [TEST 2] 0 Failed (256 Passed) Out of 256 Cases.
-# 
-# 
-# 
-# ** Note: $finish    : ./ver/tx/chaos_gen/logistic_map_tb.sv(117)
-#    Time: 51400 ns  Iteration: 0  Instance: /logistic_map_tb
-# End time: 00:31:10 on Dec 06,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
+# ===========================
+# NUMBER OF BITS RECV'd = 0
+# MSG: = x
+# ===========================
+# ====== Send Asserted ======
+# Now Sending faceb00c @ 6500 With SF16
+# Sending Complete @ 1031500
+# ===========================
+# NUMBER OF BITS RECV'd = 1024
+# MSG: = faceb00c
+# ===========================
+# ====== Send Asserted ======
+# Now Sending 66dead66 @ 1033500 With SF16
+# Sending Complete @ 2058500
+# ===========================
+# NUMBER OF BITS RECV'd = 1024
+# MSG: = 66dead66
+# ===========================
+# ** Note: $finish    : ./ver/tx/tx_tb.sv(50)
+#    Time: 205950 ns  Iteration: 3  Instance: /tx_tb
+# End time: 23:58:53 on Dec 10,2023, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 2

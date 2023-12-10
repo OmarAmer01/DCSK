@@ -25,10 +25,18 @@ interface tx_if(input logic i_clk);
     logic [1:0]  i_sf; // Spreading Factor ID
     logic o_tx;
 
+    logic is_sending;
+
+
     modport tx (
         input i_arst_n, i_clk, i_msg, i_seed, i_load_seed, i_sf, i_send,
         output o_tx
     );
 
+    default clocking cb @(posedge i_clk);
+        output i_arst_n, i_clk, i_msg, i_seed, i_load_seed, i_sf, i_send;
+        input o_tx;
+        input is_sending;
+    endclocking
 
 endinterface
