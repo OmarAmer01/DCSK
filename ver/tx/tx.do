@@ -8,8 +8,8 @@ add wave -position end  sim:/tx_tb/intf/i_arst_n
 add wave -position end -color "cyan" -group "Modulator" sim:/tx_tb/UUT/U_chip_ctr/o_chip_index
 add wave -position end -color "cyan" -group "Modulator" sim:/tx_tb/UUT/U_modulator/i_chip_idx_msb
 add wave -position end -group "Modulator"  sim:/tx_tb/UUT/U_modulator/i_chaos_bit
-add wave -position end -group "Modulator" -color "cyan" sim:/tx_tb/UUT/U_modulator/msg_piso_output_serial
-add wave -position end -group "Modulator" -color "cyan" -label "D_bit" sim:/tx_tb/UUT/U_modulator/delayed_bit
+add wave -position end -group "Modulator" -color "magenta" sim:/tx_tb/UUT/U_modulator/msg_piso_output_serial
+add wave -position end -group "Modulator" -color "yellow" -label "D_bit" sim:/tx_tb/UUT/U_modulator/delayed_bit
 add wave -position end -color "orange" sim:/tx_tb/intf/o_tx
 
 #add wave -position end -group "Modulator" -group "Delays" -label "D2" sim:/tx_tb/UUT/U_modulator/delay_by_2_tap

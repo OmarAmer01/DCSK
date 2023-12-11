@@ -34,6 +34,8 @@ chaos_gen U_chaos_gen (
 
 
 logic [4:0] chip_idx;
+logic is_sending;
+assign intf.is_sending = is_sending;
 chip_ctr U_chip_ctr(
     .i_clk              (tx_if.i_clk),
     .i_arst_n           (tx_if.i_arst_n),
@@ -43,11 +45,10 @@ chip_ctr U_chip_ctr(
     .o_chip_index       (chip_idx),
     .o_msb              (chip_idx_msb),
     .o_load_bit         (load_bit),
-    .o_sending          (intf.is_sending)
+    .o_sending          (is_sending)
 );
 
 logic modulator_ready;
-// logic modulator_en; //TODO: Should we really have an enable signal here?
 modulator #(32) U_modulator(
     .i_clk              (tx_if.i_clk),
     .i_arst_n           (tx_if.i_arst_n),
@@ -57,6 +58,7 @@ modulator #(32) U_modulator(
     .i_msg              (tx_if.i_msg),
     .i_load_msg         (tx_if.i_send),
     .i_chip_idx_msb     (chip_idx_msb),
+    .i_is_sending       (is_sending),
     .o_ready_to_send    (modulator_ready),
     .o_serial           (tx_if.o_tx)
 );
