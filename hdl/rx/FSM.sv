@@ -15,7 +15,7 @@ module FSM
     input  logic [4:0] Spread_Factor,
     input  logic       Clk,
     input  logic       N_Rst,
-    output logic [4:0] Var_Del_Reg_Addr,
+    output logic [3:0] Var_Del_Reg_Addr,
     output logic       Var_Del_Reg_Re,
     output logic       Var_Del_Reg_Load,
     output logic       Ones_Count_Inc,
@@ -24,7 +24,7 @@ module FSM
     output logic       STP_Out_Reg_Load,
     output logic       STP_Out_Reg_Re,
     output logic [4:0] STP_Out_Reg_Addr,
-    output logic       Valid_Data //? output signal that indicates that the output data has been demodulated successfully and ready to be readed
+    output logic       Valid_Data //? output signal that indicates that the output data has been demodulated successfully and ready to be read
 );
 typedef enum logic [1:0] 
 { 
@@ -68,7 +68,7 @@ always@(posedge Clk or negedge N_Rst)begin
                 end
                 else begin
                     Var_Del_Reg_Addr <= Var_Del_Reg_Addr + 1'b1;
-                    if(Var_Del_Reg_Addr == Spread_Factor)begin
+                    if(Var_Del_Reg_Addr == Spread_Factor-1)begin
                         State               <= Correlation;
                         Var_Del_Reg_Addr    <= 0;
                         Var_Del_Reg_Re      <= 1;
@@ -86,7 +86,7 @@ always@(posedge Clk or negedge N_Rst)begin
             end
             Correlation:begin
                 Var_Del_Reg_Addr <= Var_Del_Reg_Addr + 1'b1;
-                if(Var_Del_Reg_Addr == Spread_Factor)begin
+                if(Var_Del_Reg_Addr == Spread_Factor-1)begin
                     State                <= Store_Demod_Bit;
                     Var_Del_Reg_Addr     <= 0;
                     Var_Del_Reg_Re       <= 0;
@@ -115,7 +115,7 @@ always@(posedge Clk or negedge N_Rst)begin
             Store_Demod_Bit:begin
                 Var_Del_Reg_Addr <= Var_Del_Reg_Addr + 1'b1;
                 STP_Out_Reg_Addr <= STP_Out_Reg_Addr + 1'b1;
-                if(STP_Out_Reg_Addr == 0)begin
+                if(STP_Out_Reg_Addr == 31)begin
                     STP_Out_Reg_Re <= 1'b1;
                     Valid_Data     <= 1;
                 end

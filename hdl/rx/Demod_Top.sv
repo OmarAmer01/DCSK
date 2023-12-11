@@ -15,12 +15,12 @@ module Demod_Top
     input  logic        N_Rst,
     input  logic        Valid,
     input  logic [1:0]  Spread_Factor_Sel,
-    output logic [15:0] Out_Data,
+    output logic [31:0] Out_Data,
     output logic        Valid_Data
 );
 
 logic [4:0] Spread_Factor;
-logic [4:0] Var_Del_Reg_Addr;
+logic [3:0] Var_Del_Reg_Addr;
 logic       Var_Del_Reg_Re;
 logic       Var_Del_Reg_Load;
 logic       Ones_Count_Inc;
