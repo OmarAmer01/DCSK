@@ -38,7 +38,7 @@ The modulator is split into three parts:
     \item Serializer.
 \end{enumerate}
 
-\subsection{Chaos Generator}
+\subsection{Chaos Generator [RE-WRITE]}
 The chaos is generated with a Logistic Map with $r = 4$. The value $4$ was chosen to simplify the multiplication by $r$ into a shift left by
 $2$. The logistic map operates on Q2.6 numbers. From equation \ref{eqn:logistic_map} we can see that if $n_{i}$ is 8-bits in length,
 then $n_{i+1}$ is 16-bits. This means that each cycle, the \textsc{Logistic Map} The multiplication is performed with the radix-4 Booth multiplication algorithm. As it
@@ -65,11 +65,11 @@ a delayed version of the chaos bit from \textsc{Chaos Generator} (delayed by $\b
         \hline
         \texttt{i\_clk} & 1 & Input & Positive edge clock.\\
         \texttt{i\_arst\_n} & 1 & Input & Active-low asynchronous reset.\\
-        \texttt{i\_message} & 32 & Input & The input message.\\
+        \texttt{i\_msg\_bit} & 1 & Input & The input message bit.\\
         \texttt{i\_chaos\_bit} & 1 & Input & The bit of chaos to be modulated.\\
-        \texttt{i\_load\_msg} & 1 & Input & Load the \texttt{Message PISO} with the message at \texttt{i\_message}.\\
-        \texttt{o\_ready\_to\_send} & 1 & Output & Asserted if (and only if) the \texttt{Message PISO} is not empty.\\
-        \texttt{o\_serial} & 1 & Output & The serial output of the \texttt{Message PISO}.\\
+        \texttt{i\_frame\_half} & 1 & Input & Asserted if (and only if) the index of the chip being sent is less than $\beta$.\\
+        \texttt{i\_sf} & 2 & Input & The encoded spreading factor.\\
+        \texttt{o\_modulated\_bit} & 1 & Output & The serial output of the \textsc{Modulator}.\\
         \hline
     \end{tabular}
     \end{table}
