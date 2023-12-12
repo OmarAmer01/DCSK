@@ -34,7 +34,7 @@ typedef enum logic [1:0]
     Store_Demod_Bit
 }FSM;
 
-FSM State; //*Mealy FSM
+FSM State; //*MOORE FSM
 
 //?==================== FSM in single always block statment ====================
 always@(posedge Clk or negedge N_Rst)begin
@@ -73,14 +73,6 @@ always@(posedge Clk or negedge N_Rst)begin
                         Var_Del_Reg_Addr    <= 0;
                         Var_Del_Reg_Re      <= 1;
                         Var_Del_Reg_Load    <= 0;
-                        if(Correlated_Bit)begin
-                            Ones_Count_Inc  <= 1;
-                            Zeros_Count_Inc <= 0;  
-                        end
-                        else begin
-                            Ones_Count_Inc  <= 0;
-                            Zeros_Count_Inc <= 1;
-                        end
                     end
                 end
             end
@@ -91,9 +83,6 @@ always@(posedge Clk or negedge N_Rst)begin
                     Var_Del_Reg_Addr     <= 0;
                     Var_Del_Reg_Re       <= 0;
                     Var_Del_Reg_Load     <= 1'b1;
-                    Ones_Count_Inc       <= 0;
-                    Zeros_Count_Inc      <= 0;
-                    Ones_Zeros_Count_Clr <= 1'b1;
                     STP_Out_Reg_Load     <= 1'b1;
                 end
                 else if(~Valid)begin
@@ -114,7 +103,6 @@ always@(posedge Clk or negedge N_Rst)begin
             end
             Store_Demod_Bit:begin
                 Var_Del_Reg_Addr <= Var_Del_Reg_Addr + 1'b1;
-                STP_Out_Reg_Addr <= STP_Out_Reg_Addr + 1'b1;
                 if(STP_Out_Reg_Addr == 31)begin
                     STP_Out_Reg_Re <= 1'b1;
                     Valid_Data     <= 1;
@@ -127,10 +115,16 @@ always@(posedge Clk or negedge N_Rst)begin
                     STP_Out_Reg_Load     <= 0;
                     STP_Out_Reg_Addr     <= 0;
                 end
+                else if(Var_Del_Reg_Addr == 0)begin
+                    STP_Out_Reg_Addr     <= STP_Out_Reg_Addr + 1'b1;
+                    STP_Out_Reg_Load     <= 0;
+                    Ones_Count_Inc       <= 0;
+                    Zeros_Count_Inc      <= 0;
+                    Ones_Zeros_Count_Clr <= 1'b1;
+                end
                 else begin
                     State                <= Store_Chaos_Seq;
                     Ones_Zeros_Count_Clr <= 0;
-                    STP_Out_Reg_Load     <= 0;
                 end
             end
         endcase 

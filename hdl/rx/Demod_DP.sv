@@ -29,8 +29,8 @@ module Demod_DP
 
 logic        Var_Del_Reg_Out_Data;
 logic [15:0] Var_Del_Reg;
-logic [3:0]  Ones_Count;
-logic [3:0]  Zeros_Count;
+logic [4:0]  Ones_Count;
+logic [4:0]  Zeros_Count;
 logic        Demod_Bit;
 logic [31:0] STP_Out_Reg;
 
