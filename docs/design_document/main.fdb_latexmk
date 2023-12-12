@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1701546059 "g:/Projects/DCSK/DCSK/DCSK/docs/design_document/main.tex" "main.pdf" "main" 1701546060 0
+["pdflatex"] 1702345652 "g:/Projects/DCSK/DCSK/DCSK/docs/design_document/main.tex" "main.pdf" "main" 1702345653 0
   "../../diagrams//Top Level/demod.png" 1700368339 159304 344515e99ceeff2ce6b7001c329a41e8 ""
   "../../diagrams//Top Level/modulator.png" 1701543946 317867 75edcad1022659304aaf08ef72a2ebbd ""
   "C:/Users/omart/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1701527143 82684 3a87f55ef758bc5fe6abfed9a40cca26 ""
@@ -72,16 +72,16 @@
   "G:/MiKTeX/tex/latex/preprint/authblk.sty" 1369145270 7196 985a983ce041cc8959cd31133cba0244 ""
   "G:/MiKTeX/tex/latex/tools/array.sty" 1667242266 12691 5b542990fe866f3d772f71346cf85b95 ""
   "G:/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656233290 56148 51a9a8571c07b9921892ae11063ae853 ""
-  "chapters/arch.tex" 1701546057 5920 78d6bba9d1a54524a0e1cb704592c6bf ""
+  "chapters/arch.tex" 1702345651 5942 46a9089879d7f67986dad0d54da160d2 ""
   "chapters/introduction.tex" 1701539819 1819 a5d7bbcafeb4d17caaae30a2ae97f085 ""
   "chapters/preface.tex" 1701545577 926 9fc399013b43ba701ad034822be19dc5 ""
   "g:/Projects/DCSK/DCSK/DCSK/docs/design_document/main.tex" 1701543651 814 3c4104738a54e7462f35b46533371f4b ""
   "graphics//cnd_logo.jpg" 1701528148 62438 a4e9588eea8e4f55d57935a86d810683 ""
-  "main.aux" 1701546060 1906 7edcdd4501174377d9b62b244e603690 "pdflatex"
-  "main.lof" 1701546060 220 c8e86c7b2d9508aca15d057b8b1b68ca "pdflatex"
-  "main.lot" 1701546060 286 2dc9f37d9c6b39a6bec0f9376e8c8096 "pdflatex"
+  "main.aux" 1702345653 1906 7edcdd4501174377d9b62b244e603690 "pdflatex"
+  "main.lof" 1702345653 220 c8e86c7b2d9508aca15d057b8b1b68ca "pdflatex"
+  "main.lot" 1702345653 286 2dc9f37d9c6b39a6bec0f9376e8c8096 "pdflatex"
   "main.tex" 1701543651 814 3c4104738a54e7462f35b46533371f4b ""
-  "main.toc" 1701546060 585 72916dd441bc352249f099a8a20cce47 "pdflatex"
+  "main.toc" 1702345653 585 72916dd441bc352249f099a8a20cce47 "pdflatex"
   "title_page.tex" 1701528827 888 1fd3d715aa0b8d112f90874dbd2a082a ""
   (generated)
   "main.aux"

@@ -11,7 +11,7 @@
 */
 `timescale 1ns/100ps
 
-module calc_partial_product_tb ();
+module calc_partial_product_tb;
 localparam WORD_LEN = 4;
 
 logic  [WORD_LEN-1:0]  i_multiplicand;

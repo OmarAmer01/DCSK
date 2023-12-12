@@ -11,7 +11,7 @@ vsim chaos_gen_tb -c -debugDB=+ACC -do "./ver/tx/chaos_gen/chaos_gen.do"
 */
 
 `timescale 1ns/100ps
-module chaos_gen_tb();
+module chaos_gen_tb;
 
     logic        i_clk;
     logic        i_arst_n;

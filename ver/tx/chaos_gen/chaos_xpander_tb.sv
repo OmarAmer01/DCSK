@@ -12,7 +12,7 @@
 */
 import wire_shuffler_pkg::*;
 
-module chaos_xpander_tb ();
+module chaos_xpander_tb;
 import wire_shuffler_pkg::*;
 logic [15:0]  i_chaos;
 logic [255:0] o_xpanded_chaos;

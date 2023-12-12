@@ -39,33 +39,63 @@ package modem_pkg;
       return dmod;
     endfunction
 
-    task automatic send_msg(logic [31:0] msg, logic [1:0] sf_id /*,logic last*/);
+    task automatic send_msg(logic [31:0] msg, logic [1:0] sf_id);
+
+      //! Infer spreading factor from sf_id
+      int delay = 2 * 32 * 2 ** (sf_id + 1);
+
       intf.cb.i_msg  <= msg;
-      intf.cb.i_sf   <= sf_id;
-      @(intf.cb) intf.cb.i_send <= 1;
-      //intf.cb.i_send <= 1;
-    
+      intf.cb.i_send <= 1'b1;
+
+      @(intf.cb) intf.cb.i_send <= 1'b0;
       $display("\n======== Sending Msg (ID-%0d) =======", msg_id);
       $display("Current Time; %0d ns.", $time);
       $display("Data: 0x%8H", msg);
       $display("Spreading Factor: SF%0d", 2 ** (sf_id + 1));
-      //$display("Last: %s", last ? "Y" : "No.");
-
-      //intf.cb.i_send <= 0;
-      @(intf.cb) intf.cb.i_send <= 0;
-      case (sf_id)
-        SF2: repeat  ((2 * 2  * 32)) @(intf.cb);
-        SF4: repeat  ((2 * 4  * 32)) @(intf.cb);
-        SF8: repeat  ((2 * 8  * 32)) @(intf.cb);
-        SF16: repeat ((2 * 16 * 32)) @(intf.cb);
-        default: $fatal(1, "INVALID SPREADING FACTOR");
-      endcase
-      $display("MSG (ID-%0d) Fully Sent @ %0t ns.", msg_id++, $time);
       $display("===================================\n");
+      intf.cb.i_sf <= sf_id;
+      repeat (delay-1) @(intf.cb);
+
+
+      msg_id++;
     endtask
+    // task automatic send_msg(logic [31:0] msg, logic [1:0] sf_id, logic first);
+    //   int delay = 2 * 32 * 2 ** (sf_id + 1);
+    //   // intf.cb.i_msg <= msg;
+    //   // intf.cb.i_sf  <= sf_id;
+
+    //   // if (first) begin
+    //   //   intf.cb.i_send <= 1;
+    //   //   intf.cb.i_msg <= msg;
+    //   //   intf.cb.i_sf  <= sf_id;
+    //   // end else begin
+    //   //   intf.cb.i_send <= 0;
+    //   // end
+
+    //   $display("\n======== Sending Msg (ID-%0d) =======", msg_id);
+    //   $display("Current Time; %0d ns.", $time);
+    //   $display("Data: 0x%8H", msg);
+    //   $display("Spreading Factor: SF%0d", 2 ** (sf_id + 1));
+
+    //   // if (first) begin
+    //   //   @(intf.cb) intf.cb.i_send <= 0;
+    //   //   repeat (delay) @(intf.cb);
+    //   // end else begin
+    //   //   repeat (delay-1) @(intf.cb);
+    //   //   @(intf.cb) intf.cb.i_send <= 1;
+    //   //   intf.cb.i_msg <= msg;
+    //   //   intf.cb.i_sf  <= sf_id;
+
+    //   //   @(intf.cb) intf.cb.i_send <= 0;
+
+    //   // end
+
+    //   $display("MSG (ID-%0d) Fully Sent @ %0t ns.", msg_id++, $time);
+    //   $display("===================================\n");
+    // endtask
 
     task automatic demod_msg(logic bit_q[$], logic verbose = 1'b0, ref logic [31:0] msg);
-      // Infer spreading factor from the number of received bits.
+      //* Infer spreading factor from the number of received bits.
       int num_recv_bits = bit_q.size();
       int sf = (num_recv_bits / (32 * 2));
       logic chaos[$], modualted_chaos[$];

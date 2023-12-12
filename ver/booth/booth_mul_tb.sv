@@ -10,7 +10,7 @@
 ==============================================================
 */
 `timescale 1ns/100ps
-module booth_mul_tb();
+module booth_mul_tb;
     localparam WORD_LEN = 8;
     localparam TEST_ITERATIONS = 1000;
     logic                            i_clk, i_arst_n;
