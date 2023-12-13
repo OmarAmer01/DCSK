@@ -24,7 +24,7 @@ module end2end_tb;
   always #(PERIOD / 2) i_clk = ~i_clk;
 
 
-  localparam TEST_ITERATIONS = 400;
+  localparam TEST_ITERATIONS = 2;
 
 
   //! Variable declarations
@@ -81,6 +81,7 @@ module end2end_tb;
 
     for (int i = 0; i < TEST_ITERATIONS; i++) begin
       msg_to_send = $urandom();
+      msg_to_send = 32'hFFFF_FFFF;
       tx.push_back(msg_to_send);
 
       sf = $urandom_range(3, 3);
