@@ -50,20 +50,6 @@ FSM NS;
 always@(posedge Clk or negedge N_Rst)begin
     if(~N_Rst)begin
         CS                   <= Idle;
-        NS                   <= Idle;
-        Var_Del_Reg_Load     <= 0;
-        Var_Del_Reg_Re       <= 0;
-        Var_Del_Reg_Addr_Inc <= 0;
-        Var_Del_Reg_Addr_Clr <= 0;
-        STP_Out_Reg_Load     <= 0;
-        STP_Out_Reg_Re       <= 0;
-        STP_Out_Reg_Addr_Inc <= 0;
-        Ones_Count_Inc       <= 0;
-        Zeros_Count_Inc      <= 0;
-        Ones_Count_Clr       <= 0;
-        Zeros_Count_Clr      <= 0;
-        Demod_Bit            <= 0;
-        Valid_Data           <= 0; 
     end
     else
         CS <= NS;
@@ -73,175 +59,175 @@ always@(*)begin
     case(CS)
         Idle:begin
             if(Valid)begin
-                NS                   <= Store_Chaos_Seq;
-                Var_Del_Reg_Load     <= 1;
-                Var_Del_Reg_Re       <= 0;
-                Var_Del_Reg_Addr_Inc <= 1;
-                Var_Del_Reg_Addr_Clr <= 0;
-                STP_Out_Reg_Load     <= 0;
-                STP_Out_Reg_Re       <= 0;
-                STP_Out_Reg_Addr_Inc <= 0;
-                Ones_Count_Inc       <= 0;
-                Zeros_Count_Inc      <= 0;
-                Ones_Count_Clr       <= 0;
-                Zeros_Count_Clr      <= 0;
-                Demod_Bit            <= 0;
-                Valid_Data           <= 0;         
+                NS                   = Store_Chaos_Seq;
+                Var_Del_Reg_Load     = 1;
+                Var_Del_Reg_Re       = 0;
+                Var_Del_Reg_Addr_Inc = 1;
+                Var_Del_Reg_Addr_Clr = 0;
+                STP_Out_Reg_Load     = 0;
+                STP_Out_Reg_Re       = 0;
+                STP_Out_Reg_Addr_Inc = 0;
+                Ones_Count_Inc       = 0;
+                Zeros_Count_Inc      = 0;
+                Ones_Count_Clr       = 0;
+                Zeros_Count_Clr      = 0;
+                Demod_Bit            = 0;
+                Valid_Data           = 0;         
             end
             else begin
-                NS                   <= Idle;
-                Var_Del_Reg_Load     <= 0;
-                Var_Del_Reg_Re       <= 0;
-                Var_Del_Reg_Addr_Inc <= 0;
-                Var_Del_Reg_Addr_Clr <= 0;
-                STP_Out_Reg_Load     <= 0;
-                STP_Out_Reg_Re       <= 0;
-                STP_Out_Reg_Addr_Inc <= 0;
-                Ones_Count_Inc       <= 0;
-                Zeros_Count_Inc      <= 0;
-                Ones_Count_Clr       <= 0;
-                Zeros_Count_Clr      <= 0;
-                Demod_Bit            <= 0;
-                Valid_Data           <= 0;
+                NS                   = Idle;
+                Var_Del_Reg_Load     = 0;
+                Var_Del_Reg_Re       = 0;
+                Var_Del_Reg_Addr_Inc = 0;
+                Var_Del_Reg_Addr_Clr = 0;
+                STP_Out_Reg_Load     = 0;
+                STP_Out_Reg_Re       = 0;
+                STP_Out_Reg_Addr_Inc = 0;
+                Ones_Count_Inc       = 0;
+                Zeros_Count_Inc      = 0;
+                Ones_Count_Clr       = 0;
+                Zeros_Count_Clr      = 0;
+                Demod_Bit            = 0;
+                Valid_Data           = 0;
             end
         end
         Store_Chaos_Seq:begin
             if(~Valid)begin
-                NS                   <= Idle;
-                Var_Del_Reg_Load     <= 0;
-                Var_Del_Reg_Re       <= 0;
-                Var_Del_Reg_Addr_Inc <= 0;
-                Var_Del_Reg_Addr_Clr <= 1;
-                STP_Out_Reg_Load     <= 0;
-                STP_Out_Reg_Re       <= 0;
-                STP_Out_Reg_Addr_Inc <= 0;
-                Ones_Count_Inc       <= 0;
-                Zeros_Count_Inc      <= 0;
-                Ones_Count_Clr       <= 0;
-                Zeros_Count_Clr      <= 0;
-                Demod_Bit            <= 0;
-                Valid_Data           <= 0;
+                NS                   = Idle;
+                Var_Del_Reg_Load     = 0;
+                Var_Del_Reg_Re       = 0;
+                Var_Del_Reg_Addr_Inc = 0;
+                Var_Del_Reg_Addr_Clr = 1;
+                STP_Out_Reg_Load     = 0;
+                STP_Out_Reg_Re       = 0;
+                STP_Out_Reg_Addr_Inc = 0;
+                Ones_Count_Inc       = 0;
+                Zeros_Count_Inc      = 0;
+                Ones_Count_Clr       = 0;
+                Zeros_Count_Clr      = 0;
+                Demod_Bit            = 0;
+                Valid_Data           = 0;
             end
             else if(Var_Del_Reg_Addr == Spread_Factor-1)begin
-                NS                   <= Correlation;
-                Var_Del_Reg_Load     <= 1;
-                Var_Del_Reg_Re       <= 0;
-                Var_Del_Reg_Addr_Inc <= 0;
-                Var_Del_Reg_Addr_Clr <= 1;
-                STP_Out_Reg_Load     <= 0;
-                STP_Out_Reg_Re       <= 0;
-                STP_Out_Reg_Addr_Inc <= 0;
-                Ones_Count_Inc       <= 0;
-                Zeros_Count_Inc      <= 0;
-                Ones_Count_Clr       <= 0;
-                Zeros_Count_Clr      <= 0;
-                Demod_Bit            <= 0;
-                Valid_Data           <= 0;
+                NS                   = Correlation;
+                Var_Del_Reg_Load     = 1;
+                Var_Del_Reg_Re       = 0;
+                Var_Del_Reg_Addr_Inc = 0;
+                Var_Del_Reg_Addr_Clr = 1;
+                STP_Out_Reg_Load     = 0;
+                STP_Out_Reg_Re       = 0;
+                STP_Out_Reg_Addr_Inc = 0;
+                Ones_Count_Inc       = 0;
+                Zeros_Count_Inc      = 0;
+                Ones_Count_Clr       = 0;
+                Zeros_Count_Clr      = 0;
+                Demod_Bit            = 0;
+                Valid_Data           = 0;
             end
             else begin
-                NS                   <= Store_Chaos_Seq;
-                Var_Del_Reg_Load     <= 1;
-                Var_Del_Reg_Re       <= 0;
-                Var_Del_Reg_Addr_Inc <= 1;
-                Var_Del_Reg_Addr_Clr <= 0;
-                STP_Out_Reg_Load     <= 0;
-                STP_Out_Reg_Re       <= 0;
-                STP_Out_Reg_Addr_Inc <= 0;
-                Ones_Count_Inc       <= 0;
-                Zeros_Count_Inc      <= 0;
-                Ones_Count_Clr       <= 0;
-                Zeros_Count_Clr      <= 0;
-                Demod_Bit            <= 0;
-                Valid_Data           <= 0;
+                NS                   = Store_Chaos_Seq;
+                Var_Del_Reg_Load     = 1;
+                Var_Del_Reg_Re       = 0;
+                Var_Del_Reg_Addr_Inc = 1;
+                Var_Del_Reg_Addr_Clr = 0;
+                STP_Out_Reg_Load     = 0;
+                STP_Out_Reg_Re       = 0;
+                STP_Out_Reg_Addr_Inc = 0;
+                Ones_Count_Inc       = 0;
+                Zeros_Count_Inc      = 0;
+                Ones_Count_Clr       = 0;
+                Zeros_Count_Clr      = 0;
+                Demod_Bit            = 0;
+                Valid_Data           = 0;
             end
 
         end
         Correlation:begin
             if(Var_Del_Reg_Addr == Spread_Factor-1)begin
-                NS                   <= Store_Demod_Bit;
-                Var_Del_Reg_Load     <= 1;
-                Var_Del_Reg_Re       <= 0;
-                Var_Del_Reg_Addr_Inc <= 0;
-                Var_Del_Reg_Addr_Clr <= 1;
-                STP_Out_Reg_Load     <= 1;
-                STP_Out_Reg_Re       <= 0;
-                STP_Out_Reg_Addr_Inc <= 1;
-                Ones_Count_Inc       <= 0;
-                Zeros_Count_Inc      <= 0;
-                Ones_Count_Clr       <= 1;
-                Zeros_Count_Clr      <= 1;
-                Valid_Data           <= 0;
+                NS                   = Store_Demod_Bit;
+                Var_Del_Reg_Load     = 1;
+                Var_Del_Reg_Re       = 0;
+                Var_Del_Reg_Addr_Inc = 0;
+                Var_Del_Reg_Addr_Clr = 1;
+                STP_Out_Reg_Load     = 1;
+                STP_Out_Reg_Re       = 0;
+                STP_Out_Reg_Addr_Inc = 1;
+                Ones_Count_Inc       = 0;
+                Zeros_Count_Inc      = 0;
+                Ones_Count_Clr       = 1;
+                Zeros_Count_Clr      = 1;
+                Valid_Data           = 0;
                 if(Ones_Count > Zeros_Count)
-                    Demod_Bit        <= 1;
+                    Demod_Bit        = 1;
                 else
-                    Demod_Bit        <= 0;   
+                    Demod_Bit        = 0;   
             end
             else begin
-                NS                   <= Correlation;
-                Var_Del_Reg_Load     <= 1;
-                Var_Del_Reg_Re       <= 1;
-                Var_Del_Reg_Addr_Inc <= 1;
-                Var_Del_Reg_Addr_Clr <= 0;
-                STP_Out_Reg_Load     <= 0;
-                STP_Out_Reg_Re       <= 0;
-                STP_Out_Reg_Addr_Inc <= 0;
+                NS                   = Correlation;
+                Var_Del_Reg_Load     = 1;
+                Var_Del_Reg_Re       = 1;
+                Var_Del_Reg_Addr_Inc = 1;
+                Var_Del_Reg_Addr_Clr = 0;
+                STP_Out_Reg_Load     = 0;
+                STP_Out_Reg_Re       = 0;
+                STP_Out_Reg_Addr_Inc = 0;
                 if(Correlated_Bit)begin
-                    Ones_Count_Inc   <= 1;
-                    Zeros_Count_Inc  <= 0;
+                    Ones_Count_Inc   = 1;
+                    Zeros_Count_Inc  = 0;
                 end
                 else begin
-                    Ones_Count_Inc   <= 0;
-                    Zeros_Count_Inc  <= 1;
+                    Ones_Count_Inc   = 0;
+                    Zeros_Count_Inc  = 1;
                 end
-                Ones_Count_Clr       <= 0;
-                Zeros_Count_Clr      <= 0;
-                Demod_Bit            <= 0;
-                Valid_Data           <= 0;
+                Ones_Count_Clr       = 0;
+                Zeros_Count_Clr      = 0;
+                Demod_Bit            = 0;
+                Valid_Data           = 0;
             end
         end
         Store_Demod_Bit:begin
                 if(Valid)begin
-                    NS                   <= Store_Chaos_Seq;
-                    Var_Del_Reg_Load     <= 1;
-                    Var_Del_Reg_Re       <= 0;
-                    Var_Del_Reg_Addr_Inc <= 1;
-                    Var_Del_Reg_Addr_Clr <= 0;
-                    STP_Out_Reg_Load     <= 0;
-                    STP_Out_Reg_Addr_Inc <= 0;
-                    Ones_Count_Inc       <= 0;
-                    Zeros_Count_Inc      <= 0;
-                    Ones_Count_Clr       <= 0;
-                    Zeros_Count_Clr      <= 0;
-                    Demod_Bit            <= 0;
+                    NS                   = Store_Chaos_Seq;
+                    Var_Del_Reg_Load     = 1;
+                    Var_Del_Reg_Re       = 0;
+                    Var_Del_Reg_Addr_Inc = 1;
+                    Var_Del_Reg_Addr_Clr = 0;
+                    STP_Out_Reg_Load     = 0;
+                    STP_Out_Reg_Addr_Inc = 0;
+                    Ones_Count_Inc       = 0;
+                    Zeros_Count_Inc      = 0;
+                    Ones_Count_Clr       = 0;
+                    Zeros_Count_Clr      = 0;
+                    Demod_Bit            = 0;
                     if(STP_Out_Reg_Addr == 0)begin
-                        STP_Out_Reg_Re   <= 1;
-                        Valid_Data       <= 1;
+                        STP_Out_Reg_Re   = 1;
+                        Valid_Data       = 1;
                     end
                     else begin
-                        STP_Out_Reg_Re   <= 0;
-                        Valid_Data       <= 0;
+                        STP_Out_Reg_Re   = 0;
+                        Valid_Data       = 0;
                     end
                 end
                 else begin
-                    NS                   <= Idle;
-                    Var_Del_Reg_Load     <= 0;
-                    Var_Del_Reg_Re       <= 0;
-                    Var_Del_Reg_Addr_Inc <= 0;
-                    Var_Del_Reg_Addr_Clr <= 1;
-                    STP_Out_Reg_Load     <= 0;
-                    STP_Out_Reg_Addr_Inc <= 0;
-                    Ones_Count_Inc       <= 0;
-                    Zeros_Count_Inc      <= 0;
-                    Ones_Count_Clr       <= 0;
-                    Zeros_Count_Clr      <= 0;
-                    Demod_Bit            <= 0;
+                    NS                   = Idle;
+                    Var_Del_Reg_Load     = 0;
+                    Var_Del_Reg_Re       = 0;
+                    Var_Del_Reg_Addr_Inc = 0;
+                    Var_Del_Reg_Addr_Clr = 1;
+                    STP_Out_Reg_Load     = 0;
+                    STP_Out_Reg_Addr_Inc = 0;
+                    Ones_Count_Inc       = 0;
+                    Zeros_Count_Inc      = 0;
+                    Ones_Count_Clr       = 0;
+                    Zeros_Count_Clr      = 0;
+                    Demod_Bit            = 0;
                     if(STP_Out_Reg_Addr == 0)begin
-                        STP_Out_Reg_Re   <= 1;
-                        Valid_Data       <= 1;
+                        STP_Out_Reg_Re   = 1;
+                        Valid_Data       = 1;
                     end
                     else begin
-                        STP_Out_Reg_Re   <= 0;
-                        Valid_Data       <= 0;
+                        STP_Out_Reg_Re   = 0;
+                        Valid_Data       = 0;
                     end
                 end
         end
