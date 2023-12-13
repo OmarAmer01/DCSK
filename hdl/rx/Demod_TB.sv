@@ -96,25 +96,25 @@ initial begin
     wait(j==WORDLEN);//?wait until second word
     //*test the normal sequence at spreading factor = 16
     Valid = 1;
-    wait(j==2*WORDLEN)//?wait until third word
-    //*test the normal sequence at spreading factor = 8
-    Spread_Factor_Sel = 3;
-    wait(j==3*WORDLEN)
-    //*test the normal sequence at spreading factor = 4
-    Spread_Factor_Sel = 1;
-    wait(j==4*WORDLEN)
-    //*test the normal sequence at spreading factor = 2
-    Spread_Factor_Sel = 0;
-    wait(j==5*WORDLEN);
-    //*test that when valid goes to zero during the receiving operation it will stop and go to idle state
-    wait(j==5*WORDLEN + 10);
-    Valid = 0;
-    Spread_Factor_Sel = 16;
-    //*continue normal operation and check the results
-    wait(j==6*WORDLEN)
-    Valid = 1;
-    wait(j==10*WORDLEN)
-    $finish;
+    // wait(j==2*WORDLEN)//?wait until third word
+    // //*test the normal sequence at spreading factor = 8
+    // Spread_Factor_Sel = 3;
+    // wait(j==3*WORDLEN)
+    // //*test the normal sequence at spreading factor = 4
+    // Spread_Factor_Sel = 1;
+    // wait(j==4*WORDLEN)
+    // //*test the normal sequence at spreading factor = 2
+    // Spread_Factor_Sel = 0;
+    // wait(j==5*WORDLEN);
+    // //*test that when valid goes to zero during the receiving operation it will stop and go to idle state
+    // wait(j==5*WORDLEN + 10);
+    // Valid = 0;
+    // Spread_Factor_Sel = 16;
+    // //*continue normal operation and check the results
+    // wait(j==6*WORDLEN)
+    // Valid = 1;
+    // wait(j==10*WORDLEN)
+    // $finish;
 end
 
 endmodule

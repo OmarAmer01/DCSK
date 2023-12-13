@@ -49,22 +49,23 @@ always@(posedge Clk or negedge N_Rst)begin
         STP_Out_Reg_Load     <= 0;
         STP_Out_Reg_Re       <= 0;
         STP_Out_Reg_Addr     <= 0;
+        Valid_Data           <= 0;
     end
     else begin
         case(State)
             Idle:begin
+                Valid_Data       <= 0;
                 if(Valid)begin
                     State            <= Store_Chaos_Seq;
                     Var_Del_Reg_Load <= 1;
-                    Valid_Data       <= 0;
                 end
             end
             Store_Chaos_Seq:begin
+                Valid_Data       <= 0;
                 if(~Valid)begin
                     State <= Idle;
                     Var_Del_Reg_Addr <= 0;
                     Var_Del_Reg_Load <= 0;
-                    Valid_Data       <= 0;
                 end
                 else begin
                     Var_Del_Reg_Addr <= Var_Del_Reg_Addr + 1'b1;
@@ -82,7 +83,6 @@ always@(posedge Clk or negedge N_Rst)begin
                     State                <= Store_Demod_Bit;
                     Var_Del_Reg_Addr     <= 0;
                     Var_Del_Reg_Re       <= 0;
-                    Var_Del_Reg_Load     <= 1'b1;
                     STP_Out_Reg_Load     <= 1'b1;
                 end
                 else if(~Valid)begin
@@ -91,6 +91,9 @@ always@(posedge Clk or negedge N_Rst)begin
                     Var_Del_Reg_Re   <= 0;
                     Ones_Count_Inc   <= 0;
                     Zeros_Count_Inc  <= 0;
+                end
+                else if(Var_Del_Reg_Addr == Spread_Factor-2)begin
+                    Var_Del_Reg_Load <= 1'b1;
                 end
                 else if(Correlated_Bit)begin
                     Ones_Count_Inc  <= 1;
@@ -124,6 +127,8 @@ always@(posedge Clk or negedge N_Rst)begin
                 end
                 else begin
                     State                <= Store_Chaos_Seq;
+                    Valid_Data           <= 0;
+                    STP_Out_Reg_Re       <= 0;
                     Ones_Zeros_Count_Clr <= 0;
                 end
             end

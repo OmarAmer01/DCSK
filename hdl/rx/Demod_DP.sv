@@ -22,6 +22,7 @@ module Demod_DP
     input  logic        STP_Out_Reg_Load, //? Serial to parallel output register load signal
     input  logic        STP_Out_Reg_Re,   //? Serial to parallel output register read enable signal
     input  logic [4:0]  STP_Out_Reg_Addr, //? Serial to parallel output register bit number that we will write current bit in
+    input  logic        Valid_Data,
     output logic [4:0]  Spread_Factor,
     output logic        Correlated_Bit,   //? send this bit to FSM to send a control signal to the accumelator of ones or zeros
     output logic [31:0] Out_Data          //? Output demodulated data can be (2,4,8,16)bits according to the spread factor 
