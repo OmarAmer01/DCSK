@@ -55,6 +55,7 @@ always@(posedge Clk or negedge N_Rst)begin
         case(State)
             Idle:begin
                 Valid_Data       <= 0;
+                STP_Out_Reg_Re   <= 0;
                 if(Valid)begin
                     State            <= Store_Chaos_Seq;
                     Var_Del_Reg_Load <= 1;
