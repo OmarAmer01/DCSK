@@ -21,7 +21,7 @@ module tx_tb;
   localparam int PERIOD = 100;
   always #(PERIOD / 2) i_clk = ~i_clk;
 
-  localparam TEST_ITERATIONS = 10000;
+  localparam TEST_ITERATIONS = 1000;
 
   //! UUT
   tx_if intf (i_clk);

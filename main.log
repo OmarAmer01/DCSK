@@ -1,0 +1,161 @@
+This is mikTeX, Version 3.141592653 (MiKTeX 23.4) (preloaded format=tex 2023.12.12)  12 DEC 2023 22:00
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./docs/design_document/main.tex
+(docs/design_document/main.tex
+! Undefined control sequence.
+l.1 \documentclass
+                  [a4paper, 12pt]{report}
+? 
+! Undefined control sequence.
+l.2 \usepackage
+               [a4paper, width=150mm,top=25mm,bottom=25mm]{geometry}
+? 
+! Undefined control sequence.
+l.3 \usepackage
+               {fancyhdr}
+? 
+! Undefined control sequence.
+l.4 \pagestyle
+              {fancy}
+? 
+! Undefined control sequence.
+l.5 \fancyfoot
+              [C]{Page \thepage}
+? 
+! Undefined control sequence.
+l.5 \fancyfoot[C]{Page \thepage
+                               }
+? 
+! Undefined control sequence.
+l.6 \usepackage
+               {authblk}
+? 
+! Undefined control sequence.
+l.7 \usepackage
+               {graphicx}
+? 
+! Undefined control sequence.
+l.8 \graphicspath
+                 {{graphics/}{../../diagrams/}}
+? 
+! Undefined control sequence.
+l.9 \usepackage
+               {amsmath, amssymb}
+? 
+! Undefined control sequence.
+l.10 \usepackage
+                {xcolor, array, rotating}
+? 
+
+Overfull \hbox (17.66289pt too wide) in paragraph at lines 1--11
+[]\tenrm [a4paper, 12pt]report [a4paper, width=150mm,top=25mm,bottom=25mm]geome
+try fan-cy-hdr fancy [C]Page|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm [
+.\tenrm a
+.\tenrm 4
+.\tenrm p
+.etc.
+
+! Undefined control sequence.
+l.12 \begin
+           {document}
+? 
+! I can't find file `title_page.tex'.
+l.13     \input{title_page.tex}
+                               
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `title_page.tex'.
+l.13     \input{title_page.tex}
+                               
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `title_page.tex'.
+l.13     \input{title_page.tex}
+                               
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `title_page.tex'.
+l.13     \input{title_page.tex}
+                               
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `title_page.tex'.
+l.13     \input{title_page.tex}
+                               
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `title_page.tex'.
+l.13     \input{title_page.tex}
+                               
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `title_page.tex'.
+l.13     \input{title_page.tex}
+                               
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `title_page.tex'.
+l.13     \input{title_page.tex}
+                               
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `title_page.tex'.
+l.13     \input{title_page.tex}
+                               
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `title_page.tex'.
+l.13     \input{title_page.tex}
+                               
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `title_page.tex'.
+l.13     \input{title_page.tex}
+                               
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `title_page.tex'.
+l.13     \input{title_page.tex}
+                               
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `title_page.tex'.
+l.13     \input{title_page.tex}
+                               
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `title_page.tex'.
+l.13     \input{title_page.tex}
+                               
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `title_page.tex'.
+l.13     \input{title_page.tex}
+                               
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `title_page.tex'.
+l.13     \input{title_page.tex}
+                               
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `title_page.tex'.
+l.13     \input{title_page.tex}
+                               
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `title_page.tex'.
+l.13     \input{title_page.tex}
+                               
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 
+! I can't find file `title_page.tex'.
+l.13     \input{title_page.tex}
+                               
+(Press Enter to retry, or Control-C to exit)
+Please type another input file name: 

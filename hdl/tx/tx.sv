@@ -63,7 +63,7 @@ chip_bit_ctr U_chip_bit_ctr (
     .i_clk            (tx_if.i_clk),
     .i_arst_n         (tx_if.i_arst_n),
     .i_en             (en_bit_chip_ctr),
-    .i_sf             (intf.i_sf),
+    .i_sf             (tx_if.i_sf),
     .o_bit_index      (bit_ctr),
     .o_chip_index     (chip_ctr),
     .o_chip_index_msb (chip_ctr_msb),

@@ -752,6 +752,11 @@ R0
 R0
 R0
 R0
+R0
+R0
+R0
+R0
+R0
 !s11f MIXED_VERSIONS
 13
 !s112 1.1
@@ -795,18 +800,19 @@ R6
 R1
 T_opt3
 !s11d modem_pkg G:/Projects/DCSK/DCSK/DCSK/work 1 tx_if 1 G:/Projects/DCSK/DCSK/DCSK/work 
-!s110 1702345271
-Vm@01S5<7NZVDUAMh7AF0f1
-04 5 4 work tx_tb fast 0
-=1-98fa9bd5c19f-6577ba37-3c-598
+!s110 1702424909
+VV=26cME0_IiJ]CUiPZ@493
+04 10 4 work end2end_tb fast 0
+=1-98fa9bd5c19f-6578f14d-14b-c54
 R3
 R4
 R5
 n@_opt3
 R6
+R1
 vbooth_mul
 Z7 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z8 !s110 1702345267
+Z8 !s110 1702425001
 !i10b 1
 !s100 dVP^2j7z0HKnM[hH8]jTX1
 I:deNfaG8S8m350XBGbQLi0
@@ -815,18 +821,18 @@ Z9 dG:/Projects/DCSK/DCSK/DCSK
 w1701643009
 8./hdl/booth/booth_mul.sv
 F./hdl/booth/booth_mul.sv
-!i122 1127
+!i122 1139
 L0 13 53
 Z10 VDg1SIo80bB@j0V0VzS_@n1
 Z11 OL;L;2021.1;73
 r1
 !s85 0
 31
-Z12 !s108 1702345267.000000
-Z13 !s107 ./ver/tx/tx_tb.sv|./ver/tx/chaos_gen/logistic_map_tb.sv|./ver/tx/chaos_gen/chaos_xpander_tb.sv|./ver/tx/chaos_gen/chaos_gen_tb.sv|./ver/booth/calc_partial_product_tb.sv|./ver/booth/booth_mul_tb.sv|./ver/pkgs/modem_pkg.sv|./hdl/tx/tx_fsm.sv|./hdl/tx/tx.sv|./hdl/tx/modulator.sv|./hdl/tx/chip_bit_ctr.sv|./hdl/tx/chaos_gen/logistic_map.sv|./hdl/tx/chaos_gen/chaos_xpander.sv|./hdl/tx/chaos_gen/chaos_gen.sv|./hdl/booth/calc_partial_product.sv|./hdl/booth/booth_mul.sv|./hdl/misc/piso.sv|./hdl/misc/negedge_detector.sv|./hdl/interfaces/tx_if.sv|./hdl/pkgs/wire_shuffler_pkg.sv|./hdl/pkgs/spreading_factors_pkg.sv|
-Z14 !s90 -f|.\filelist.f|-lint|
+Z12 !s108 1702425001.000000
+!s107 ./ver/end2end_tb.sv|./ver/tx/tx_tb.sv|./ver/tx/chaos_gen/logistic_map_tb.sv|./ver/tx/chaos_gen/chaos_xpander_tb.sv|./ver/tx/chaos_gen/chaos_gen_tb.sv|./ver/booth/calc_partial_product_tb.sv|./ver/booth/booth_mul_tb.sv|./ver/pkgs/modem_pkg.sv|./hdl/rx/rx.sv|./hdl/rx/FSM.sv|./hdl/rx/Demod_Top.sv|./hdl/rx/Demod_TB.sv|./hdl/rx/Demod_DP.sv|./hdl/tx/tx_fsm.sv|./hdl/tx/tx.sv|./hdl/tx/modulator.sv|./hdl/tx/chip_bit_ctr.sv|./hdl/tx/chaos_gen/logistic_map.sv|./hdl/tx/chaos_gen/chaos_xpander.sv|./hdl/tx/chaos_gen/chaos_gen.sv|./hdl/booth/calc_partial_product.sv|./hdl/booth/booth_mul.sv|./hdl/misc/piso.sv|./hdl/misc/negedge_detector.sv|./hdl/interfaces/tx_if.sv|./hdl/pkgs/wire_shuffler_pkg.sv|./hdl/pkgs/spreading_factors_pkg.sv|
+Z13 !s90 -f|.\filelist.f|-lint|
 !i113 0
-Z15 o-lint -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z14 o-lint -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R5
 vbooth_mul_tb
 R7
@@ -839,7 +845,7 @@ R9
 w1702329786
 8./ver/booth/booth_mul_tb.sv
 F./ver/booth/booth_mul_tb.sv
-!i122 1127
+!i122 1139
 L0 13 48
 R10
 R11
@@ -847,10 +853,10 @@ r1
 !s85 0
 31
 R12
+Z15 !s107 ./ver/end2end_tb.sv|./ver/tx/tx_tb.sv|./ver/tx/chaos_gen/logistic_map_tb.sv|./ver/tx/chaos_gen/chaos_xpander_tb.sv|./ver/tx/chaos_gen/chaos_gen_tb.sv|./ver/booth/calc_partial_product_tb.sv|./ver/booth/booth_mul_tb.sv|./ver/pkgs/modem_pkg.sv|./hdl/rx/rx.sv|./hdl/rx/FSM.sv|./hdl/rx/Demod_Top.sv|./hdl/rx/Demod_TB.sv|./hdl/rx/Demod_DP.sv|./hdl/tx/tx_fsm.sv|./hdl/tx/tx.sv|./hdl/tx/modulator.sv|./hdl/tx/chip_bit_ctr.sv|./hdl/tx/chaos_gen/logistic_map.sv|./hdl/tx/chaos_gen/chaos_xpander.sv|./hdl/tx/chaos_gen/chaos_gen.sv|./hdl/booth/calc_partial_product.sv|./hdl/booth/booth_mul.sv|./hdl/misc/piso.sv|./hdl/misc/negedge_detector.sv|./hdl/interfaces/tx_if.sv|./hdl/pkgs/wire_shuffler_pkg.sv|./hdl/pkgs/spreading_factors_pkg.sv|
 R13
-R14
 !i113 0
-R15
+R14
 R5
 vcalc_partial_product
 R7
@@ -863,7 +869,7 @@ R9
 w1701220052
 8./hdl/booth/calc_partial_product.sv
 F./hdl/booth/calc_partial_product.sv
-!i122 1127
+!i122 1139
 L0 16 51
 R10
 R11
@@ -871,10 +877,10 @@ r1
 !s85 0
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 vcalc_partial_product_tb
 R7
@@ -887,7 +893,7 @@ R9
 w1702329794
 8./ver/booth/calc_partial_product_tb.sv
 F./ver/booth/calc_partial_product_tb.sv
-!i122 1127
+!i122 1139
 L0 14 69
 R10
 R11
@@ -895,10 +901,10 @@ r1
 !s85 0
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 vchaos_gen
 R7
@@ -911,7 +917,7 @@ R9
 w1702326901
 8./hdl/tx/chaos_gen/chaos_gen.sv
 F./hdl/tx/chaos_gen/chaos_gen.sv
-!i122 1127
+!i122 1139
 L0 12 45
 R10
 R11
@@ -919,10 +925,10 @@ r1
 !s85 0
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 vchaos_gen_tb
 R7
@@ -935,7 +941,7 @@ R9
 w1702329800
 8./ver/tx/chaos_gen/chaos_gen_tb.sv
 F./ver/tx/chaos_gen/chaos_gen_tb.sv
-!i122 1127
+!i122 1139
 L0 14 44
 R10
 R11
@@ -943,10 +949,10 @@ r1
 !s85 0
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 vchaos_mod_mux
 R7
@@ -1005,7 +1011,7 @@ R24
 R5
 vchaos_xpander
 R7
-Z25 DXx4 work 17 wire_shuffler_pkg 0 22 ?8QSo8GDbJ7R]zfN=n:VJ0
+Z25 DXx4 work 17 wire_shuffler_pkg 0 22 7[4kzQ`db]6CcTmFZ=Im50
 DXx4 work 21 chaos_xpander_sv_unit 0 22 =jWIR:DKXk@DoYjQFHR^T3
 R8
 R10
@@ -1020,15 +1026,15 @@ R9
 Z26 w1701721164
 Z27 8./hdl/tx/chaos_gen/chaos_xpander.sv
 Z28 F./hdl/tx/chaos_gen/chaos_xpander.sv
-!i122 1127
+!i122 1139
 L0 13 26
 R11
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 Xchaos_xpander_sv_unit
 R7
@@ -1046,15 +1052,15 @@ R9
 R26
 R27
 R28
-!i122 1127
+!i122 1139
 Z29 L0 12 0
 R11
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 vchaos_xpander_tb
 R7
@@ -1074,15 +1080,15 @@ R9
 Z30 w1702329807
 Z31 8./ver/tx/chaos_gen/chaos_xpander_tb.sv
 Z32 F./ver/tx/chaos_gen/chaos_xpander_tb.sv
-!i122 1127
+!i122 1139
 L0 15 80
 R11
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 Xchaos_xpander_tb_sv_unit
 R7
@@ -1101,15 +1107,15 @@ R9
 R30
 R31
 R32
-!i122 1127
+!i122 1139
 L0 13 0
 R11
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 vchip_bit_ctr
 R7
@@ -1128,15 +1134,15 @@ R9
 Z34 w1702326058
 Z35 8./hdl/tx/chip_bit_ctr.sv
 Z36 F./hdl/tx/chip_bit_ctr.sv
-!i122 1127
+!i122 1139
 L0 15 54
 R11
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 Xchip_bit_ctr_sv_unit
 R7
@@ -1154,15 +1160,15 @@ R9
 R34
 R35
 R36
-!i122 1127
+!i122 1139
 Z37 L0 14 0
 R11
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 vchip_ctr
 R7
@@ -1219,6 +1225,31 @@ R23
 !i113 0
 R24
 R5
+vDemod_DP
+R7
+R8
+!i10b 1
+!s100 ?L6LZ?nQjYhSYOk=@]<nL3
+I6K@YV_Z[dUTQl?43HZm0U0
+S1
+R9
+Z44 w1702346132
+8./hdl/rx/Demod_DP.sv
+F./hdl/rx/Demod_DP.sv
+!i122 1139
+L0 10 73
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R5
+n@demod_@d@p
 Xdemod_pkg
 R7
 !s110 1702052748
@@ -1243,6 +1274,140 @@ R23
 !i113 0
 R24
 R5
+vDemod_TB
+R7
+R8
+!i10b 1
+!s100 iB`?i8c:7UfGd8VlHh5<`2
+I[^WEgYFaDFz]=nV6Gj<Iz1
+S1
+R9
+R44
+8./hdl/rx/Demod_TB.sv
+F./hdl/rx/Demod_TB.sv
+!i122 1139
+L0 1 120
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R5
+n@demod_@t@b
+vDemod_Top
+R7
+R8
+!i10b 1
+!s100 9OXjjICdI8=]1I[EPlTKR2
+I7D;J>6]kV6KCP<m8Y4e`O3
+S1
+R9
+w1702322107
+8./hdl/rx/Demod_Top.sv
+F./hdl/rx/Demod_Top.sv
+!i122 1139
+L0 11 66
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R5
+n@demod_@top
+vend2end_tb
+R7
+R7
+R7
+R33
+Z45 DXx4 work 9 modem_pkg 0 22 Hdf`WmKZWV:`9W:H;8c6F2
+DXx4 work 18 end2end_tb_sv_unit 0 22 hN2m[aHF[]GHD;Q[Wk2IJ1
+R8
+R10
+r1
+!s85 0
+!i10b 1
+!s100 PECSUbdFkcg:Sj0hWhLEF0
+IRncLDOKle?d_Zb2V43Z591
+!s105 end2end_tb_sv_unit
+S1
+R9
+Z46 w1702424999
+Z47 8./ver/end2end_tb.sv
+Z48 F./ver/end2end_tb.sv
+!i122 1139
+L0 19 112
+R11
+31
+R12
+R15
+R13
+!i113 0
+R14
+R5
+Xend2end_tb_sv_unit
+R7
+R7
+R7
+R33
+R45
+R8
+VhN2m[aHF[]GHD;Q[Wk2IJ1
+r1
+!s85 0
+!i10b 1
+!s100 bT>h2L`mzHj?k<JDf1_R50
+IhN2m[aHF[]GHD;Q[Wk2IJ1
+!i103 1
+S1
+R9
+R46
+R47
+R48
+!i122 1139
+Z49 L0 16 0
+R11
+31
+R12
+R15
+R13
+!i113 0
+R14
+R5
+vFSM
+R7
+R8
+!i10b 1
+!s100 ^cCEIkLKG?f<Am<2AijYS2
+IQSjZ465S3?GX_];5DiT903
+S1
+R9
+R44
+8./hdl/rx/FSM.sv
+F./hdl/rx/FSM.sv
+!i122 1139
+L0 11 124
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R5
+n@f@s@m
 vlogistic_map
 R7
 R8
@@ -1254,7 +1419,7 @@ R9
 w1701716029
 8./hdl/tx/chaos_gen/logistic_map.sv
 F./hdl/tx/chaos_gen/logistic_map.sv
-!i122 1127
+!i122 1139
 L0 12 35
 R10
 R11
@@ -1262,10 +1427,10 @@ r1
 !s85 0
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 vlogistic_map_tb
 R7
@@ -1276,9 +1441,9 @@ IW``>j<[fJ2=1FThojEHcl3
 S1
 R9
 w1702333574
-Z44 8./ver/tx/chaos_gen/logistic_map_tb.sv
-Z45 F./ver/tx/chaos_gen/logistic_map_tb.sv
-!i122 1127
+Z50 8./ver/tx/chaos_gen/logistic_map_tb.sv
+Z51 F./ver/tx/chaos_gen/logistic_map_tb.sv
+!i122 1139
 L0 13 111
 R10
 R11
@@ -1286,10 +1451,10 @@ r1
 !s85 0
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 Xlogistic_map_tb_sv_unit
 R7
@@ -1304,15 +1469,15 @@ IBH0b7UVniTo1jVjb1H0da3
 S1
 R9
 w1701618975
-R44
-R45
+R50
+R51
 !i122 390
 R37
 R11
 31
 !s108 1701618977.000000
-Z46 !s107 ./ver/tx/chaos_gen/logistic_map_tb.sv|./ver/tx/chaos_gen/chaos_xpander_tb.sv|./ver/tx/chaos_gen/chaos_gen_tb.sv|./ver/booth/calc_partial_product_tb.sv|./ver/booth/booth_mul_tb.sv|./hdl/tx/tx.sv|./hdl/tx/serializer/serializer.sv|./hdl/tx/modulator/modulator.sv|./hdl/tx/chaos_gen/logistic_map.sv|./hdl/tx/chaos_gen/chaos_xpander.sv|./hdl/tx/chaos_gen/chaos_gen.sv|./hdl/booth/calc_partial_product.sv|./hdl/booth/booth_mul.sv|./hdl/misc/piso.sv|./hdl/pkgs/wire_shuffler_pkg.sv|
-Z47 !s90 -f|filelist.f|
+Z52 !s107 ./ver/tx/chaos_gen/logistic_map_tb.sv|./ver/tx/chaos_gen/chaos_xpander_tb.sv|./ver/tx/chaos_gen/chaos_gen_tb.sv|./ver/booth/calc_partial_product_tb.sv|./ver/booth/booth_mul_tb.sv|./hdl/tx/tx.sv|./hdl/tx/serializer/serializer.sv|./hdl/tx/modulator/modulator.sv|./hdl/tx/chaos_gen/logistic_map.sv|./hdl/tx/chaos_gen/chaos_xpander.sv|./hdl/tx/chaos_gen/chaos_gen.sv|./hdl/booth/calc_partial_product.sv|./hdl/booth/booth_mul.sv|./hdl/misc/piso.sv|./hdl/pkgs/wire_shuffler_pkg.sv|
+Z53 !s90 -f|filelist.f|
 !i113 0
 R24
 R5
@@ -1330,7 +1495,7 @@ R9
 w1702342452
 8./ver/pkgs/modem_pkg.sv
 F./ver/pkgs/modem_pkg.sv
-!i122 1127
+!i122 1139
 R29
 VHdf`WmKZWV:`9W:H;8c6F2
 R11
@@ -1338,10 +1503,10 @@ r1
 !s85 0
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 vmodulator
 R7
@@ -1358,18 +1523,18 @@ IYFz1l[`jKMB<94GA5P1ID2
 !s105 modulator_sv_unit
 S1
 R9
-Z48 w1702329110
-Z49 8./hdl/tx/modulator.sv
-Z50 F./hdl/tx/modulator.sv
-!i122 1127
+Z54 w1702329110
+Z55 8./hdl/tx/modulator.sv
+Z56 F./hdl/tx/modulator.sv
+!i122 1139
 L0 13 44
 R11
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 Xmodulator_sv_unit
 R7
@@ -1385,18 +1550,18 @@ IB9_On;FVCe<Nidz:DEjLl3
 !i103 1
 S1
 R9
-R48
-R49
-R50
-!i122 1127
+R54
+R55
+R56
+!i122 1139
 R29
 R11
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 vnegedge_detector
 R7
@@ -1409,7 +1574,7 @@ R9
 w1702325238
 8./hdl/misc/negedge_detector.sv
 F./hdl/misc/negedge_detector.sv
-!i122 1127
+!i122 1139
 L0 11 17
 R10
 R11
@@ -1417,10 +1582,10 @@ r1
 !s85 0
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 vpiso
 R7
@@ -1433,7 +1598,7 @@ R9
 w1701612566
 8./hdl/misc/piso.sv
 F./hdl/misc/piso.sv
-!i122 1127
+!i122 1139
 L0 9 33
 R10
 R11
@@ -1441,10 +1606,10 @@ r1
 !s85 0
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 vserialization_counter
 R7
@@ -1513,8 +1678,8 @@ r1
 !s85 0
 31
 !s108 1701793217.000000
-R46
-R47
+R52
+R53
 !i113 0
 R24
 R5
@@ -1553,7 +1718,7 @@ R9
 w1701985541
 8./hdl/pkgs/spreading_factors_pkg.sv
 F./hdl/pkgs/spreading_factors_pkg.sv
-!i122 1127
+!i122 1139
 R29
 Ve56h?OPd4==Q^^>gFcboO1
 R11
@@ -1561,23 +1726,23 @@ r1
 !s85 0
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 vtx
 R7
 R8
 !i10b 1
-!s100 =>:ib6Qee9`Ph]RVoL6f60
-I@>1K`d[nnUK0^4WQgQno41
+!s100 aZR?YgCA8NA@_^ckQmLDO2
+IoA65ld5nnng@JaVdVK1NW2
 S1
 R9
-w1702329772
+w1702419220
 8./hdl/tx/tx.sv
 F./hdl/tx/tx.sv
-!i122 1127
+!i122 1139
 L0 15 81
 R10
 R11
@@ -1585,10 +1750,10 @@ r1
 !s85 0
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 vtx_fsm
 R7
@@ -1601,7 +1766,7 @@ R9
 w1702343155
 8./hdl/tx/tx_fsm.sv
 F./hdl/tx/tx_fsm.sv
-!i122 1127
+!i122 1139
 L0 14 88
 R10
 R11
@@ -1609,23 +1774,23 @@ r1
 !s85 0
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 Ytx_if
 R7
 R8
 !i10b 1
-!s100 a]nXNXZa_dQV;0a6b[B583
-I8Q5_e[SF@A`h7:0kD?Y3V2
+!s100 zlm0@>z_C;674I:OV^`E@0
+IbbzMTRUk8OG2DO]:j^G9i3
 S1
 R9
-w1702328971
+w1702419008
 8./hdl/interfaces/tx_if.sv
 F./hdl/interfaces/tx_if.sv
-!i122 1127
+!i122 1139
 L0 15 0
 R10
 R11
@@ -1633,45 +1798,45 @@ r1
 !s85 0
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 vtx_tb
 R7
 R7
 R33
-Z51 DXx4 work 9 modem_pkg 0 22 Hdf`WmKZWV:`9W:H;8c6F2
+R45
 DXx4 work 13 tx_tb_sv_unit 0 22 @ac]iSgmT_WBCE<Zn:W]20
 R8
 R10
 r1
 !s85 0
 !i10b 1
-!s100 2[98_kWQeoAe:b_7A;oSo2
-I5HIL8`FQYBPG=9]ClOSXm3
+!s100 WSPB5WfJ:chSCGAa2zB5[0
+IK;8]`@2Z4F8YRfIQPWWgk1
 !s105 tx_tb_sv_unit
 S1
 R9
-Z52 w1702345264
-Z53 8./ver/tx/tx_tb.sv
-Z54 F./ver/tx/tx_tb.sv
-!i122 1127
+Z57 w1702419527
+Z58 8./ver/tx/tx_tb.sv
+Z59 F./ver/tx/tx_tb.sv
+!i122 1139
 L0 17 119
 R11
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 Xtx_tb_sv_unit
 R7
 R7
 R33
-R51
+R45
 R8
 V@ac]iSgmT_WBCE<Zn:W]20
 r1
@@ -1682,18 +1847,18 @@ I@ac]iSgmT_WBCE<Zn:W]20
 !i103 1
 S1
 R9
-R52
-R53
-R54
-!i122 1127
+R57
+R58
+R59
+!i122 1139
 R37
 R11
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5
 Xwire_shuffler
 R7
@@ -1707,7 +1872,7 @@ w1700612360
 8pkgs/wire_shuffler.sv
 Fpkgs/wire_shuffler.sv
 !i122 8
-Z55 L0 16 0
+R49
 VnX1zNgocUYeFg5C6Ygf9R0
 R11
 r1
@@ -1715,7 +1880,7 @@ r1
 31
 !s108 1700612366.000000
 !s107 hdl/modulator/modulator.sv|hdl/modulator/chaos_xpander.sv|pkgs/wire_shuffler.sv|
-R47
+R53
 !i113 0
 R24
 R5
@@ -1723,23 +1888,23 @@ Xwire_shuffler_pkg
 R7
 R8
 !i10b 1
-!s100 6dnJL7T4nU_fI[>fA^lA32
-I?8QSo8GDbJ7R]zfN=n:VJ0
+!s100 h_F`iDLAge5c_I=_@RPQz1
+I7[4kzQ`db]6CcTmFZ=Im50
 S1
 R9
-w1701726751
+w1702419513
 8./hdl/pkgs/wire_shuffler_pkg.sv
 F./hdl/pkgs/wire_shuffler_pkg.sv
-!i122 1127
-R55
-V?8QSo8GDbJ7R]zfN=n:VJ0
+!i122 1139
+R49
+V7[4kzQ`db]6CcTmFZ=Im50
 R11
 r1
 !s85 0
 31
 R12
-R13
-R14
-!i113 0
 R15
+R13
+!i113 0
+R14
 R5

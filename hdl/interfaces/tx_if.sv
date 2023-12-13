@@ -33,10 +33,13 @@ interface tx_if(input logic i_clk);
         output o_tx, o_is_sending
     );
 
+    // synthesis translate_off
     default clocking cb @(posedge i_clk);
         output i_arst_n, i_clk, i_msg, i_seed, i_load_seed, i_sf, i_send;
         input o_tx;
         input o_is_sending;
     endclocking
+
+    // synthesis translate_on
 
 endinterface

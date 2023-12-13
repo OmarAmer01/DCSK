@@ -12,21 +12,19 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# vsim tx_tb -debugDB=+ACC -do "./ver/tx/tx.do" -msgmode both -displaymsgmode both 
-# Start time: 20:52:25 on Dec 11,2023
-# ** Warning: (vsim-4308) Enabling visibility using +acc is recommended with debug flow.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Note: (vsim-8611) Generating debug db.
-# ** Warning: (vopt-4308) Enabling visibility using +acc is recommended with debug flow.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# vsim end2end_tb -debugDB=+ACC -do "./ver/end_to_end.do" -msgmode both -displaymsgmode both 
+# Start time: 01:54:51 on Dec 13,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt3
 # Loading sv_std.std
 # Loading work.tx_if(fast)
 # Loading work.spreading_factors_pkg(fast)
 # Loading work.modem_pkg(fast)
-# Loading work.tx_tb_sv_unit(fast)
-# Loading work.tx_tb(fast)
+# Loading work.end2end_tb_sv_unit(fast)
+# Loading work.end2end_tb(fast)
 # Loading work.tx_if(fast__2)
 # Loading work.tx(fast)
+# Loading work.tx_fsm(fast)
+# Loading work.negedge_detector(fast)
 # Loading work.chaos_gen(fast)
 # Loading work.logistic_map(fast)
 # Loading work.booth_mul(fast)
@@ -35,1017 +33,116 @@
 # Loading work.chaos_xpander_sv_unit(fast)
 # Loading work.chaos_xpander(fast)
 # Loading work.piso(fast)
-# Loading work.chip_ctr_sv_unit(fast)
-# Loading work.chip_ctr(fast)
+# Loading work.chip_bit_ctr_sv_unit(fast)
+# Loading work.chip_bit_ctr(fast)
+# Loading work.piso(fast__1)
 # Loading work.modulator_sv_unit(fast)
 # Loading work.modulator(fast)
-# Loading work.piso(fast__1)
-# ** Note: (vsim-8900) Creating design debug database +ACC.
-# do ./ver/tx/tx.do
+# Loading work.Demod_Top(fast)
+# Loading work.Demod_DP(fast)
+# Loading work.FSM(fast)
+# ** Note: (vsim-8716) Reusing existing debug database +ACC.
+# do ./ver/end_to_end.do
 # 
 # ======== Sending Msg (ID-0) =======
 # Current Time; 5500 ns.
-# Data: 0x12f837e7
-# Spreading Factor: SF4
-# MSG (ID-0) Fully Sent @ 262500 ns.
+# Data: 0x8eb74a7c
+# Spreading Factor: SF2
 # ===================================
 # 
-# [PASS] MSG (ID-0) Received Successfully.
-# EXPECTED = 12f837e7
+# End of Burst. Silence for 0 Cycles.
 # 
 # ======== Sending Msg (ID-1) =======
-# Current Time; 263500 ns.
-# Data: 0x4682679c
-# Spreading Factor: SF4
-# MSG (ID-1) Fully Sent @ 520500 ns.
+# Current Time; 133500 ns.
+# Data: 0xc73523a7
+# Spreading Factor: SF2
 # ===================================
 # 
-# [PASS] MSG (ID-1) Received Successfully.
-# EXPECTED = 4682679c
+# End of Burst. Silence for 6 Cycles.
 # 
 # ======== Sending Msg (ID-2) =======
-# Current Time; 521500 ns.
-# Data: 0x519afde8
-# Spreading Factor: SF4
-# MSG (ID-2) Fully Sent @ 778500 ns.
+# Current Time; 267500 ns.
+# Data: 0x03d23d59
+# Spreading Factor: SF2
 # ===================================
 # 
-# [PASS] MSG (ID-2) Received Successfully.
-# EXPECTED = 519afde8
 # 
 # ======== Sending Msg (ID-3) =======
-# Current Time; 779500 ns.
-# Data: 0x61604716
-# Spreading Factor: SF4
-# MSG (ID-3) Fully Sent @ 1036500 ns.
+# Current Time; 395500 ns.
+# Data: 0x1fc6b311
+# Spreading Factor: SF2
 # ===================================
 # 
-# [PASS] MSG (ID-3) Received Successfully.
-# EXPECTED = 61604716
 # 
 # ======== Sending Msg (ID-4) =======
-# Current Time; 1037500 ns.
-# Data: 0x4879f300
-# Spreading Factor: SF4
-# MSG (ID-4) Fully Sent @ 1294500 ns.
+# Current Time; 523500 ns.
+# Data: 0x68c470a5
+# Spreading Factor: SF2
 # ===================================
 # 
-# [PASS] MSG (ID-4) Received Successfully.
-# EXPECTED = 4879f300
+# ** Error: [FAIL] Msg-ID4: Found 03e6a732 Expected 8eb74a7c
+#    Time: 61450 ns  Scope: end2end_tb.monitor_loop File: ./ver/end2end_tb.sv Line: 126
 # 
 # ======== Sending Msg (ID-5) =======
-# Current Time; 1295500 ns.
-# Data: 0x58b64df8
-# Spreading Factor: SF4
-# MSG (ID-5) Fully Sent @ 1552500 ns.
+# Current Time; 651500 ns.
+# Data: 0x37575c90
+# Spreading Factor: SF2
 # ===================================
 # 
-# [PASS] MSG (ID-5) Received Successfully.
-# EXPECTED = 58b64df8
 # 
 # ======== Sending Msg (ID-6) =======
-# Current Time; 1553500 ns.
-# Data: 0x1fc6b311
-# Spreading Factor: SF4
-# MSG (ID-6) Fully Sent @ 1810500 ns.
+# Current Time; 779500 ns.
+# Data: 0x24b5be83
+# Spreading Factor: SF2
 # ===================================
 # 
-# [PASS] MSG (ID-6) Received Successfully.
-# EXPECTED = 1fc6b311
 # 
 # ======== Sending Msg (ID-7) =======
-# Current Time; 1811500 ns.
-# Data: 0x3b8f4ffc
-# Spreading Factor: SF4
-# MSG (ID-7) Fully Sent @ 2068500 ns.
+# Current Time; 907500 ns.
+# Data: 0x2bdf79cd
+# Spreading Factor: SF2
 # ===================================
 # 
-# [PASS] MSG (ID-7) Received Successfully.
-# EXPECTED = 3b8f4ffc
 # 
 # ======== Sending Msg (ID-8) =======
-# Current Time; 2069500 ns.
-# Data: 0x31ed88de
-# Spreading Factor: SF4
-# MSG (ID-8) Fully Sent @ 2326500 ns.
+# Current Time; 1035500 ns.
+# Data: 0x070e17b2
+# Spreading Factor: SF2
 # ===================================
 # 
-# [PASS] MSG (ID-8) Received Successfully.
-# EXPECTED = 31ed88de
 # 
 # ======== Sending Msg (ID-9) =======
-# Current Time; 2327500 ns.
-# Data: 0x37575c90
-# Spreading Factor: SF4
-# MSG (ID-9) Fully Sent @ 2584500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-9) Received Successfully.
-# EXPECTED = 37575c90
-# 
-# ======== Sending Msg (ID-10) =======
-# Current Time; 2585500 ns.
-# Data: 0x49c4b7de
-# Spreading Factor: SF4
-# MSG (ID-10) Fully Sent @ 2842500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-10) Received Successfully.
-# EXPECTED = 49c4b7de
-# 
-# ======== Sending Msg (ID-11) =======
-# Current Time; 2843500 ns.
-# Data: 0xc3b85986
-# Spreading Factor: SF4
-# MSG (ID-11) Fully Sent @ 3100500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-11) Received Successfully.
-# EXPECTED = c3b85986
-# 
-# ======== Sending Msg (ID-12) =======
-# Current Time; 3101500 ns.
-# Data: 0x2bdf79cd
-# Spreading Factor: SF4
-# MSG (ID-12) Fully Sent @ 3358500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-12) Received Successfully.
-# EXPECTED = 2bdf79cd
-# 
-# ======== Sending Msg (ID-13) =======
-# Current Time; 3359500 ns.
-# Data: 0x3e6f604f
-# Spreading Factor: SF4
-# MSG (ID-13) Fully Sent @ 3616500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-13) Received Successfully.
-# EXPECTED = 3e6f604f
-# 
-# ======== Sending Msg (ID-14) =======
-# Current Time; 3617500 ns.
-# Data: 0xc182e897
-# Spreading Factor: SF4
-# MSG (ID-14) Fully Sent @ 3874500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-14) Received Successfully.
-# EXPECTED = c182e897
-# 
-# ======== Sending Msg (ID-15) =======
-# Current Time; 3875500 ns.
+# Current Time; 1163500 ns.
 # Data: 0x83d3cf1e
-# Spreading Factor: SF4
-# MSG (ID-15) Fully Sent @ 4132500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-15) Received Successfully.
-# EXPECTED = 83d3cf1e
-# 
-# ======== Sending Msg (ID-16) =======
-# Current Time; 4133500 ns.
-# Data: 0x997a812c
-# Spreading Factor: SF4
-# MSG (ID-16) Fully Sent @ 4390500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-16) Received Successfully.
-# EXPECTED = 997a812c
-# 
-# ======== Sending Msg (ID-17) =======
-# Current Time; 4391500 ns.
-# Data: 0x49804e9e
-# Spreading Factor: SF4
-# MSG (ID-17) Fully Sent @ 4648500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-17) Received Successfully.
-# EXPECTED = 49804e9e
-# 
-# ======== Sending Msg (ID-18) =======
-# Current Time; 4649500 ns.
-# Data: 0x9df1a1b2
-# Spreading Factor: SF4
-# MSG (ID-18) Fully Sent @ 4906500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-18) Received Successfully.
-# EXPECTED = 9df1a1b2
-# 
-# ======== Sending Msg (ID-19) =======
-# Current Time; 4907500 ns.
-# Data: 0xb9fe2752
-# Spreading Factor: SF4
-# MSG (ID-19) Fully Sent @ 5164500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-19) Received Successfully.
-# EXPECTED = b9fe2752
-# 
-# ======== Sending Msg (ID-20) =======
-# Current Time; 5165500 ns.
-# Data: 0xf6ee3b31
-# Spreading Factor: SF4
-# MSG (ID-20) Fully Sent @ 5422500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-20) Received Successfully.
-# EXPECTED = f6ee3b31
-# 
-# ======== Sending Msg (ID-21) =======
-# Current Time; 5423500 ns.
-# Data: 0xde7eeb99
-# Spreading Factor: SF4
-# MSG (ID-21) Fully Sent @ 5680500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-21) Received Successfully.
-# EXPECTED = de7eeb99
-# 
-# ======== Sending Msg (ID-22) =======
-# Current Time; 5681500 ns.
-# Data: 0x146ea402
-# Spreading Factor: SF4
-# MSG (ID-22) Fully Sent @ 5938500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-22) Received Successfully.
-# EXPECTED = 146ea402
-# 
-# ======== Sending Msg (ID-23) =======
-# Current Time; 5939500 ns.
-# Data: 0xfec5fee1
-# Spreading Factor: SF4
-# MSG (ID-23) Fully Sent @ 6196500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-23) Received Successfully.
-# EXPECTED = fec5fee1
-# 
-# ======== Sending Msg (ID-24) =======
-# Current Time; 6197500 ns.
-# Data: 0x9eee4f2f
-# Spreading Factor: SF4
-# MSG (ID-24) Fully Sent @ 6454500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-24) Received Successfully.
-# EXPECTED = 9eee4f2f
-# 
-# ======== Sending Msg (ID-25) =======
-# Current Time; 6455500 ns.
-# Data: 0x75655f14
-# Spreading Factor: SF4
-# MSG (ID-25) Fully Sent @ 6712500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-25) Received Successfully.
-# EXPECTED = 75655f14
-# 
-# ======== Sending Msg (ID-26) =======
-# Current Time; 6713500 ns.
-# Data: 0xf1eeed11
-# Spreading Factor: SF4
-# MSG (ID-26) Fully Sent @ 6970500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-26) Received Successfully.
-# EXPECTED = f1eeed11
-# 
-# ======== Sending Msg (ID-27) =======
-# Current Time; 6971500 ns.
-# Data: 0xbab09d48
-# Spreading Factor: SF4
-# MSG (ID-27) Fully Sent @ 7228500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-27) Received Successfully.
-# EXPECTED = bab09d48
-# 
-# ======== Sending Msg (ID-28) =======
-# Current Time; 7229500 ns.
-# Data: 0x417d2a1d
-# Spreading Factor: SF4
-# MSG (ID-28) Fully Sent @ 7486500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-28) Received Successfully.
-# EXPECTED = 417d2a1d
-# 
-# ======== Sending Msg (ID-29) =======
-# Current Time; 7487500 ns.
-# Data: 0x044981f5
-# Spreading Factor: SF4
-# MSG (ID-29) Fully Sent @ 7744500 ns.
-# ===================================
-# 
-# ** Error: [FAIL] MSG (ID-29) Found: 0x444981f5 Expected 0x044981f5.
-#    Time: 774550 ns  Scope: tx_tb.recv_loop.read_bits File: ./ver/tx/tx_tb.sv Line: 103
-# 
-# ======== Sending Msg (ID-30) =======
-# Current Time; 7745500 ns.
-# Data: 0x06a9e682
-# Spreading Factor: SF4
-# MSG (ID-30) Fully Sent @ 8002500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-30) Received Successfully.
-# EXPECTED = 06a9e682
-# 
-# ======== Sending Msg (ID-31) =======
-# Current Time; 8003500 ns.
-# Data: 0xb1e5d871
-# Spreading Factor: SF4
-# MSG (ID-31) Fully Sent @ 8260500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-31) Received Successfully.
-# EXPECTED = b1e5d871
-# 
-# ======== Sending Msg (ID-32) =======
-# Current Time; 8261500 ns.
-# Data: 0x24a1af15
-# Spreading Factor: SF4
-# MSG (ID-32) Fully Sent @ 8518500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-32) Received Successfully.
-# EXPECTED = 24a1af15
-# 
-# ======== Sending Msg (ID-33) =======
-# Current Time; 8519500 ns.
-# Data: 0x34ae867e
-# Spreading Factor: SF4
-# MSG (ID-33) Fully Sent @ 8776500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-33) Received Successfully.
-# EXPECTED = 34ae867e
-# 
-# ======== Sending Msg (ID-34) =======
-# Current Time; 8777500 ns.
-# Data: 0xe92e7d39
-# Spreading Factor: SF4
-# MSG (ID-34) Fully Sent @ 9034500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-34) Received Successfully.
-# EXPECTED = e92e7d39
-# 
-# ======== Sending Msg (ID-35) =======
-# Current Time; 9035500 ns.
-# Data: 0x5d30c438
-# Spreading Factor: SF4
-# MSG (ID-35) Fully Sent @ 9292500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-35) Received Successfully.
-# EXPECTED = 5d30c438
-# 
-# ======== Sending Msg (ID-36) =======
-# Current Time; 9293500 ns.
-# Data: 0x1c7311a1
-# Spreading Factor: SF4
-# MSG (ID-36) Fully Sent @ 9550500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-36) Received Successfully.
-# EXPECTED = 1c7311a1
-# 
-# ======== Sending Msg (ID-37) =======
-# Current Time; 9551500 ns.
-# Data: 0xa1ce4c18
-# Spreading Factor: SF4
-# MSG (ID-37) Fully Sent @ 9808500 ns.
-# ===================================
-# 
-# ** Error: [FAIL] MSG (ID-37) Found: 0xe1ce4c18 Expected 0xa1ce4c18.
-#    Time: 980950 ns  Scope: tx_tb.recv_loop.read_bits File: ./ver/tx/tx_tb.sv Line: 103
-# 
-# ======== Sending Msg (ID-38) =======
-# Current Time; 9809500 ns.
-# Data: 0xed0470b8
-# Spreading Factor: SF4
-# MSG (ID-38) Fully Sent @ 10066500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-38) Received Successfully.
-# EXPECTED = ed0470b8
-# 
-# ======== Sending Msg (ID-39) =======
-# Current Time; 10067500 ns.
-# Data: 0xbaf0ede1
-# Spreading Factor: SF4
-# MSG (ID-39) Fully Sent @ 10324500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-39) Received Successfully.
-# EXPECTED = baf0ede1
-# 
-# ======== Sending Msg (ID-40) =======
-# Current Time; 10325500 ns.
-# Data: 0x959a2ba2
-# Spreading Factor: SF4
-# MSG (ID-40) Fully Sent @ 10582500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-40) Received Successfully.
-# EXPECTED = 959a2ba2
-# 
-# ======== Sending Msg (ID-41) =======
-# Current Time; 10583500 ns.
-# Data: 0xfd7fc60d
-# Spreading Factor: SF4
-# MSG (ID-41) Fully Sent @ 10840500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-41) Received Successfully.
-# EXPECTED = fd7fc60d
-# 
-# ======== Sending Msg (ID-42) =======
-# Current Time; 10841500 ns.
-# Data: 0x8a439038
-# Spreading Factor: SF4
-# MSG (ID-42) Fully Sent @ 11098500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-42) Received Successfully.
-# EXPECTED = 8a439038
-# 
-# ======== Sending Msg (ID-43) =======
-# Current Time; 11099500 ns.
-# Data: 0xcf2088c1
-# Spreading Factor: SF4
-# MSG (ID-43) Fully Sent @ 11356500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-43) Received Successfully.
-# EXPECTED = cf2088c1
-# 
-# ======== Sending Msg (ID-44) =======
-# Current Time; 11357500 ns.
-# Data: 0x1efbba1a
-# Spreading Factor: SF4
-# MSG (ID-44) Fully Sent @ 11614500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-44) Received Successfully.
-# EXPECTED = 1efbba1a
-# 
-# ======== Sending Msg (ID-45) =======
-# Current Time; 11615500 ns.
-# Data: 0x125d04c9
-# Spreading Factor: SF4
-# MSG (ID-45) Fully Sent @ 11872500 ns.
-# ===================================
-# 
-# ** Error: [FAIL] MSG (ID-45) Found: 0xd25d44c9 Expected 0x125d04c9.
-#    Time: 1187350 ns  Scope: tx_tb.recv_loop.read_bits File: ./ver/tx/tx_tb.sv Line: 103
-# 
-# ======== Sending Msg (ID-46) =======
-# Current Time; 11873500 ns.
-# Data: 0xedf2f2d3
-# Spreading Factor: SF4
-# MSG (ID-46) Fully Sent @ 12130500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-46) Received Successfully.
-# EXPECTED = edf2f2d3
-# 
-# ======== Sending Msg (ID-47) =======
-# Current Time; 12131500 ns.
-# Data: 0x267f57d6
-# Spreading Factor: SF4
-# MSG (ID-47) Fully Sent @ 12388500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-47) Received Successfully.
-# EXPECTED = 267f57d6
-# 
-# ======== Sending Msg (ID-48) =======
-# Current Time; 12389500 ns.
-# Data: 0x3ccefa2a
-# Spreading Factor: SF4
-# MSG (ID-48) Fully Sent @ 12646500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-48) Received Successfully.
-# EXPECTED = 3ccefa2a
-# 
-# ======== Sending Msg (ID-49) =======
-# Current Time; 12647500 ns.
-# Data: 0x8f7ab1e0
-# Spreading Factor: SF4
-# MSG (ID-49) Fully Sent @ 12904500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-49) Received Successfully.
-# EXPECTED = 8f7ab1e0
-# 
-# ======== Sending Msg (ID-50) =======
-# Current Time; 12905500 ns.
-# Data: 0x51ba30a5
-# Spreading Factor: SF4
-# MSG (ID-50) Fully Sent @ 13162500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-50) Received Successfully.
-# EXPECTED = 51ba30a5
-# 
-# ======== Sending Msg (ID-51) =======
-# Current Time; 13163500 ns.
-# Data: 0x4ca5c03f
-# Spreading Factor: SF4
-# MSG (ID-51) Fully Sent @ 13420500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-51) Received Successfully.
-# EXPECTED = 4ca5c03f
-# 
-# ======== Sending Msg (ID-52) =======
-# Current Time; 13421500 ns.
-# Data: 0x629b0f7e
-# Spreading Factor: SF4
-# MSG (ID-52) Fully Sent @ 13678500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-52) Received Successfully.
-# EXPECTED = 629b0f7e
-# 
-# ======== Sending Msg (ID-53) =======
-# Current Time; 13679500 ns.
-# Data: 0x1ca2177d
-# Spreading Factor: SF4
-# MSG (ID-53) Fully Sent @ 13936500 ns.
-# ===================================
-# 
-# ** Error: [FAIL] MSG (ID-53) Found: 0x3caa177d Expected 0x1ca2177d.
-#    Time: 1393750 ns  Scope: tx_tb.recv_loop.read_bits File: ./ver/tx/tx_tb.sv Line: 103
-# 
-# ======== Sending Msg (ID-54) =======
-# Current Time; 13937500 ns.
-# Data: 0x2b335718
-# Spreading Factor: SF4
-# MSG (ID-54) Fully Sent @ 14194500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-54) Received Successfully.
-# EXPECTED = 2b335718
-# 
-# ======== Sending Msg (ID-55) =======
-# Current Time; 14195500 ns.
-# Data: 0x70ae08e2
-# Spreading Factor: SF4
-# MSG (ID-55) Fully Sent @ 14452500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-55) Received Successfully.
-# EXPECTED = 70ae08e2
-# 
-# ======== Sending Msg (ID-56) =======
-# Current Time; 14453500 ns.
-# Data: 0x86fc4c33
-# Spreading Factor: SF4
-# MSG (ID-56) Fully Sent @ 14710500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-56) Received Successfully.
-# EXPECTED = 86fc4c33
-# 
-# ======== Sending Msg (ID-57) =======
-# Current Time; 14711500 ns.
-# Data: 0xd0c0c1fc
-# Spreading Factor: SF4
-# MSG (ID-57) Fully Sent @ 14968500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-57) Received Successfully.
-# EXPECTED = d0c0c1fc
-# 
-# ======== Sending Msg (ID-58) =======
-# Current Time; 14969500 ns.
-# Data: 0xae8fcdbd
-# Spreading Factor: SF4
-# MSG (ID-58) Fully Sent @ 15226500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-58) Received Successfully.
-# EXPECTED = ae8fcdbd
-# 
-# ======== Sending Msg (ID-59) =======
-# Current Time; 15227500 ns.
-# Data: 0x8ebca889
-# Spreading Factor: SF4
-# MSG (ID-59) Fully Sent @ 15484500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-59) Received Successfully.
-# EXPECTED = 8ebca889
-# 
-# ======== Sending Msg (ID-60) =======
-# Current Time; 15485500 ns.
-# Data: 0x58d36d81
-# Spreading Factor: SF4
-# MSG (ID-60) Fully Sent @ 15742500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-60) Received Successfully.
-# EXPECTED = 58d36d81
-# 
-# ======== Sending Msg (ID-61) =======
-# Current Time; 15743500 ns.
-# Data: 0x731f05ad
-# Spreading Factor: SF4
-# MSG (ID-61) Fully Sent @ 16000500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-61) Received Successfully.
-# EXPECTED = 731f05ad
-# 
-# ======== Sending Msg (ID-62) =======
-# Current Time; 16001500 ns.
-# Data: 0x7e1ee994
-# Spreading Factor: SF4
-# MSG (ID-62) Fully Sent @ 16258500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-62) Received Successfully.
-# EXPECTED = 7e1ee994
-# 
-# ======== Sending Msg (ID-63) =======
-# Current Time; 16259500 ns.
-# Data: 0xca242b7d
-# Spreading Factor: SF4
-# MSG (ID-63) Fully Sent @ 16516500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-63) Received Successfully.
-# EXPECTED = ca242b7d
-# 
-# ======== Sending Msg (ID-64) =======
-# Current Time; 16517500 ns.
-# Data: 0x1ffe1da8
-# Spreading Factor: SF4
-# MSG (ID-64) Fully Sent @ 16774500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-64) Received Successfully.
-# EXPECTED = 1ffe1da8
-# 
-# ======== Sending Msg (ID-65) =======
-# Current Time; 16775500 ns.
-# Data: 0xbf7db6af
-# Spreading Factor: SF4
-# MSG (ID-65) Fully Sent @ 17032500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-65) Received Successfully.
-# EXPECTED = bf7db6af
-# 
-# ======== Sending Msg (ID-66) =======
-# Current Time; 17033500 ns.
-# Data: 0x7f2f874d
-# Spreading Factor: SF4
-# MSG (ID-66) Fully Sent @ 17290500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-66) Received Successfully.
-# EXPECTED = 7f2f874d
-# 
-# ======== Sending Msg (ID-67) =======
-# Current Time; 17291500 ns.
-# Data: 0x87303c1e
-# Spreading Factor: SF4
-# MSG (ID-67) Fully Sent @ 17548500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-67) Received Successfully.
-# EXPECTED = 87303c1e
-# 
-# ======== Sending Msg (ID-68) =======
-# Current Time; 17549500 ns.
-# Data: 0xf222d0fe
-# Spreading Factor: SF4
-# MSG (ID-68) Fully Sent @ 17806500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-68) Received Successfully.
-# EXPECTED = f222d0fe
-# 
-# ======== Sending Msg (ID-69) =======
-# Current Time; 17807500 ns.
-# Data: 0xe4efdd25
-# Spreading Factor: SF4
-# MSG (ID-69) Fully Sent @ 18064500 ns.
-# ===================================
-# 
-# ** Error: [FAIL] MSG (ID-69) Found: 0xe4efdda5 Expected 0xe4efdd25.
-#    Time: 1806550 ns  Scope: tx_tb.recv_loop.read_bits File: ./ver/tx/tx_tb.sv Line: 103
-# 
-# ======== Sending Msg (ID-70) =======
-# Current Time; 18065500 ns.
-# Data: 0xc17e4b49
-# Spreading Factor: SF4
-# MSG (ID-70) Fully Sent @ 18322500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-70) Received Successfully.
-# EXPECTED = c17e4b49
-# 
-# ======== Sending Msg (ID-71) =======
-# Current Time; 18323500 ns.
-# Data: 0x5c096700
-# Spreading Factor: SF4
-# MSG (ID-71) Fully Sent @ 18580500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-71) Received Successfully.
-# EXPECTED = 5c096700
-# 
-# ======== Sending Msg (ID-72) =======
-# Current Time; 18581500 ns.
-# Data: 0xba5a5ec3
-# Spreading Factor: SF4
-# MSG (ID-72) Fully Sent @ 18838500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-72) Received Successfully.
-# EXPECTED = ba5a5ec3
-# 
-# ======== Sending Msg (ID-73) =======
-# Current Time; 18839500 ns.
-# Data: 0x9e7ca75e
-# Spreading Factor: SF4
-# MSG (ID-73) Fully Sent @ 19096500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-73) Received Successfully.
-# EXPECTED = 9e7ca75e
-# 
-# ======== Sending Msg (ID-74) =======
-# Current Time; 19097500 ns.
-# Data: 0x44218d1b
-# Spreading Factor: SF4
-# MSG (ID-74) Fully Sent @ 19354500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-74) Received Successfully.
-# EXPECTED = 44218d1b
-# 
-# ======== Sending Msg (ID-75) =======
-# Current Time; 19355500 ns.
-# Data: 0x6003ad41
-# Spreading Factor: SF4
-# MSG (ID-75) Fully Sent @ 19612500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-75) Received Successfully.
-# EXPECTED = 6003ad41
-# 
-# ======== Sending Msg (ID-76) =======
-# Current Time; 19613500 ns.
-# Data: 0xda0381ed
-# Spreading Factor: SF4
-# MSG (ID-76) Fully Sent @ 19870500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-76) Received Successfully.
-# EXPECTED = da0381ed
-# 
-# ======== Sending Msg (ID-77) =======
-# Current Time; 19871500 ns.
-# Data: 0xa174ad79
-# Spreading Factor: SF4
-# MSG (ID-77) Fully Sent @ 20128500 ns.
-# ===================================
-# 
-# ** Error: [FAIL] MSG (ID-77) Found: 0xa977ad7d Expected 0xa174ad79.
-#    Time: 2012950 ns  Scope: tx_tb.recv_loop.read_bits File: ./ver/tx/tx_tb.sv Line: 103
-# 
-# ======== Sending Msg (ID-78) =======
-# Current Time; 20129500 ns.
-# Data: 0x80e807c4
-# Spreading Factor: SF4
-# MSG (ID-78) Fully Sent @ 20386500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-78) Received Successfully.
-# EXPECTED = 80e807c4
-# 
-# ======== Sending Msg (ID-79) =======
-# Current Time; 20387500 ns.
-# Data: 0xa2258cac
-# Spreading Factor: SF4
-# MSG (ID-79) Fully Sent @ 20644500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-79) Received Successfully.
-# EXPECTED = a2258cac
-# 
-# ======== Sending Msg (ID-80) =======
-# Current Time; 20645500 ns.
-# Data: 0x57ab95b2
-# Spreading Factor: SF4
-# MSG (ID-80) Fully Sent @ 20902500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-80) Received Successfully.
-# EXPECTED = 57ab95b2
-# 
-# ======== Sending Msg (ID-81) =======
-# Current Time; 20903500 ns.
-# Data: 0x008c488f
-# Spreading Factor: SF4
-# MSG (ID-81) Fully Sent @ 21160500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-81) Received Successfully.
-# EXPECTED = 008c488f
-# 
-# ======== Sending Msg (ID-82) =======
-# Current Time; 21161500 ns.
-# Data: 0xf0902f03
-# Spreading Factor: SF4
-# MSG (ID-82) Fully Sent @ 21418500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-82) Received Successfully.
-# EXPECTED = f0902f03
-# 
-# ======== Sending Msg (ID-83) =======
-# Current Time; 21419500 ns.
-# Data: 0x5643ffb5
-# Spreading Factor: SF4
-# MSG (ID-83) Fully Sent @ 21676500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-83) Received Successfully.
-# EXPECTED = 5643ffb5
-# 
-# ======== Sending Msg (ID-84) =======
-# Current Time; 21677500 ns.
-# Data: 0xc161fafc
-# Spreading Factor: SF4
-# MSG (ID-84) Fully Sent @ 21934500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-84) Received Successfully.
-# EXPECTED = c161fafc
-# 
-# ======== Sending Msg (ID-85) =======
-# Current Time; 21935500 ns.
-# Data: 0xec0537b0
-# Spreading Factor: SF4
-# MSG (ID-85) Fully Sent @ 22192500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-85) Received Successfully.
-# EXPECTED = ec0537b0
-# 
-# ======== Sending Msg (ID-86) =======
-# Current Time; 22193500 ns.
-# Data: 0x3d261201
-# Spreading Factor: SF4
-# MSG (ID-86) Fully Sent @ 22450500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-86) Received Successfully.
-# EXPECTED = 3d261201
-# 
-# ======== Sending Msg (ID-87) =======
-# Current Time; 22451500 ns.
-# Data: 0x7a2018aa
-# Spreading Factor: SF4
-# MSG (ID-87) Fully Sent @ 22708500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-87) Received Successfully.
-# EXPECTED = 7a2018aa
-# 
-# ======== Sending Msg (ID-88) =======
-# Current Time; 22709500 ns.
-# Data: 0x74a1b70b
-# Spreading Factor: SF4
-# MSG (ID-88) Fully Sent @ 22966500 ns.
-# ===================================
-# 
-# ** Error: [FAIL] MSG (ID-88) Found: 0xf4a1b70b Expected 0x74a1b70b.
-#    Time: 2296750 ns  Scope: tx_tb.recv_loop.read_bits File: ./ver/tx/tx_tb.sv Line: 103
-# 
-# ======== Sending Msg (ID-89) =======
-# Current Time; 22967500 ns.
-# Data: 0xedafc9d2
-# Spreading Factor: SF4
-# MSG (ID-89) Fully Sent @ 23224500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-89) Received Successfully.
-# EXPECTED = edafc9d2
-# 
-# ======== Sending Msg (ID-90) =======
-# Current Time; 23225500 ns.
-# Data: 0xa2487585
-# Spreading Factor: SF4
-# MSG (ID-90) Fully Sent @ 23482500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-90) Received Successfully.
-# EXPECTED = a2487585
-# 
-# ======== Sending Msg (ID-91) =======
-# Current Time; 23483500 ns.
-# Data: 0x3f4195f8
-# Spreading Factor: SF4
-# MSG (ID-91) Fully Sent @ 23740500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-91) Received Successfully.
-# EXPECTED = 3f4195f8
-# 
-# ======== Sending Msg (ID-92) =======
-# Current Time; 23741500 ns.
-# Data: 0xa05886c4
-# Spreading Factor: SF4
-# MSG (ID-92) Fully Sent @ 23998500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-92) Received Successfully.
-# EXPECTED = a05886c4
-# 
-# ======== Sending Msg (ID-93) =======
-# Current Time; 23999500 ns.
-# Data: 0xf77c3878
-# Spreading Factor: SF4
-# MSG (ID-93) Fully Sent @ 24256500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-93) Received Successfully.
-# EXPECTED = f77c3878
-# 
-# ======== Sending Msg (ID-94) =======
-# Current Time; 24257500 ns.
-# Data: 0xe64cb43d
-# Spreading Factor: SF4
-# MSG (ID-94) Fully Sent @ 24514500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-94) Received Successfully.
-# EXPECTED = e64cb43d
-# 
-# ======== Sending Msg (ID-95) =======
-# Current Time; 24515500 ns.
-# Data: 0x3d311159
-# Spreading Factor: SF4
-# MSG (ID-95) Fully Sent @ 24772500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-95) Received Successfully.
-# EXPECTED = 3d311159
-# 
-# ======== Sending Msg (ID-96) =======
-# Current Time; 24773500 ns.
-# Data: 0xcf453bcb
-# Spreading Factor: SF4
-# MSG (ID-96) Fully Sent @ 25030500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-96) Received Successfully.
-# EXPECTED = cf453bcb
-# 
-# ======== Sending Msg (ID-97) =======
-# Current Time; 25031500 ns.
-# Data: 0xcead7755
-# Spreading Factor: SF4
-# MSG (ID-97) Fully Sent @ 25288500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-97) Received Successfully.
-# EXPECTED = cead7755
-# 
-# ======== Sending Msg (ID-98) =======
-# Current Time; 25289500 ns.
-# Data: 0x1e6c8835
-# Spreading Factor: SF4
-# MSG (ID-98) Fully Sent @ 25546500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-98) Received Successfully.
-# EXPECTED = 1e6c8835
-# 
-# ======== Sending Msg (ID-99) =======
-# Current Time; 25547500 ns.
-# Data: 0x68ab02af
-# Spreading Factor: SF4
-# MSG (ID-99) Fully Sent @ 25804500 ns.
-# ===================================
-# 
-# [PASS] MSG (ID-99) Received Successfully.
-# EXPECTED = 68ab02af
-# ** Note: $finish    : ./ver/tx/tx_tb.sv(73)
-#    Time: 2580850 ns  Iteration: 4  Instance: /tx_tb
+# Spreading Factor: SF2
+# ===================================
+# 
+# ============= Statistics =============
+# [Total Tests]  10
+# [Tests PASSED] 0
+# [Tests FAILED] 10
+# 
+#           *** Tests Ran ***
+# Number of Messages Sent with SF2:  10
+# Number of Messages Sent with SF4:  0
+# Number of Messages Sent with SF8:  0
+# Number of Messages Sent with SF16: 0
+#           *** Number of Bursts ***
+# [Bursts] 2
+# ======================================
+# 
+# ** Note: $finish    : ./ver/end2end_tb.sv(118)
+#    Time: 129250 ns  Iteration: 3  Instance: /end2end_tb
 # 1
-# Break in NamedBeginStat sender_loop at ./ver/tx/tx_tb.sv line 73
-add wave -position end  sim:/tx_tb/UUT/U_chip_ctr/bit_index
-# End time: 21:14:35 on Dec 11,2023, Elapsed time: 0:22:10
-# Errors: 7, Warnings: 2
+# Break in NamedBeginStat sender_loop at ./ver/end2end_tb.sv line 118
+add wave -position end  sim:/end2end_tb/intf/i_send
+add wave -position end  sim:/end2end_tb/intf/i_clk
+add wave -position end  sim:/end2end_tb/intf/i_arst_n
+add wave -position end  sim:/end2end_tb/intf/i_msg
+add wave -position end  sim:/end2end_tb/intf/i_send
+add wave -position end  sim:/end2end_tb/intf/o_is_sending
+add wave -position end  sim:/end2end_tb/UUT_RX/Valid
+add wave -position end  sim:/end2end_tb/UUT_RX/Valid_Data
+add wave -position end  sim:/end2end_tb/UUT_RX/Out_Data
+# End time: 01:59:56 on Dec 13,2023, Elapsed time: 0:05:05
+# Errors: 1, Warnings: 0
