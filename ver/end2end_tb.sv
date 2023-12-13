@@ -24,7 +24,7 @@ module end2end_tb;
   always #(PERIOD / 2) i_clk = ~i_clk;
 
 
-  localparam TEST_ITERATIONS = 2;
+  localparam TEST_ITERATIONS = 10000;
 
 
   //! Variable declarations
@@ -81,10 +81,9 @@ module end2end_tb;
 
     for (int i = 0; i < TEST_ITERATIONS; i++) begin
       msg_to_send = $urandom();
-      msg_to_send = 32'hFFFF_FFFF;
       tx.push_back(msg_to_send);
 
-      sf = $urandom_range(3, 3);
+      sf = $urandom_range(3, 0);
       modem.send_msg(msg_to_send, spreading_factors[sf]);
       sf_report[sf]++;
 
@@ -126,10 +125,10 @@ module end2end_tb;
   always @(posedge word_recv_valid) begin: monitor_loop
     expected = tx.pop_front();
     assert (word_recv == expected) begin
-      $display("[PASS] Msg-ID%0d", modem.msg_id);
+      $display("[PASS] Msg-ID%0d", modem.msg_id-1);
       pass_count++;
     end
-    else $error("[FAIL] Msg-ID%0d: Found %8h Expected %8h", modem.msg_id, word_recv, expected);
+    else $error("[FAIL] Msg-ID%0d: Found %8h Expected %8h", modem.msg_id-1, word_recv, expected);
   end
 
 

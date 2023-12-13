@@ -782,6 +782,11 @@ R0
 R0
 R0
 R0
+R0
+R0
+R0
+R0
+R0
 !s11f MIXED_VERSIONS
 13
 !s112 1.1
@@ -846,9 +851,21 @@ R4
 R5
 n@_opt4
 R6
+R1
+T_opt5
+R7
+!s110 1702504726
+VZO;_Ph]MNS]PNTBg2KRJK2
+R8
+=1-98fa9bd5c19f-657a2915-379-4870
+R3
+R4
+R5
+n@_opt5
+R6
 vbooth_mul
 Z9 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z10 !s110 1702483293
+Z10 !s110 1702504723
 !i10b 1
 !s100 dVP^2j7z0HKnM[hH8]jTX1
 I:deNfaG8S8m350XBGbQLi0
@@ -857,14 +874,14 @@ Z11 dG:/Projects/DCSK/DCSK/DCSK
 w1701643009
 8./hdl/booth/booth_mul.sv
 F./hdl/booth/booth_mul.sv
-!i122 1179
+!i122 1184
 L0 13 53
 Z12 VDg1SIo80bB@j0V0VzS_@n1
 Z13 OL;L;2021.1;73
 r1
 !s85 0
 31
-Z14 !s108 1702483293.000000
+Z14 !s108 1702504722.000000
 Z15 !s107 ./ver/end2end_tb.sv|./ver/tx/tx_tb.sv|./ver/tx/chaos_gen/logistic_map_tb.sv|./ver/tx/chaos_gen/chaos_xpander_tb.sv|./ver/tx/chaos_gen/chaos_gen_tb.sv|./ver/booth/calc_partial_product_tb.sv|./ver/booth/booth_mul_tb.sv|./ver/pkgs/modem_pkg.sv|./hdl/rx/rx.sv|./hdl/rx/FSM.sv|./hdl/rx/Demod_Top.sv|./hdl/rx/Demod_TB.sv|./hdl/rx/Demod_DP.sv|./hdl/tx/tx_fsm.sv|./hdl/tx/tx.sv|./hdl/tx/modulator.sv|./hdl/tx/chip_bit_ctr.sv|./hdl/tx/chaos_gen/logistic_map.sv|./hdl/tx/chaos_gen/chaos_xpander.sv|./hdl/tx/chaos_gen/chaos_gen.sv|./hdl/tx/chaos_gen/trng/ring_oscillator.sv|./hdl/booth/calc_partial_product.sv|./hdl/booth/booth_mul.sv|./hdl/misc/wait_then_high.sv|./hdl/misc/ro_sig_tap.sv|./hdl/misc/piso.sv|./hdl/misc/negedge_detector.sv|./hdl/interfaces/tx_if.sv|./hdl/pkgs/wire_shuffler_pkg.sv|./hdl/pkgs/spreading_factors_pkg.sv|
 Z16 !s90 -f|.\filelist.f|-lint|
 !i113 0
@@ -881,7 +898,7 @@ R11
 w1702329786
 8./ver/booth/booth_mul_tb.sv
 F./ver/booth/booth_mul_tb.sv
-!i122 1179
+!i122 1184
 L0 13 48
 R12
 R13
@@ -905,7 +922,7 @@ R11
 w1701220052
 8./hdl/booth/calc_partial_product.sv
 F./hdl/booth/calc_partial_product.sv
-!i122 1179
+!i122 1184
 L0 16 51
 R12
 R13
@@ -929,7 +946,7 @@ R11
 w1702329794
 8./ver/booth/calc_partial_product_tb.sv
 F./ver/booth/calc_partial_product_tb.sv
-!i122 1179
+!i122 1184
 L0 14 69
 R12
 R13
@@ -953,7 +970,7 @@ R11
 w1702326901
 8./hdl/tx/chaos_gen/chaos_gen.sv
 F./hdl/tx/chaos_gen/chaos_gen.sv
-!i122 1179
+!i122 1184
 L0 12 45
 R12
 R13
@@ -977,7 +994,7 @@ R11
 w1702329800
 8./ver/tx/chaos_gen/chaos_gen_tb.sv
 F./ver/tx/chaos_gen/chaos_gen_tb.sv
-!i122 1179
+!i122 1184
 L0 14 44
 R12
 R13
@@ -1062,7 +1079,7 @@ R11
 Z28 w1702470028
 Z29 8./hdl/tx/chaos_gen/chaos_xpander.sv
 Z30 F./hdl/tx/chaos_gen/chaos_xpander.sv
-!i122 1179
+!i122 1184
 L0 13 26
 R13
 31
@@ -1088,7 +1105,7 @@ R11
 R28
 R29
 R30
-!i122 1179
+!i122 1184
 Z31 L0 12 0
 R13
 31
@@ -1116,7 +1133,7 @@ R11
 Z32 w1702329807
 Z33 8./ver/tx/chaos_gen/chaos_xpander_tb.sv
 Z34 F./ver/tx/chaos_gen/chaos_xpander_tb.sv
-!i122 1179
+!i122 1184
 L0 15 80
 R13
 31
@@ -1143,7 +1160,7 @@ R11
 R32
 R33
 R34
-!i122 1179
+!i122 1184
 L0 13 0
 R13
 31
@@ -1170,7 +1187,7 @@ R11
 Z36 w1702467060
 Z37 8./hdl/tx/chip_bit_ctr.sv
 Z38 F./hdl/tx/chip_bit_ctr.sv
-!i122 1179
+!i122 1184
 L0 15 54
 R13
 31
@@ -1196,7 +1213,7 @@ R11
 R36
 R37
 R38
-!i122 1179
+!i122 1184
 Z39 L0 14 0
 R13
 31
@@ -1265,15 +1282,15 @@ vDemod_DP
 R9
 R10
 !i10b 1
-!s100 zj2h`R@NimD24AbC_NJdg3
-Ii0F78e0F4YXzk6?H23>[k0
+!s100 9kaD]]]1i4cI?o`TJnPjK2
+IE>;PL0UV5@:z@Hj3K3oUZ0
 S1
 R11
-Z46 w1702462525
+Z46 w1702502947
 8./hdl/rx/Demod_DP.sv
 F./hdl/rx/Demod_DP.sv
-!i122 1179
-L0 10 74
+!i122 1184
+L0 10 53
 R12
 R13
 r1
@@ -1318,10 +1335,10 @@ R10
 I9`_hC@Wfd4^5Ok0SigkN83
 S1
 R11
-R46
+w1702462525
 8./hdl/rx/Demod_TB.sv
 F./hdl/rx/Demod_TB.sv
-!i122 1179
+!i122 1184
 L0 1 120
 R12
 R13
@@ -1339,15 +1356,15 @@ vDemod_Top
 R9
 R10
 !i10b 1
-!s100 9OXjjICdI8=]1I[EPlTKR2
-I7D;J>6]kV6KCP<m8Y4e`O3
+!s100 4jO<eGR6iL]BAUOfHC_jA1
+IaSd6N?Pih4VEM]iFW5h<92
 S1
 R11
-w1702322107
+R46
 8./hdl/rx/Demod_Top.sv
 F./hdl/rx/Demod_Top.sv
-!i122 1179
-L0 11 66
+!i122 1184
+L0 11 57
 R12
 R13
 r1
@@ -1366,22 +1383,22 @@ R9
 R9
 R35
 Z47 DXx4 work 9 modem_pkg 0 22 AV<6ZN7ff88lT>=^fOT;C0
-DXx4 work 18 end2end_tb_sv_unit 0 22 6Rcchm6>FWHR]1lXJH8E92
+DXx4 work 18 end2end_tb_sv_unit 0 22 QckH^7MYBFLEfJ74PB9]n2
 R10
 R12
 r1
 !s85 0
 !i10b 1
-!s100 eXgO`a6]?_PCMgSCc=74A0
-IU58`;ZW[k2VAQbCUl3;_h3
+!s100 CGFI7BZnk8V@Z>LAZ2Z^H1
+IOGFzlNnn@z=LD0g1n>`PY3
 !s105 end2end_tb_sv_unit
 S1
 R11
-Z48 w1702483285
+Z48 w1702504719
 Z49 8./ver/end2end_tb.sv
 Z50 F./ver/end2end_tb.sv
-!i122 1179
-L0 19 118
+!i122 1184
+L0 19 117
 R13
 31
 R14
@@ -1397,19 +1414,19 @@ R9
 R35
 R47
 R10
-V6Rcchm6>FWHR]1lXJH8E92
+VQckH^7MYBFLEfJ74PB9]n2
 r1
 !s85 0
 !i10b 1
-!s100 2@Q1Y[e]3H4S2<gE<A2]63
-I6Rcchm6>FWHR]1lXJH8E92
+!s100 4Gc:eKJ4k>_>ZXgkODA7k0
+IQckH^7MYBFLEfJ74PB9]n2
 !i103 1
 S1
 R11
 R48
 R49
 R50
-!i122 1179
+!i122 1184
 Z51 L0 16 0
 R13
 31
@@ -1423,15 +1440,15 @@ vFSM
 R9
 R10
 !i10b 1
-!s100 S?_LKD<odYUJZGa7M_OF22
-I5K9QcG7<CU>29UVSgIb0j3
+!s100 ^^`lGN;8GK@kHZFSb8HD<2
+I72XMS7X:ce9MbIBcXD3ES2
 S1
 R11
-w1702468288
+R46
 8./hdl/rx/FSM.sv
 F./hdl/rx/FSM.sv
-!i122 1179
-L0 11 130
+!i122 1184
+L0 11 278
 R12
 R13
 r1
@@ -1455,7 +1472,7 @@ R11
 w1701716029
 8./hdl/tx/chaos_gen/logistic_map.sv
 F./hdl/tx/chaos_gen/logistic_map.sv
-!i122 1179
+!i122 1184
 L0 12 35
 R12
 R13
@@ -1479,7 +1496,7 @@ R11
 w1702333574
 Z52 8./ver/tx/chaos_gen/logistic_map_tb.sv
 Z53 F./ver/tx/chaos_gen/logistic_map_tb.sv
-!i122 1179
+!i122 1184
 L0 13 111
 R12
 R13
@@ -1531,7 +1548,7 @@ R11
 w1702467199
 8./ver/pkgs/modem_pkg.sv
 F./ver/pkgs/modem_pkg.sv
-!i122 1179
+!i122 1184
 R31
 VAV<6ZN7ff88lT>=^fOT;C0
 R13
@@ -1559,10 +1576,10 @@ IdRj[0Q@KzG3_hJ@Ni?d^53
 !s105 modulator_sv_unit
 S1
 R11
-Z56 w1702467070
+Z56 w1702499761
 Z57 8./hdl/tx/modulator.sv
 Z58 F./hdl/tx/modulator.sv
-!i122 1179
+!i122 1184
 L0 13 44
 R13
 31
@@ -1589,7 +1606,7 @@ R11
 R56
 R57
 R58
-!i122 1179
+!i122 1184
 R31
 R13
 31
@@ -1610,7 +1627,7 @@ R11
 w1702325238
 8./hdl/misc/negedge_detector.sv
 F./hdl/misc/negedge_detector.sv
-!i122 1179
+!i122 1184
 L0 11 17
 R12
 R13
@@ -1634,7 +1651,7 @@ R11
 w1701612566
 8./hdl/misc/piso.sv
 F./hdl/misc/piso.sv
-!i122 1179
+!i122 1184
 L0 9 33
 R12
 R13
@@ -1658,7 +1675,7 @@ R11
 w1702430946
 8./hdl/tx/chaos_gen/trng/ring_oscillator.sv
 F./hdl/tx/chaos_gen/trng/ring_oscillator.sv
-!i122 1179
+!i122 1184
 L0 11 29
 R12
 R13
@@ -1682,7 +1699,7 @@ R11
 w1702464226
 8./hdl/misc/ro_sig_tap.sv
 F./hdl/misc/ro_sig_tap.sv
-!i122 1179
+!i122 1184
 L0 9 7
 R12
 R13
@@ -1802,7 +1819,7 @@ R11
 w1702466947
 8./hdl/pkgs/spreading_factors_pkg.sv
 F./hdl/pkgs/spreading_factors_pkg.sv
-!i122 1179
+!i122 1184
 R31
 VC?IbYhf0a]VO;X=hV<L:m2
 R13
@@ -1826,7 +1843,7 @@ R11
 w1702464168
 8./hdl/misc/wait_then_high.sv
 F./hdl/misc/wait_then_high.sv
-!i122 1179
+!i122 1184
 L0 9 21
 R12
 R13
@@ -1850,7 +1867,7 @@ R11
 w1702419220
 8./hdl/tx/tx.sv
 F./hdl/tx/tx.sv
-!i122 1179
+!i122 1184
 L0 15 81
 R12
 R13
@@ -1874,7 +1891,7 @@ R11
 w1702343155
 8./hdl/tx/tx_fsm.sv
 F./hdl/tx/tx_fsm.sv
-!i122 1179
+!i122 1184
 L0 14 88
 R12
 R13
@@ -1898,7 +1915,7 @@ R11
 w1702419008
 8./hdl/interfaces/tx_if.sv
 F./hdl/interfaces/tx_if.sv
-!i122 1179
+!i122 1184
 L0 15 0
 R12
 R13
@@ -1930,7 +1947,7 @@ R11
 Z59 w1702467287
 Z60 8./ver/tx/tx_tb.sv
 Z61 F./ver/tx/tx_tb.sv
-!i122 1179
+!i122 1184
 L0 17 119
 R13
 31
@@ -1958,7 +1975,7 @@ R11
 R59
 R60
 R61
-!i122 1179
+!i122 1184
 R39
 R13
 31
@@ -2003,7 +2020,7 @@ R11
 w1702419513
 8./hdl/pkgs/wire_shuffler_pkg.sv
 F./hdl/pkgs/wire_shuffler_pkg.sv
-!i122 1179
+!i122 1184
 R51
 V7[4kzQ`db]6CcTmFZ=Im50
 R13

@@ -37,7 +37,7 @@ max_seed = max_ind/256;
 min_seed = min_ind/256;
 
 avg = mean(z1_score_arr);
-
+fscore = z1test(full_xpanded);
 % %% Running Mode
 % 
 % value = 0.5;
@@ -68,8 +68,9 @@ result.Properties.RowNames = {'Mean';'Min';'Max'};
 result.Properties.Description = 'Run for all seeds.';
 disp(result)
 
-fprintf("Running Mode Score (256 Iterations) = %f\n", z1test(full_xpanded));
+fprintf("Running Mode Score (256 Iterations) = %f\n", fscore);
 plot (0:1/256:255/256, z1_score_arr);
+title("256 Iterations");
 
 
 
