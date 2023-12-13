@@ -23,12 +23,13 @@ module end2end_tb;
   localparam int PERIOD = 100;
   always #(PERIOD / 2) i_clk = ~i_clk;
 
-  localparam TEST_ITERATIONS = 10;
+
+  localparam TEST_ITERATIONS = 400;
 
 
   //! Variable declarations
   logic [31:0] msg_to_send, expected;
-  sf_t spreading_factors[4] = {SF2, SF4, SF8, SF16};
+  sf_t spreading_factors[4] = {SF4, SF8, SF16, SF32};
   int sf_report[4] = {0, 0, 0, 0};
   int silence_report = 0;
   int sf;  // Spreading Factor
@@ -82,7 +83,7 @@ module end2end_tb;
       msg_to_send = $urandom();
       tx.push_back(msg_to_send);
 
-      sf = $urandom_range(0, 0);
+      sf = $urandom_range(3, 3);
       modem.send_msg(msg_to_send, spreading_factors[sf]);
       sf_report[sf]++;
 
@@ -93,7 +94,7 @@ module end2end_tb;
 
       // 20% chance of a burst ending.
       if ($urandom_range(4, 0) == 0) begin : random_silence
-        silence_len = $urandom_range(9, 0);
+        silence_len = $urandom_range(9, 1);
         repeat (silence_len) @(intf.cb);
         $display("End of Burst. Silence for %0d Cycles.", silence_len);
         silence_report++;
@@ -103,15 +104,17 @@ module end2end_tb;
 
     @(intf.cb);
     @(intf.cb);
+    @(intf.cb);
+
     $display("============= Statistics =============");
     $display("[Total Tests]  %0d", TEST_ITERATIONS);
     $display("[Tests PASSED] %0d", pass_count);
     $display("[Tests FAILED] %0d\n", TEST_ITERATIONS - pass_count);
     $display("          *** Tests Ran ***");
-    $display("Number of Messages Sent with SF2:  %0d", sf_report[0]);
-    $display("Number of Messages Sent with SF4:  %0d", sf_report[1]);
-    $display("Number of Messages Sent with SF8:  %0d", sf_report[2]);
-    $display("Number of Messages Sent with SF16: %0d", sf_report[3]);
+    $display("Number of Messages Sent with SF4:  %0d", sf_report[0]);
+    $display("Number of Messages Sent with SF8:  %0d", sf_report[1]);
+    $display("Number of Messages Sent with SF16: %0d", sf_report[2]);
+    $display("Number of Messages Sent with SF32: %0d", sf_report[3]);
     $display("          *** Number of Bursts ***");
     $display("[Bursts] %0d", silence_report);
     $display("======================================\n");
@@ -120,9 +123,11 @@ module end2end_tb;
   end
 
   always @(posedge word_recv_valid) begin: monitor_loop
-    //word_recv = intf.cb.o_tx;
     expected = tx.pop_front();
-    assert (word_recv == expected) $display("[PASS] Msg-ID%0d", modem.msg_id);
+    assert (word_recv == expected) begin
+      $display("[PASS] Msg-ID%0d", modem.msg_id);
+      pass_count++;
+    end
     else $error("[FAIL] Msg-ID%0d: Found %8h Expected %8h", modem.msg_id, word_recv, expected);
   end
 

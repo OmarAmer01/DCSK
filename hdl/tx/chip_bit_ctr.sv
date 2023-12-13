@@ -26,10 +26,10 @@ module chip_bit_ctr (
   logic wrap_around;
   always_comb begin : get_ctr_wrap_around_val
     case (i_sf)
-      SF2:     o_wrap_around = 10'd127;
-      SF4:     o_wrap_around = 10'd255;
-      SF8:     o_wrap_around = 10'd511;
-      SF16:    o_wrap_around = 10'd1023;
+      SF4:     o_wrap_around = 10'd127;
+      SF8:     o_wrap_around = 10'd255;
+      SF16:     o_wrap_around = 10'd511;
+      SF32:    o_wrap_around = 10'd1023;
       default: o_wrap_around = 'X;
     endcase
   end
@@ -45,10 +45,10 @@ module chip_bit_ctr (
 
   always_comb begin : count_chips
     case (i_sf)
-      SF2:  o_chip_index = 5'(o_bit_index[1:0]);  //* From 0 => 3
-      SF4:  o_chip_index = 5'(o_bit_index[2:0]);  //* From 0 => 7
-      SF8:  o_chip_index = 5'(o_bit_index[3:0]);  //* From 0 => 15
-      SF16: o_chip_index = 5'(o_bit_index[4:0]);  //* From 0 => 31
+      SF4:  o_chip_index = 5'(o_bit_index[1:0]);  //* From 0 => 3
+      SF8:  o_chip_index = 5'(o_bit_index[2:0]);  //* From 0 => 7
+      SF16:  o_chip_index = 5'(o_bit_index[3:0]);  //* From 0 => 15
+      SF32: o_chip_index = 5'(o_bit_index[4:0]);  //* From 0 => 31
 
       default: o_chip_index = 'X;  //! Invalid Spreading Factor.
     endcase
@@ -56,10 +56,10 @@ module chip_bit_ctr (
 
   always_comb begin : get_chip_idx_msb
     case (i_sf)
-      SF2:  o_chip_index_msb = o_bit_index[1];  //* From 0 => 3
-      SF4:  o_chip_index_msb = o_bit_index[2];  //* From 0 => 7
-      SF8:  o_chip_index_msb = o_bit_index[3];  //* From 0 => 15
-      SF16: o_chip_index_msb = o_bit_index[4];  //* From 0 => 31
+      SF4:  o_chip_index_msb = o_bit_index[1];  //* From 0 => 3
+      SF8:  o_chip_index_msb = o_bit_index[2];  //* From 0 => 7
+      SF16:  o_chip_index_msb = o_bit_index[3];  //* From 0 => 15
+      SF32: o_chip_index_msb = o_bit_index[4];  //* From 0 => 31
 
       default: o_chip_index_msb = 'X;  //! Invalid Spreading Factor.
     endcase

@@ -10,8 +10,10 @@
 */
 
 package spreading_factors_pkg;
-typedef enum {SF2  = 0,
-              SF4  = 1,
-              SF8  = 2,
-              SF16 = 3} sf_t;
+  typedef enum {
+    SF4  = 0,
+    SF8  = 1,
+    SF16 = 2,
+    SF32 = 3
+  } sf_t;
 endpackage

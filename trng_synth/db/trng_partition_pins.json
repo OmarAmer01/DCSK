@@ -1,0 +1,25 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "o_rand_bit",
+					"strict" : false
+				},
+				{
+					"name" : "i_clk",
+					"strict" : false
+				},
+				{
+					"name" : "i_arst_n",
+					"strict" : false
+				},
+				{
+					"name" : "i_en",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

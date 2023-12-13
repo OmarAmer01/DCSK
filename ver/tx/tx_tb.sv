@@ -32,7 +32,7 @@ module tx_tb;
 
   //! Variable declarations
   logic [31:0] msg_to_send;
-  sf_t spreading_factors[4] = {SF2, SF4, SF8, SF16};
+  sf_t spreading_factors[4] = {SF4, SF8, SF16, SF32};
   int  sf_report[4] = {0, 0, 0, 0};
   int silence_report = 0;
   int sf;  // Spreading Factor
@@ -90,10 +90,10 @@ module tx_tb;
     $display("[Tests PASSED] %0d", pass_count);
     $display("[Tests FAILED] %0d\n", TEST_ITERATIONS-pass_count);
     $display("          *** Tests Ran ***");
-    $display("Number of Messages Sent with SF2:  %0d", sf_report[0]);
-    $display("Number of Messages Sent with SF4:  %0d", sf_report[1]);
-    $display("Number of Messages Sent with SF8:  %0d", sf_report[2]);
-    $display("Number of Messages Sent with SF16: %0d", sf_report[3]);
+    $display("Number of Messages Sent with SF4:  %0d", sf_report[0]);
+    $display("Number of Messages Sent with SF8:  %0d", sf_report[1]);
+    $display("Number of Messages Sent with SF16: %0d", sf_report[2]);
+    $display("Number of Messages Sent with SF32: %0d", sf_report[3]);
     $display("          *** Number of Bursts ***");
     $display("[Bursts] %0d", silence_report);
     $display("======================================\n");

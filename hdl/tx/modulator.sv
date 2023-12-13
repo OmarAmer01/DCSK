@@ -34,10 +34,10 @@ logic [3:0] delay_tap_location;
 
 always_comb begin: get_delay_tap_location
   case (i_sf)
-    SF2:     delay_tap_location = 4'd1;
-    SF4:     delay_tap_location = 4'd3;
-    SF8:     delay_tap_location = 4'd7;
-    SF16:    delay_tap_location = 4'd15;
+    SF4:     delay_tap_location = 4'd1;
+    SF8:     delay_tap_location = 4'd3;
+    SF16:     delay_tap_location = 4'd7;
+    SF32:    delay_tap_location = 4'd15;
     default: delay_tap_location = 4'dx; //! Invalid Spreading Factor.
   endcase
 end

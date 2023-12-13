@@ -2,6 +2,7 @@
 ./hdl/interfaces/*.sv
 ./hdl/misc/*.sv
 ./hdl/booth/*.sv
+./hdl/tx/chaos_gen/trng/*.sv
 ./hdl/tx/chaos_gen/*.sv
 ./hdl/tx/*.sv
 ./hdl/rx/*.sv

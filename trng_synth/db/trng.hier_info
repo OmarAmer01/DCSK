@@ -1,0 +1,15 @@
+|ring_oscillator
+i_clk => enable_serial[0].CLK
+i_clk => enable_serial[1].CLK
+i_clk => enable_serial[2].CLK
+i_clk => enable_serial[3].CLK
+i_clk => enable_serial[4].CLK
+i_arst_n => enable_serial[0].ACLR
+i_arst_n => enable_serial[1].ACLR
+i_arst_n => enable_serial[2].ACLR
+i_arst_n => enable_serial[3].ACLR
+i_arst_n => enable_serial[4].ACLR
+i_en => enable_serial[0].DATAIN
+o_rand_bit <= latch_arr[4].DB_MAX_OUTPUT_PORT_TYPE
+
+

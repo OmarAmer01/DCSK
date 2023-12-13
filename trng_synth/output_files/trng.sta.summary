@@ -1,0 +1,293 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 100C Model Setup 'i_clk'
+Slack : -3.238
+TNS   : -12.247
+
+Type  : Slow 1100mV 100C Model Setup 'enable_serial[2]'
+Slack : -1.836
+TNS   : -1.836
+
+Type  : Slow 1100mV 100C Model Setup 'enable_serial[1]'
+Slack : -1.530
+TNS   : -1.530
+
+Type  : Slow 1100mV 100C Model Setup 'enable_serial[3]'
+Slack : -1.504
+TNS   : -1.504
+
+Type  : Slow 1100mV 100C Model Setup 'enable_serial[0]'
+Slack : -1.476
+TNS   : -1.476
+
+Type  : Slow 1100mV 100C Model Setup 'enable_serial[4]'
+Slack : -0.672
+TNS   : -0.672
+
+Type  : Slow 1100mV 100C Model Hold 'enable_serial[4]'
+Slack : 0.327
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Hold 'i_clk'
+Slack : 0.413
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Hold 'enable_serial[3]'
+Slack : 0.974
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Hold 'enable_serial[1]'
+Slack : 1.013
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Hold 'enable_serial[0]'
+Slack : 1.033
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Hold 'enable_serial[2]'
+Slack : 1.130
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'i_clk'
+Slack : -0.538
+TNS   : -3.914
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'enable_serial[1]'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'enable_serial[4]'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'enable_serial[2]'
+Slack : 0.418
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'enable_serial[0]'
+Slack : 0.420
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'enable_serial[3]'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Setup 'i_clk'
+Slack : -2.667
+TNS   : -9.695
+
+Type  : Slow 1100mV -40C Model Setup 'enable_serial[2]'
+Slack : -1.939
+TNS   : -1.939
+
+Type  : Slow 1100mV -40C Model Setup 'enable_serial[1]'
+Slack : -1.628
+TNS   : -1.628
+
+Type  : Slow 1100mV -40C Model Setup 'enable_serial[3]'
+Slack : -1.548
+TNS   : -1.548
+
+Type  : Slow 1100mV -40C Model Setup 'enable_serial[0]'
+Slack : -1.494
+TNS   : -1.494
+
+Type  : Slow 1100mV -40C Model Setup 'enable_serial[4]'
+Slack : -0.681
+TNS   : -0.681
+
+Type  : Slow 1100mV -40C Model Hold 'i_clk'
+Slack : -0.219
+TNS   : -0.495
+
+Type  : Slow 1100mV -40C Model Hold 'enable_serial[4]'
+Slack : 0.281
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Hold 'enable_serial[3]'
+Slack : 0.818
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Hold 'enable_serial[0]'
+Slack : 0.909
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Hold 'enable_serial[1]'
+Slack : 1.009
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Hold 'enable_serial[2]'
+Slack : 1.014
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'i_clk'
+Slack : -0.538
+TNS   : -4.146
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'enable_serial[1]'
+Slack : 0.394
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'enable_serial[4]'
+Slack : 0.395
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'enable_serial[0]'
+Slack : 0.411
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'enable_serial[2]'
+Slack : 0.414
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'enable_serial[3]'
+Slack : 0.441
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Setup 'i_clk'
+Slack : -2.593
+TNS   : -10.116
+
+Type  : Fast 1100mV 100C Model Setup 'enable_serial[2]'
+Slack : -0.479
+TNS   : -0.479
+
+Type  : Fast 1100mV 100C Model Setup 'enable_serial[3]'
+Slack : -0.295
+TNS   : -0.295
+
+Type  : Fast 1100mV 100C Model Setup 'enable_serial[0]'
+Slack : -0.259
+TNS   : -0.259
+
+Type  : Fast 1100mV 100C Model Setup 'enable_serial[1]'
+Slack : -0.201
+TNS   : -0.201
+
+Type  : Fast 1100mV 100C Model Setup 'enable_serial[4]'
+Slack : 0.241
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Hold 'enable_serial[4]'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Hold 'enable_serial[1]'
+Slack : 0.478
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Hold 'enable_serial[3]'
+Slack : 0.501
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Hold 'enable_serial[0]'
+Slack : 0.518
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Hold 'enable_serial[2]'
+Slack : 0.588
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Hold 'i_clk'
+Slack : 0.682
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'i_clk'
+Slack : -0.084
+TNS   : -0.416
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'enable_serial[4]'
+Slack : 0.456
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'enable_serial[1]'
+Slack : 0.457
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'enable_serial[2]'
+Slack : 0.471
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'enable_serial[3]'
+Slack : 0.471
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'enable_serial[0]'
+Slack : 0.472
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Setup 'i_clk'
+Slack : -1.697
+TNS   : -6.563
+
+Type  : Fast 1100mV -40C Model Setup 'enable_serial[2]'
+Slack : -0.283
+TNS   : -0.283
+
+Type  : Fast 1100mV -40C Model Setup 'enable_serial[3]'
+Slack : -0.117
+TNS   : -0.117
+
+Type  : Fast 1100mV -40C Model Setup 'enable_serial[0]'
+Slack : -0.088
+TNS   : -0.088
+
+Type  : Fast 1100mV -40C Model Setup 'enable_serial[1]'
+Slack : -0.060
+TNS   : -0.060
+
+Type  : Fast 1100mV -40C Model Setup 'enable_serial[4]'
+Slack : 0.322
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Hold 'enable_serial[4]'
+Slack : 0.148
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Hold 'i_clk'
+Slack : 0.204
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Hold 'enable_serial[3]'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Hold 'enable_serial[1]'
+Slack : 0.416
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Hold 'enable_serial[0]'
+Slack : 0.429
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Hold 'enable_serial[2]'
+Slack : 0.494
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'i_clk'
+Slack : -0.084
+TNS   : -0.416
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'enable_serial[1]'
+Slack : 0.460
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'enable_serial[4]'
+Slack : 0.460
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'enable_serial[0]'
+Slack : 0.471
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'enable_serial[2]'
+Slack : 0.472
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'enable_serial[3]'
+Slack : 0.473
+TNS   : 0.000
+
+------------------------------------------------------------
