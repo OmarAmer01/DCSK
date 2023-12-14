@@ -1,0 +1,12 @@
+Power Analyzer Status : Successful - Thu Dec 14 04:45:45 2023
+Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Revision Name : Demod_Top
+Top-level Entity Name : Demod_Top
+Family : Cyclone V
+Device : 5CSEBA6U19I7
+Power Models : Final
+Total Thermal Power Dissipation : 421.09 mW
+Core Dynamic Thermal Power Dissipation : 0.13 mW
+Core Static Thermal Power Dissipation : 412.87 mW
+I/O Thermal Power Dissipation : 8.08 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

@@ -1,0 +1,357 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Valid_Data",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.o_is_sending",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.o_tx",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_sf[0]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_sf[1]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_load_seed",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_seed[0]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_seed[1]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_seed[2]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_seed[3]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_seed[4]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_seed[5]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_seed[6]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_seed[7]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_send",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[0]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[2]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[3]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[4]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[5]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[6]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[7]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[8]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[9]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[10]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[11]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[12]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[13]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[14]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[15]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[16]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[17]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[18]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[19]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[20]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[21]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[22]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[23]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[24]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[25]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[26]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[27]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[28]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[29]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[30]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_msg[31]",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_arst_n",
+					"strict" : false
+				},
+				{
+					"name" : "tx_if.i_clk",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[16]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[17]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[18]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[19]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[20]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[21]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[22]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[23]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[24]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[25]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[26]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[27]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[28]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[29]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[30]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[31]",
+					"strict" : false
+				},
+				{
+					"name" : "Spread_Factor_Sel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Spread_Factor_Sel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Clk",
+					"strict" : false
+				},
+				{
+					"name" : "N_Rst",
+					"strict" : false
+				},
+				{
+					"name" : "Valid",
+					"strict" : false
+				},
+				{
+					"name" : "In_Mod_Data",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,7 @@
+
+State Machine - |dcsk_modem|Demod_Top:U_RX|FSM:FSM|CS
+Name CS.Store_Demod_Bit CS.Correlation CS.Store_Chaos_Seq CS.Idle 
+CS.Idle 0 0 0 0 
+CS.Store_Chaos_Seq 0 0 1 1 
+CS.Correlation 0 1 0 1 
+CS.Store_Demod_Bit 1 0 0 1 

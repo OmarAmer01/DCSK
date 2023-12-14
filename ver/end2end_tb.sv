@@ -24,7 +24,7 @@ module end2end_tb;
   always #(PERIOD / 2) i_clk = ~i_clk;
 
 
-  localparam TEST_ITERATIONS = 10000;
+  localparam TEST_ITERATIONS = 1000;
 
 
   //! Variable declarations

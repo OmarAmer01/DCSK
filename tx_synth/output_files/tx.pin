@@ -110,14 +110,14 @@ GND                          : AA11      : gnd    :                   :         
 VCC_AUX                      : AA12      : power  :                   : 2.5V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA13      :        :                   :         : 4A        :                
 VREFB4AN0                    : AA14      : power  :                   :         : 4A        :                
-tx_if.i_msg[17]              : AA15      : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[2]               : AA15      : bidir  : 2.5 V             :         : 4A        : N              
 GND                          : AA16      : gnd    :                   :         :           :                
-tx_if.i_msg[29]              : AA17      : bidir  : 2.5 V             :         : 4A        : N              
-tx_if.i_msg[0]               : AA18      : bidir  : 2.5 V             :         : 4A        : N              
-tx_if.i_msg[22]              : AA19      : bidir  : 2.5 V             :         : 4A        : N              
-tx_if.i_msg[19]              : AA20      : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[1]               : AA17      : bidir  : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA18      :        :                   :         : 4A        :                
+tx_if.i_msg[29]              : AA19      : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[20]              : AA20      : bidir  : 2.5 V             :         : 4A        : N              
 VCCIO4A                      : AA21      : power  :                   : 2.5V    : 4A        :                
-tx_if.i_msg[30]              : AA22      : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[7]               : AA22      : bidir  : 2.5 V             :         : 4A        : N              
 GND                          : AB1       : gnd    :                   :         :           :                
 GND                          : AB2       : gnd    :                   :         :           :                
 DNU                          : AB3       :        :                   :         :           :                
@@ -132,14 +132,14 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AB11      :        :                   :      
 VREFB3BN0                    : AB12      : power  :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB13      :        :                   :         : 4A        :                
 VCCIO4A                      : AB14      : power  :                   : 2.5V    : 4A        :                
-tx_if.i_msg[27]              : AB15      : bidir  : 2.5 V             :         : 4A        : N              
-tx_if.i_msg[2]               : AB16      : bidir  : 2.5 V             :         : 4A        : N              
-tx_if.i_msg[9]               : AB17      : bidir  : 2.5 V             :         : 4A        : N              
-tx_if.i_msg[6]               : AB18      : bidir  : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB15      :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB16      :        :                   :         : 4A        :                
+tx_if.i_msg[11]              : AB17      : bidir  : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB18      :        :                   :         : 4A        :                
 GND                          : AB19      : gnd    :                   :         :           :                
-tx_if.i_msg[13]              : AB20      : bidir  : 2.5 V             :         : 4A        : N              
-tx_if.i_msg[10]              : AB21      : bidir  : 2.5 V             :         : 4A        : N              
-tx_if.i_msg[8]               : AB22      : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[21]              : AB20      : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[31]              : AB21      : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[17]              : AB22      : bidir  : 2.5 V             :         : 4A        : N              
 GND                          : B1        : gnd    :                   :         :           :                
 GND                          : B2        : gnd    :                   :         :           :                
 DNU                          : B3        :        :                   :         :           :                
@@ -417,7 +417,7 @@ GND                          : P10       : gnd    :                   :         
 VCC                          : P11       : power  :                   : 1.1V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P12       :        :                   :         : 3B        :                
 VCC                          : P13       : power  :                   : 1.1V    :           :                
-tx_if.i_msg[4]               : P14       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[14]              : P14       : bidir  : 2.5 V             :         : 4A        : N              
 VCC                          : P15       : power  :                   : 1.1V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P16       :        :                   :         : 5B        :                
 VCCPD5A                      : P17       : power  :                   : 2.5V    : 5A        :                
@@ -439,15 +439,15 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : R10       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : R11       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R12       :        :                   :         : 4A        :                
 GND                          : R13       : gnd    :                   :         :           :                
-tx_if.i_msg[1]               : R14       : bidir  : 2.5 V             :         : 4A        : N              
-tx_if.i_msg[15]              : R15       : bidir  : 2.5 V             :         : 4A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : R16       :        :                   :         : 5A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R17       :        :                   :         : 5A        :                
+tx_if.i_msg[25]              : R14       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[16]              : R15       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_seed[7]              : R16       : bidir  : 2.5 V             :         : 5A        : N              
+tx_if.i_seed[4]              : R17       : bidir  : 2.5 V             :         : 5A        : N              
 VCCIO5A                      : R18       : power  :                   : 2.5V    : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R19       :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R20       :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R21       :        :                   :         : 5A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R22       :        :                   :         : 5A        :                
+tx_if.i_load_seed            : R22       : bidir  : 2.5 V             :         : 5A        : N              
 GND                          : T1        : gnd    :                   :         :           :                
 GND                          : T2        : gnd    :                   :         :           :                
 VCCA_FPLL                    : T3        : power  :                   : 2.5V    :           :                
@@ -459,17 +459,17 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : T8        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : T9        :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T10       :        :                   :         : 3B        :                
 GND                          : T11       : gnd    :                   :         :           :                
-tx_if.i_msg[20]              : T12       : bidir  : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T12       :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T13       :        :                   :         : 4A        :                
-tx_if.i_msg[26]              : T14       : bidir  : 2.5 V             :         : 4A        : N              
-tx_if.i_msg[12]              : T15       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[24]              : T14       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[18]              : T15       : bidir  : 2.5 V             :         : 4A        : N              
 VCCIO4A                      : T16       : power  :                   : 2.5V    : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T17       :        :                   :         : 5A        :                
-tx_if.i_msg[14]              : T18       : bidir  : 2.5 V             :         : 5A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : T19       :        :                   :         : 5A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T20       :        :                   :         : 5A        :                
+tx_if.i_seed[1]              : T17       : bidir  : 2.5 V             :         : 5A        : N              
+tx_if.i_seed[2]              : T18       : bidir  : 2.5 V             :         : 5A        : N              
+tx_if.i_seed[5]              : T19       : bidir  : 2.5 V             :         : 5A        : N              
+tx_if.i_seed[3]              : T20       : bidir  : 2.5 V             :         : 5A        : N              
 VCCIO5A                      : T21       : power  :                   : 2.5V    : 5A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T22       :        :                   :         : 5A        :                
+tx_if.o_is_sending           : T22       : bidir  : 2.5 V             :         : 5A        : N              
 NC                           : U1        :        :                   :         :           :                
 NC                           : U2        :        :                   :         :           :                
 GND                          : U3        : gnd    :                   :         :           :                
@@ -482,16 +482,16 @@ GND                          : U9        : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : U10       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U11       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U12       :        :                   :         : 4A        :                
-tx_if.i_msg[25]              : U13       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[15]              : U13       : bidir  : 2.5 V             :         : 4A        : N              
 GND                          : U14       : gnd    :                   :         :           :                
-tx_if.i_msg[3]               : U15       : bidir  : 2.5 V             :         : 4A        : N              
-tx_if.o_is_sending           : U16       : bidir  : 2.5 V             :         : 4A        : N              
-tx_if.i_msg[31]              : U17       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[6]               : U15       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[3]               : U16       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[5]               : U17       : bidir  : 2.5 V             :         : 4A        : N              
 VCCA_FPLL                    : U18       : power  :                   : 2.5V    :           :                
 GND                          : U19       : gnd    :                   :         :           :                
 VCCPGM                       : U20       : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
-tx_if.i_seed[3]              : U21       : bidir  : 2.5 V             :         : 5A        : N              
-tx_if.i_seed[7]              : U22       : bidir  : 2.5 V             :         : 5A        : N              
+tx_if.i_sf[0]                : U21       : bidir  : 2.5 V             :         : 5A        : N              
+tx_if.i_seed[0]              : U22       : bidir  : 2.5 V             :         : 5A        : N              
 GND                          : V1        : gnd    :                   :         :           :                
 GND                          : V2        : gnd    :                   :         :           :                
 TDO                          : V3        : output :                   :         : 3A        :                
@@ -504,14 +504,14 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : V9        :        :                   :      
 VCCPD3B4A                    : V10       : power  :                   : 2.5V    : 3B, 4A    :                
 DNU                          : V11       :        :                   :         :           :                
 VCCIO4A                      : V12       : power  :                   : 2.5V    : 4A        :                
-tx_if.i_msg[7]               : V13       : bidir  : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V13       :        :                   :         : 4A        :                
 VCCPD3B4A                    : V14       : power  :                   : 2.5V    : 3B, 4A    :                
-tx_if.i_msg[11]              : V15       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[9]               : V15       : bidir  : 2.5 V             :         : 4A        : N              
 VCCPD3B4A                    : V16       : power  :                   : 2.5V    : 3B, 4A    :                
 GND                          : V17       : gnd    :                   :         :           :                
-tx_if.i_sf[0]                : V18       : bidir  : 2.5 V             :         : 4A        : N              
-tx_if.i_seed[0]              : V19       : bidir  : 2.5 V             :         : 5A        : N              
-tx_if.i_seed[1]              : V20       : bidir  : 2.5 V             :         : 5A        : N              
+tx_if.i_msg[27]              : V18       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_sf[1]                : V19       : bidir  : 2.5 V             :         : 5A        : N              
+tx_if.i_seed[6]              : V20       : bidir  : 2.5 V             :         : 5A        : N              
 VREFB5AN0                    : V21       : power  :                   :         : 5A        :                
 GND                          : V22       : gnd    :                   :         :           :                
 NC                           : W1        :        :                   :         :           :                
@@ -526,16 +526,16 @@ VCCPD3B4A                    : W9        : power  :                   : 2.5V    
 VCCIO3B                      : W10       : power  :                   : 2.5V    : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W11       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W12       :        :                   :         : 4A        :                
-tx_if.i_msg[5]               : W13       : bidir  : 2.5 V             :         : 4A        : N              
-tx_if.i_msg[23]              : W14       : bidir  : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W13       :        :                   :         : 4A        :                
+tx_if.i_msg[26]              : W14       : bidir  : 2.5 V             :         : 4A        : N              
 VCCIO4A                      : W15       : power  :                   : 2.5V    : 4A        :                
-tx_if.i_seed[5]              : W16       : bidir  : 2.5 V             :         : 4A        : N              
-tx_if.i_seed[2]              : W17       : bidir  : 2.5 V             :         : 4A        : N              
-tx_if.i_seed[6]              : W18       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_send                 : W16       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[10]              : W17       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[19]              : W18       : bidir  : 2.5 V             :         : 4A        : N              
 VCC_AUX                      : W19       : power  :                   : 2.5V    :           :                
 GND                          : W20       : gnd    :                   :         :           :                
-tx_if.i_seed[4]              : W21       : bidir  : 2.5 V             :         : 4A        : N              
-tx_if.i_load_seed            : W22       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[0]               : W21       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[4]               : W22       : bidir  : 2.5 V             :         : 4A        : N              
 GND                          : Y1        : gnd    :                   :         :           :                
 GND                          : Y2        : gnd    :                   :         :           :                
 NC                           : Y3        :        :                   :         :           :                
@@ -549,12 +549,12 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : Y10       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y11       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y12       :        :                   :         : 4A        :                
 GND                          : Y13       : gnd    :                   :         :           :                
-tx_if.i_msg[21]              : Y14       : bidir  : 2.5 V             :         : 4A        : N              
-tx_if.i_msg[18]              : Y15       : bidir  : 2.5 V             :         : 4A        : N              
-tx_if.i_send                 : Y16       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[23]              : Y14       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[8]               : Y15       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[22]              : Y16       : bidir  : 2.5 V             :         : 4A        : N              
 tx_if.i_msg[28]              : Y17       : bidir  : 2.5 V             :         : 4A        : N              
 VCCIO4A                      : Y18       : power  :                   : 2.5V    : 4A        :                
-tx_if.i_msg[24]              : Y19       : bidir  : 2.5 V             :         : 4A        : N              
-tx_if.i_msg[16]              : Y20       : bidir  : 2.5 V             :         : 4A        : N              
-tx_if.i_sf[1]                : Y21       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[12]              : Y19       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[13]              : Y20       : bidir  : 2.5 V             :         : 4A        : N              
+tx_if.i_msg[30]              : Y21       : bidir  : 2.5 V             :         : 4A        : N              
 tx_if.o_tx                   : Y22       : bidir  : 2.5 V             :         : 4A        : N              

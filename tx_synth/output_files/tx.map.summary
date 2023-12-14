@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed Dec 13 00:19:56 2023
+Analysis & Synthesis Status : Successful - Thu Dec 14 05:10:02 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : tx
 Top-level Entity Name : tx
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 285
+Total registers : 194
 Total pins : 48
 Total virtual pins : 0
 Total block memory bits : 0

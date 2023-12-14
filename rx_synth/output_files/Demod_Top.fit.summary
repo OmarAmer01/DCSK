@@ -1,0 +1,20 @@
+Fitter Status : Successful - Thu Dec 14 03:03:59 2023
+Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Revision Name : Demod_Top
+Top-level Entity Name : Demod_Top
+Family : Cyclone V
+Device : 5CSEBA6U19I7
+Timing Models : Final
+Logic utilization (in ALMs) : 89 / 41,910 ( < 1 % )
+Total registers : 79
+Total pins : 39 / 205 ( 19 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 5,662,720 ( 0 % )
+Total RAM Blocks : 0 / 553 ( 0 % )
+Total DSP Blocks : 0 / 112 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

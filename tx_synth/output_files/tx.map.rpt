@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tx
-Wed Dec 13 00:19:57 2023
+Thu Dec 14 05:10:02 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -16,7 +16,7 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   8. Registers Removed During Synthesis
   9. General Register Statistics
  10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Multiplexer Restructuring Statistics (No Restructuring Performed)
  12. Parameter Settings for User Entity Instance: chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul
  13. Parameter Settings for User Entity Instance: chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[0].U_partial_product
  14. Parameter Settings for User Entity Instance: chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[1].U_partial_product
@@ -60,13 +60,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Dec 13 00:19:56 2023          ;
+; Analysis & Synthesis Status     ; Successful - Thu Dec 14 05:10:02 2023          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; tx                                             ;
 ; Top-level Entity Name           ; tx                                             ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 285                                            ;
+; Total registers                 ; 194                                            ;
 ; Total pins                      ; 48                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
@@ -88,10 +88,11 @@ https://fpgasoftware.intel.com/eula.
 ; Device                                                                          ; 5CEFA9U19I7        ;                    ;
 ; Top-level entity name                                                           ; tx                 ; tx                 ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Restructure Multiplexers                                                        ; Off                ; Auto               ;
+; Optimization Technique                                                          ; Speed              ; Balanced           ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
-; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
 ; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
 ; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
 ; Preserve fewer node names                                                       ; On                 ; On                 ;
@@ -120,7 +121,6 @@ https://fpgasoftware.intel.com/eula.
 ; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
 ; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
 ; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
-; Optimization Technique                                                          ; Balanced           ; Balanced           ;
 ; Carry Chain Length                                                              ; 70                 ; 70                 ;
 ; Auto Carry Chains                                                               ; On                 ; On                 ;
 ; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
@@ -180,11 +180,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -215,25 +211,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------------+
 ; Resource                                    ; Usage                ;
 +---------------------------------------------+----------------------+
-; Estimate of Logic utilization (ALMs needed) ; 297                  ;
+; Estimate of Logic utilization (ALMs needed) ; 249                  ;
 ;                                             ;                      ;
-; Combinational ALUT usage for logic          ; 317                  ;
+; Combinational ALUT usage for logic          ; 389                  ;
 ;     -- 7 input functions                    ; 8                    ;
 ;     -- 6 input functions                    ; 94                   ;
 ;     -- 5 input functions                    ; 47                   ;
-;     -- 4 input functions                    ; 71                   ;
-;     -- <=3 input functions                  ; 97                   ;
+;     -- 4 input functions                    ; 68                   ;
+;     -- <=3 input functions                  ; 172                  ;
 ;                                             ;                      ;
-; Dedicated logic registers                   ; 285                  ;
+; Dedicated logic registers                   ; 194                  ;
 ;                                             ;                      ;
 ; I/O pins                                    ; 48                   ;
 ;                                             ;                      ;
 ; Total DSP Blocks                            ; 0                    ;
 ;                                             ;                      ;
 ; Maximum fan-out node                        ; tx_if.i_arst_n~input ;
-; Maximum fan-out                             ; 285                  ;
-; Total fan-out                               ; 2967                 ;
-; Average fan-out                             ; 3.98                 ;
+; Maximum fan-out                             ; 194                  ;
+; Total fan-out                               ; 2392                 ;
+; Average fan-out                             ; 3.29                 ;
 +---------------------------------------------+----------------------+
 
 
@@ -242,19 +238,20 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node                                                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                        ; Entity Name          ; Library Name ;
 +------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
-; |tx                                                                          ; 317 (0)             ; 285 (0)                   ; 0                 ; 0          ; 48   ; 0            ; |tx                                                                                                                                        ; tx                   ; work         ;
-;    |chaos_gen:U_chaos_gen|                                                   ; 278 (1)             ; 220 (1)                   ; 0                 ; 0          ; 0    ; 0            ; |tx|chaos_gen:U_chaos_gen                                                                                                                  ; chaos_gen            ; work         ;
-;       |logistic_map:U_logistic_map|                                          ; 160 (34)            ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |tx|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map                                                                                      ; logistic_map         ; work         ;
-;          |booth_mul:U_booth_mul|                                             ; 126 (12)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |tx|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul                                                                ; booth_mul            ; work         ;
-;             |calc_partial_product:gen_partial_products[0].U_partial_product| ; 47 (47)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |tx|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[0].U_partial_product ; calc_partial_product ; work         ;
+; |tx                                                                          ; 389 (0)             ; 194 (0)                   ; 0                 ; 0          ; 48   ; 0            ; |tx                                                                                                                                        ;                      ;              ;
+;    |chaos_gen:U_chaos_gen|                                                   ; 350 (1)             ; 129 (1)                   ; 0                 ; 0          ; 0    ; 0            ; |tx|chaos_gen:U_chaos_gen                                                                                                                  ; chaos_gen            ; work         ;
+;       |chaos_xpander:U_chaos_xpander|                                        ; 91 (91)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |tx|chaos_gen:U_chaos_gen|chaos_xpander:U_chaos_xpander                                                                                    ; chaos_xpander        ; work         ;
+;       |logistic_map:U_logistic_map|                                          ; 141 (20)            ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |tx|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map                                                                                      ; logistic_map         ; work         ;
+;          |booth_mul:U_booth_mul|                                             ; 121 (12)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |tx|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul                                                                ; booth_mul            ; work         ;
+;             |calc_partial_product:gen_partial_products[0].U_partial_product| ; 42 (42)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |tx|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[0].U_partial_product ; calc_partial_product ; work         ;
 ;             |calc_partial_product:gen_partial_products[1].U_partial_product| ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |tx|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[1].U_partial_product ; calc_partial_product ; work         ;
 ;             |calc_partial_product:gen_partial_products[2].U_partial_product| ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |tx|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[2].U_partial_product ; calc_partial_product ; work         ;
 ;             |calc_partial_product:gen_partial_products[3].U_partial_product| ; 19 (19)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |tx|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[3].U_partial_product ; calc_partial_product ; work         ;
-;       |piso:U_chaos_piso|                                                    ; 117 (117)           ; 205 (205)                 ; 0                 ; 0          ; 0    ; 0            ; |tx|chaos_gen:U_chaos_gen|piso:U_chaos_piso                                                                                                ; piso                 ; work         ;
+;       |piso:U_chaos_piso|                                                    ; 117 (117)           ; 114 (114)                 ; 0                 ; 0          ; 0    ; 0            ; |tx|chaos_gen:U_chaos_gen|piso:U_chaos_piso                                                                                                ; piso                 ; work         ;
 ;    |chip_bit_ctr:U_chip_bit_ctr|                                             ; 11 (11)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |tx|chip_bit_ctr:U_chip_bit_ctr                                                                                                            ; chip_bit_ctr         ; work         ;
 ;    |modulator:U_modulator|                                                   ; 2 (2)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |tx|modulator:U_modulator                                                                                                                  ; modulator            ; work         ;
-;    |piso:U_msg_buffer|                                                       ; 21 (21)             ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |tx|piso:U_msg_buffer                                                                                                                      ; piso                 ; work         ;
-;    |tx_fsm:U_tx_fsm|                                                         ; 5 (5)               ; 2 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |tx|tx_fsm:U_tx_fsm                                                                                                                        ; tx_fsm               ; work         ;
+;    |piso:U_msg_buffer|                                                       ; 18 (18)             ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |tx|piso:U_msg_buffer                                                                                                                      ; piso                 ; work         ;
+;    |tx_fsm:U_tx_fsm|                                                         ; 8 (8)               ; 2 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |tx|tx_fsm:U_tx_fsm                                                                                                                        ; tx_fsm               ; work         ;
 ;       |negedge_detector:U_negedge_detector|                                  ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |tx|tx_fsm:U_tx_fsm|negedge_detector:U_negedge_detector                                                                                    ; negedge_detector     ; work         ;
 +------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -296,7 +293,98 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[80,103,178]  ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[196] ;
 ; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[21,34,123]   ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[193] ;
 ; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[24,73,119]   ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[174] ;
-; Total Number of Removed Registers = 59                      ;                                                                 ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[82]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[255] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[83]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[254] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[145]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[253] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[69]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[252] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[55]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[249] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[169]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[248] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[115]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[247] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[110]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[246] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[151]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[245] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[127]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[244] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[172]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[243] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[57]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[241] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[63]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[240] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[22]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[239] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[214]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[238] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[231]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[236] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[161]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[235] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[104]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[233] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[71]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[232] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[33]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[230] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[207]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[229] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[118]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[228] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[158]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[227] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[68]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[225] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[133]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[223] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[130]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[221] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[105]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[219] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[7]           ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[218] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[166]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[216] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[35]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[211] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[195]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[210] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[100]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[209] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[194]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[208] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[77]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[204] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[45]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[203] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[88]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[202] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[157]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[200] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[36]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[199] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[117]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[198] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[62]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[192] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[154]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[190] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[76]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[188] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[148]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[187] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[179]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[180] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[153]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[177] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[19]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[175] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[163]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[173] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[165]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[171] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[75]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[168] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[101]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[167] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[28]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[164] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[126]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[162] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[60]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[160] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[140]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[155] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[143]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[152] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[137]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[150] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[93]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[149] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[146]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[147] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[134]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[144] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[59]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[142] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[124]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[141] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[37]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[139] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[125]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[138] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[47]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[136] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[41]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[132] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[40]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[129] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[102]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[121] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[111]         ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[120] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[97]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[114] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[9]           ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[112] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[29]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[108] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[81]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[106] ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[49]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[99]  ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[42]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[95]  ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[44]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[94]  ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[91]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[92]  ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[0]           ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[90]  ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[30]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[85]  ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[4]           ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[84]  ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[25]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[79]  ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[6]           ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[70]  ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[56]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[67]  ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[50]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[58]  ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[13]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[53]  ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[12]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[52]  ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[26]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[48]  ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[16]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[46]  ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[15]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[23]  ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[2]           ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[18]  ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[10]          ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[17]  ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[3]           ; Merged with chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[14]  ;
+; Total Number of Removed Registers = 150                     ;                                                                 ;
 +-------------------------------------------------------------+-----------------------------------------------------------------+
 
 
@@ -305,12 +393,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 285   ;
+; Total registers                              ; 194   ;
 ; Number of registers using Synchronous Clear  ; 10    ;
-; Number of registers using Synchronous Load   ; 182   ;
-; Number of registers using Asynchronous Clear ; 285   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 194   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 256   ;
+; Number of registers using Clock Enable       ; 165   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -320,16 +408,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------+---------+
 ; Inverted Register                                  ; Fan out ;
 +----------------------------------------------------+---------+
-; chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[6] ; 30      ;
-; chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[7] ; 21      ;
-; chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[2] ; 27      ;
-; chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[5] ; 36      ;
-; chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[1] ; 33      ;
-; chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[4] ; 33      ;
-; chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[0] ; 3       ;
-; chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[3] ; 3       ;
 ; piso:U_msg_buffer|counter[4]                       ; 2       ;
 ; piso:U_msg_buffer|counter[3]                       ; 3       ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[3] ; 33      ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[4] ; 33      ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[5] ; 12      ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[1] ; 39      ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[2] ; 27      ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[0] ; 36      ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[7] ; 3       ;
+; chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[6] ; 3       ;
 ; piso:U_msg_buffer|counter[2]                       ; 11      ;
 ; piso:U_msg_buffer|counter[1]                       ; 12      ;
 ; piso:U_msg_buffer|counter[0]                       ; 9       ;
@@ -338,7 +426,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
+; Multiplexer Restructuring Statistics (No Restructuring Performed)                                                                                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
@@ -476,33 +564,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 285                         ;
+; arriav_ff             ; 194                         ;
 ;     CLR               ; 19                          ;
 ;     CLR SCLR          ; 10                          ;
-;     ENA CLR           ; 74                          ;
-;     ENA CLR SLD       ; 182                         ;
+;     ENA CLR           ; 165                         ;
 ; arriav_io_obuf        ; 48                          ;
-; arriav_lcell_comb     ; 317                         ;
+; arriav_lcell_comb     ; 389                         ;
 ;     arith             ; 94                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 22                          ;
 ;         2 data inputs ; 11                          ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 43                          ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 42                          ;
 ;         5 data inputs ; 14                          ;
 ;     extend            ; 8                           ;
 ;         7 data inputs ; 8                           ;
-;     normal            ; 215                         ;
-;         1 data inputs ; 28                          ;
-;         2 data inputs ; 13                          ;
+;     normal            ; 287                         ;
+;         1 data inputs ; 14                          ;
+;         2 data inputs ; 101                         ;
 ;         3 data inputs ; 19                          ;
-;         4 data inputs ; 28                          ;
+;         4 data inputs ; 26                          ;
 ;         5 data inputs ; 33                          ;
 ;         6 data inputs ; 94                          ;
 ; boundary_port         ; 48                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.10                        ;
-; Average LUT depth     ; 4.52                        ;
+; Average LUT depth     ; 4.09                        ;
 +-----------------------+-----------------------------+
 
 
@@ -511,7 +598,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -521,8 +608,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Wed Dec 13 00:19:05 2023
+    Info: Processing started: Thu Dec 14 05:09:32 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tx -c tx
+Info (16303): Aggressive Performance optimization mode selected -- timing performance will be prioritized at the potential cost of increased logic area and compilation time
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/tx/chaos_gen/logistic_map.sv
@@ -631,16 +719,16 @@ Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file G:/Projects/DCSK/DCSK/DCSK/tx_synth/output_files/tx.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 599 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 489 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 0 input pins
     Info (21059): Implemented 0 output pins
     Info (21060): Implemented 48 bidirectional pins
-    Info (21061): Implemented 551 logic cells
+    Info (21061): Implemented 441 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 63 warnings
-    Info: Peak virtual memory: 4910 megabytes
-    Info: Processing ended: Wed Dec 13 00:19:57 2023
-    Info: Elapsed time: 00:00:52
-    Info: Total CPU time (on all processors): 00:00:52
+    Info: Peak virtual memory: 4901 megabytes
+    Info: Processing ended: Thu Dec 14 05:10:02 2023
+    Info: Elapsed time: 00:00:30
+    Info: Total CPU time (on all processors): 00:00:34
 
 
 +------------------------------------------+

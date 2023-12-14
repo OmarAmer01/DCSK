@@ -1,0 +1,165 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Out_Data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[16]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[17]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[18]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[19]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[20]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[21]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[22]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[23]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[24]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[25]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[26]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[27]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[28]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[29]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[30]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_Data[31]",
+					"strict" : false
+				},
+				{
+					"name" : "Valid_Data",
+					"strict" : false
+				},
+				{
+					"name" : "Spread_Factor_Sel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Spread_Factor_Sel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Clk",
+					"strict" : false
+				},
+				{
+					"name" : "N_Rst",
+					"strict" : false
+				},
+				{
+					"name" : "Valid",
+					"strict" : false
+				},
+				{
+					"name" : "In_Mod_Data",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

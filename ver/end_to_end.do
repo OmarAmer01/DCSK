@@ -1,3 +1,5 @@
+vcd file vcd_file.vcd
+vcd add -r end2end_tb/*
 log * -r
 add wave -position end  sim:/end2end_tb/intf/i_clk
 add wave -position end  sim:/end2end_tb/intf/i_arst_n

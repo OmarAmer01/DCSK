@@ -1,0 +1,762 @@
+Analysis & Synthesis report for dcsk_modem
+Thu Dec 14 01:41:47 2023
+Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |dcsk_modem|Demod_Top:U_RX|FSM:FSM|CS
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul
+ 14. Parameter Settings for User Entity Instance: tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[0].U_partial_product
+ 15. Parameter Settings for User Entity Instance: tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[1].U_partial_product
+ 16. Parameter Settings for User Entity Instance: tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[2].U_partial_product
+ 17. Parameter Settings for User Entity Instance: tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[3].U_partial_product
+ 18. Parameter Settings for User Entity Instance: tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso
+ 19. Parameter Settings for User Entity Instance: tx:U_TX|piso:U_msg_buffer
+ 20. Port Connectivity Checks: "tx:U_TX|piso:U_msg_buffer"
+ 21. Port Connectivity Checks: "tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[3].U_partial_product"
+ 22. Port Connectivity Checks: "tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[2].U_partial_product"
+ 23. Port Connectivity Checks: "tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[1].U_partial_product"
+ 24. Port Connectivity Checks: "tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[0].U_partial_product"
+ 25. Port Connectivity Checks: "tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul"
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
+ 29. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Dec 14 01:41:47 2023          ;
+; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Revision Name                   ; dcsk_modem                                     ;
+; Top-level Entity Name           ; dcsk_modem                                     ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 354                                            ;
+; Total pins                      ; 87                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEBA6U19I7ES     ;                    ;
+; Top-level entity name                                                           ; dcsk_modem         ; dcsk_modem         ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++--------------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
+; File Name with User-Entered Path     ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                 ; Library ;
++--------------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
+; ../hdl/dcsk_modem.sv                 ; yes             ; User SystemVerilog HDL File  ; G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv                 ;         ;
+; ../hdl/tx/chaos_gen/logistic_map.sv  ; yes             ; User SystemVerilog HDL File  ; G:/Projects/DCSK/DCSK/DCSK/hdl/tx/chaos_gen/logistic_map.sv  ;         ;
+; ../hdl/tx/chaos_gen/chaos_xpander.sv ; yes             ; User SystemVerilog HDL File  ; G:/Projects/DCSK/DCSK/DCSK/hdl/tx/chaos_gen/chaos_xpander.sv ;         ;
+; ../hdl/tx/chaos_gen/chaos_gen.sv     ; yes             ; User SystemVerilog HDL File  ; G:/Projects/DCSK/DCSK/DCSK/hdl/tx/chaos_gen/chaos_gen.sv     ;         ;
+; ../hdl/tx/tx_fsm.sv                  ; yes             ; User SystemVerilog HDL File  ; G:/Projects/DCSK/DCSK/DCSK/hdl/tx/tx_fsm.sv                  ;         ;
+; ../hdl/tx/tx.sv                      ; yes             ; User SystemVerilog HDL File  ; G:/Projects/DCSK/DCSK/DCSK/hdl/tx/tx.sv                      ;         ;
+; ../hdl/tx/modulator.sv               ; yes             ; User SystemVerilog HDL File  ; G:/Projects/DCSK/DCSK/DCSK/hdl/tx/modulator.sv               ;         ;
+; ../hdl/tx/chip_bit_ctr.sv            ; yes             ; User SystemVerilog HDL File  ; G:/Projects/DCSK/DCSK/DCSK/hdl/tx/chip_bit_ctr.sv            ;         ;
+; ../hdl/rx/FSM.sv                     ; yes             ; User SystemVerilog HDL File  ; G:/Projects/DCSK/DCSK/DCSK/hdl/rx/FSM.sv                     ;         ;
+; ../hdl/rx/Demod_Top.sv               ; yes             ; User SystemVerilog HDL File  ; G:/Projects/DCSK/DCSK/DCSK/hdl/rx/Demod_Top.sv               ;         ;
+; ../hdl/rx/Demod_DP.sv                ; yes             ; User SystemVerilog HDL File  ; G:/Projects/DCSK/DCSK/DCSK/hdl/rx/Demod_DP.sv                ;         ;
+; ../hdl/pkgs/wire_shuffler_pkg.sv     ; yes             ; User SystemVerilog HDL File  ; G:/Projects/DCSK/DCSK/DCSK/hdl/pkgs/wire_shuffler_pkg.sv     ;         ;
+; ../hdl/pkgs/spreading_factors_pkg.sv ; yes             ; User SystemVerilog HDL File  ; G:/Projects/DCSK/DCSK/DCSK/hdl/pkgs/spreading_factors_pkg.sv ;         ;
+; ../hdl/misc/piso.sv                  ; yes             ; User SystemVerilog HDL File  ; G:/Projects/DCSK/DCSK/DCSK/hdl/misc/piso.sv                  ;         ;
+; ../hdl/misc/negedge_detector.sv      ; yes             ; User SystemVerilog HDL File  ; G:/Projects/DCSK/DCSK/DCSK/hdl/misc/negedge_detector.sv      ;         ;
+; ../hdl/interfaces/tx_if.sv           ; yes             ; User SystemVerilog HDL File  ; G:/Projects/DCSK/DCSK/DCSK/hdl/interfaces/tx_if.sv           ;         ;
+; ../hdl/booth/calc_partial_product.sv ; yes             ; User SystemVerilog HDL File  ; G:/Projects/DCSK/DCSK/DCSK/hdl/booth/calc_partial_product.sv ;         ;
+; ../hdl/booth/booth_mul.sv            ; yes             ; User SystemVerilog HDL File  ; G:/Projects/DCSK/DCSK/DCSK/hdl/booth/booth_mul.sv            ;         ;
++--------------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                        ;
++---------------------------------------------+----------------------+
+; Resource                                    ; Usage                ;
++---------------------------------------------+----------------------+
+; Estimate of Logic utilization (ALMs needed) ; 401                  ;
+;                                             ;                      ;
+; Combinational ALUT usage for logic          ; 475                  ;
+;     -- 7 input functions                    ; 8                    ;
+;     -- 6 input functions                    ; 145                  ;
+;     -- 5 input functions                    ; 67                   ;
+;     -- 4 input functions                    ; 84                   ;
+;     -- <=3 input functions                  ; 171                  ;
+;                                             ;                      ;
+; Dedicated logic registers                   ; 354                  ;
+;                                             ;                      ;
+; I/O pins                                    ; 87                   ;
+;                                             ;                      ;
+; Total DSP Blocks                            ; 0                    ;
+;                                             ;                      ;
+; Maximum fan-out node                        ; tx_if.i_arst_n~input ;
+; Maximum fan-out                             ; 285                  ;
+; Total fan-out                               ; 3930                 ;
+; Average fan-out                             ; 3.63                 ;
++---------------------------------------------+----------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                         ;
++---------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node                                                      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                        ; Entity Name          ; Library Name ;
++---------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
+; |dcsk_modem                                                                     ; 475 (0)             ; 354 (0)                   ; 0                 ; 0          ; 87   ; 0            ; |dcsk_modem                                                                                                                                                ; dcsk_modem           ; work         ;
+;    |Demod_Top:U_RX|                                                             ; 158 (0)             ; 69 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |dcsk_modem|Demod_Top:U_RX                                                                                                                                 ; Demod_Top            ; work         ;
+;       |Demod_DP:Demod|                                                          ; 123 (123)           ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |dcsk_modem|Demod_Top:U_RX|Demod_DP:Demod                                                                                                                  ; Demod_DP             ; work         ;
+;       |FSM:FSM|                                                                 ; 35 (35)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |dcsk_modem|Demod_Top:U_RX|FSM:FSM                                                                                                                         ; FSM                  ; work         ;
+;    |tx:U_TX|                                                                    ; 317 (0)             ; 285 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |dcsk_modem|tx:U_TX                                                                                                                                        ; tx                   ; work         ;
+;       |chaos_gen:U_chaos_gen|                                                   ; 278 (1)             ; 220 (1)                   ; 0                 ; 0          ; 0    ; 0            ; |dcsk_modem|tx:U_TX|chaos_gen:U_chaos_gen                                                                                                                  ; chaos_gen            ; work         ;
+;          |logistic_map:U_logistic_map|                                          ; 160 (34)            ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |dcsk_modem|tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map                                                                                      ; logistic_map         ; work         ;
+;             |booth_mul:U_booth_mul|                                             ; 126 (12)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |dcsk_modem|tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul                                                                ; booth_mul            ; work         ;
+;                |calc_partial_product:gen_partial_products[0].U_partial_product| ; 47 (47)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |dcsk_modem|tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[0].U_partial_product ; calc_partial_product ; work         ;
+;                |calc_partial_product:gen_partial_products[1].U_partial_product| ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |dcsk_modem|tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[1].U_partial_product ; calc_partial_product ; work         ;
+;                |calc_partial_product:gen_partial_products[2].U_partial_product| ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |dcsk_modem|tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[2].U_partial_product ; calc_partial_product ; work         ;
+;                |calc_partial_product:gen_partial_products[3].U_partial_product| ; 19 (19)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |dcsk_modem|tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[3].U_partial_product ; calc_partial_product ; work         ;
+;          |piso:U_chaos_piso|                                                    ; 117 (117)           ; 205 (205)                 ; 0                 ; 0          ; 0    ; 0            ; |dcsk_modem|tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso                                                                                                ; piso                 ; work         ;
+;       |chip_bit_ctr:U_chip_bit_ctr|                                             ; 11 (11)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |dcsk_modem|tx:U_TX|chip_bit_ctr:U_chip_bit_ctr                                                                                                            ; chip_bit_ctr         ; work         ;
+;       |modulator:U_modulator|                                                   ; 2 (2)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |dcsk_modem|tx:U_TX|modulator:U_modulator                                                                                                                  ; modulator            ; work         ;
+;       |piso:U_msg_buffer|                                                       ; 21 (21)             ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |dcsk_modem|tx:U_TX|piso:U_msg_buffer                                                                                                                      ; piso                 ; work         ;
+;       |tx_fsm:U_tx_fsm|                                                         ; 5 (5)               ; 2 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |dcsk_modem|tx:U_TX|tx_fsm:U_tx_fsm                                                                                                                        ; tx_fsm               ; work         ;
+;          |negedge_detector:U_negedge_detector|                                  ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |dcsk_modem|tx:U_TX|tx_fsm:U_tx_fsm|negedge_detector:U_negedge_detector                                                                                    ; negedge_detector     ; work         ;
++---------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------+
+; State Machine - |dcsk_modem|Demod_Top:U_RX|FSM:FSM|CS                                   ;
++--------------------+--------------------+----------------+--------------------+---------+
+; Name               ; CS.Store_Demod_Bit ; CS.Correlation ; CS.Store_Chaos_Seq ; CS.Idle ;
++--------------------+--------------------+----------------+--------------------+---------+
+; CS.Idle            ; 0                  ; 0              ; 0                  ; 0       ;
+; CS.Store_Chaos_Seq ; 0                  ; 0              ; 1                  ; 1       ;
+; CS.Correlation     ; 0                  ; 1              ; 0                  ; 1       ;
+; CS.Store_Demod_Bit ; 1                  ; 0              ; 0                  ; 1       ;
++--------------------+--------------------+----------------+--------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                            ;
++---------------------------------------------------------------------+-------------------------------------------------------------------------+
+; Register name                                                       ; Reason for Removal                                                      ;
++---------------------------------------------------------------------+-------------------------------------------------------------------------+
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[5]           ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[20]  ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[20]          ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[31]  ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[31]          ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[32]  ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[32]          ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[43]  ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[43]          ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[65]  ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[65]          ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[74]  ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[74]          ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[78]  ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[78]          ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[87]  ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[87]          ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[113] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[113]         ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[181] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[181]         ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[182] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[182]         ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[184] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[184]         ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[189] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[189]         ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[191] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[191]         ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[217] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[217]         ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[224] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[224]         ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[250] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[1,96,234]    ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[251] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[54,156,185]  ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[242] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[8,98,201]    ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[237] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[38,89,128]   ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[226] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[64,170,186]  ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[222] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[39,86,107]   ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[220] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[122,159,206] ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[215] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[109,131,176] ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[213] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[72,116,135]  ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[212] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[11,27,51]    ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[205] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[61,66,183]   ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[197] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[80,103,178]  ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[196] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[21,34,123]   ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[193] ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[24,73,119]   ; Merged with tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|buffer[174] ;
+; Demod_Top:U_RX|FSM:FSM|CS~4                                         ; Lost fanout                                                             ;
+; Demod_Top:U_RX|FSM:FSM|CS~5                                         ; Lost fanout                                                             ;
+; Total Number of Removed Registers = 61                              ;                                                                         ;
++---------------------------------------------------------------------+-------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 354   ;
+; Number of registers using Synchronous Clear  ; 10    ;
+; Number of registers using Synchronous Load   ; 182   ;
+; Number of registers using Asynchronous Clear ; 354   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 264   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------+
+; Inverted Register Statistics                                         ;
++------------------------------------------------------------+---------+
+; Inverted Register                                          ; Fan out ;
++------------------------------------------------------------+---------+
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[6] ; 30      ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[7] ; 21      ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[2] ; 27      ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[5] ; 36      ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[1] ; 33      ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[4] ; 33      ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[0] ; 3       ;
+; tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[3] ; 3       ;
+; tx:U_TX|piso:U_msg_buffer|counter[4]                       ; 2       ;
+; tx:U_TX|piso:U_msg_buffer|counter[3]                       ; 3       ;
+; tx:U_TX|piso:U_msg_buffer|counter[2]                       ; 11      ;
+; tx:U_TX|piso:U_msg_buffer|counter[1]                       ; 12      ;
+; tx:U_TX|piso:U_msg_buffer|counter[0]                       ; 9       ;
+; Total number of inverted registers = 13                    ;         ;
++------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |dcsk_modem|Demod_Top:U_RX|FSM:FSM|Var_Del_Reg_Addr[1]                 ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |dcsk_modem|Demod_Top:U_RX|FSM:FSM|Ones_Count[0]                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |dcsk_modem|Demod_Top:U_RX|FSM:FSM|Zeros_Count[2]                      ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |dcsk_modem|tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso|counter[4] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |dcsk_modem|tx:U_TX|piso:U_msg_buffer|counter[4]                       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |dcsk_modem|Demod_Top:U_RX|FSM:FSM|Ones_Count_Inc                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; WORD_LEN       ; 8     ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[0].U_partial_product ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; WORD_LEN       ; 8     ; Signed Integer                                                                                                                                                     ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[1].U_partial_product ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; WORD_LEN       ; 8     ; Signed Integer                                                                                                                                                     ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[2].U_partial_product ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; WORD_LEN       ; 8     ; Signed Integer                                                                                                                                                     ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[3].U_partial_product ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; WORD_LEN       ; 8     ; Signed Integer                                                                                                                                                     ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; WIDTH          ; 256   ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tx:U_TX|piso:U_msg_buffer ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "tx:U_TX|piso:U_msg_buffer" ;
++---------+--------+----------+-------------------------+
+; Port    ; Type   ; Severity ; Details                 ;
++---------+--------+----------+-------------------------+
+; o_empty ; Output ; Info     ; Explicitly unconnected  ;
++---------+--------+----------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[3].U_partial_product" ;
++------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
+; o_result[15..10] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                 ;
++------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[2].U_partial_product" ;
++------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
+; o_result[15..12] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                 ;
++------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[1].U_partial_product" ;
++------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
+; o_result[15..14] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                 ;
++------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[0].U_partial_product" ;
++-------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                   ;
++-------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; i_opcode[0] ; Input ; Info     ; Stuck at GND                                                                                                                              ;
++-------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul"                ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; o_result[15..14] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 354                         ;
+;     CLR               ; 80                          ;
+;     CLR SCLR          ; 10                          ;
+;     ENA CLR           ; 82                          ;
+;     ENA CLR SLD       ; 182                         ;
+; arriav_io_obuf        ; 80                          ;
+; arriav_lcell_comb     ; 475                         ;
+;     arith             ; 94                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 22                          ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 43                          ;
+;         5 data inputs ; 14                          ;
+;     extend            ; 8                           ;
+;         7 data inputs ; 8                           ;
+;     normal            ; 373                         ;
+;         1 data inputs ; 28                          ;
+;         2 data inputs ; 49                          ;
+;         3 data inputs ; 57                          ;
+;         4 data inputs ; 41                          ;
+;         5 data inputs ; 53                          ;
+;         6 data inputs ; 145                         ;
+; boundary_port         ; 87                          ;
+;                       ;                             ;
+; Max LUT depth         ; 8.10                        ;
+; Average LUT depth     ; 3.95                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+    Info: Processing started: Thu Dec 14 01:41:17 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dcsk_modem -c dcsk_modem
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/dcsk_modem.sv
+    Info (12023): Found entity 1: dcsk_modem File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/tx/chaos_gen/logistic_map.sv
+    Info (12023): Found entity 1: logistic_map File: G:/Projects/DCSK/DCSK/DCSK/hdl/tx/chaos_gen/logistic_map.sv Line: 12
+Info (12021): Found 1 design units, including 1 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/tx/chaos_gen/chaos_xpander.sv
+    Info (12023): Found entity 1: chaos_xpander File: G:/Projects/DCSK/DCSK/DCSK/hdl/tx/chaos_gen/chaos_xpander.sv Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/tx/chaos_gen/chaos_gen.sv
+    Info (12023): Found entity 1: chaos_gen File: G:/Projects/DCSK/DCSK/DCSK/hdl/tx/chaos_gen/chaos_gen.sv Line: 12
+Info (12021): Found 1 design units, including 1 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/tx/tx_fsm.sv
+    Info (12023): Found entity 1: tx_fsm File: G:/Projects/DCSK/DCSK/DCSK/hdl/tx/tx_fsm.sv Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/tx/tx.sv
+    Info (12023): Found entity 1: tx File: G:/Projects/DCSK/DCSK/DCSK/hdl/tx/tx.sv Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/tx/modulator.sv
+    Info (12023): Found entity 1: modulator File: G:/Projects/DCSK/DCSK/DCSK/hdl/tx/modulator.sv Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/tx/chip_bit_ctr.sv
+    Info (12023): Found entity 1: chip_bit_ctr File: G:/Projects/DCSK/DCSK/DCSK/hdl/tx/chip_bit_ctr.sv Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/rx/fsm.sv
+    Info (12023): Found entity 1: FSM File: G:/Projects/DCSK/DCSK/DCSK/hdl/rx/FSM.sv Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/rx/demod_top.sv
+    Info (12023): Found entity 1: Demod_Top File: G:/Projects/DCSK/DCSK/DCSK/hdl/rx/Demod_Top.sv Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/rx/demod_tb.sv
+    Info (12023): Found entity 1: Demod_TB File: G:/Projects/DCSK/DCSK/DCSK/hdl/rx/Demod_TB.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/rx/demod_dp.sv
+    Info (12023): Found entity 1: Demod_DP File: G:/Projects/DCSK/DCSK/DCSK/hdl/rx/Demod_DP.sv Line: 10
+Info (12021): Found 1 design units, including 0 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/pkgs/wire_shuffler_pkg.sv
+    Info (12022): Found design unit 1: wire_shuffler_pkg (SystemVerilog) File: G:/Projects/DCSK/DCSK/DCSK/hdl/pkgs/wire_shuffler_pkg.sv Line: 16
+Info (12021): Found 1 design units, including 0 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/pkgs/spreading_factors_pkg.sv
+    Info (12022): Found design unit 1: spreading_factors_pkg (SystemVerilog) File: G:/Projects/DCSK/DCSK/DCSK/hdl/pkgs/spreading_factors_pkg.sv Line: 12
+Info (12021): Found 1 design units, including 1 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/misc/wait_then_high.sv
+    Info (12023): Found entity 1: st_trigger File: G:/Projects/DCSK/DCSK/DCSK/hdl/misc/wait_then_high.sv Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/misc/ro_sig_tap.sv
+    Info (12023): Found entity 1: ro_sig_tap File: G:/Projects/DCSK/DCSK/DCSK/hdl/misc/ro_sig_tap.sv Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/misc/piso.sv
+    Info (12023): Found entity 1: piso File: G:/Projects/DCSK/DCSK/DCSK/hdl/misc/piso.sv Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/misc/negedge_detector.sv
+    Info (12023): Found entity 1: negedge_detector File: G:/Projects/DCSK/DCSK/DCSK/hdl/misc/negedge_detector.sv Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/interfaces/tx_if.sv
+    Info (12023): Found entity 1: tx_if File: G:/Projects/DCSK/DCSK/DCSK/hdl/interfaces/tx_if.sv Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/booth/calc_partial_product.sv
+    Info (12023): Found entity 1: calc_partial_product File: G:/Projects/DCSK/DCSK/DCSK/hdl/booth/calc_partial_product.sv Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file /projects/dcsk/dcsk/dcsk/hdl/booth/booth_mul.sv
+    Info (12023): Found entity 1: booth_mul File: G:/Projects/DCSK/DCSK/DCSK/hdl/booth/booth_mul.sv Line: 13
+Info (12127): Elaborating entity "dcsk_modem" for the top level hierarchy
+Info (12128): Elaborating entity "tx" for hierarchy "tx:U_TX" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 26
+Info (12128): Elaborating entity "tx_fsm" for hierarchy "tx:U_TX|tx_fsm:U_tx_fsm" File: G:/Projects/DCSK/DCSK/DCSK/hdl/tx/tx.sv Line: 49
+Info (12128): Elaborating entity "negedge_detector" for hierarchy "tx:U_TX|tx_fsm:U_tx_fsm|negedge_detector:U_negedge_detector" File: G:/Projects/DCSK/DCSK/DCSK/hdl/tx/tx_fsm.sv Line: 99
+Info (12128): Elaborating entity "chaos_gen" for hierarchy "tx:U_TX|chaos_gen:U_chaos_gen" File: G:/Projects/DCSK/DCSK/DCSK/hdl/tx/tx.sv Line: 59
+Info (12128): Elaborating entity "logistic_map" for hierarchy "tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map" File: G:/Projects/DCSK/DCSK/DCSK/hdl/tx/chaos_gen/chaos_gen.sv Line: 30
+Info (12128): Elaborating entity "booth_mul" for hierarchy "tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul" File: G:/Projects/DCSK/DCSK/DCSK/hdl/tx/chaos_gen/logistic_map.sv Line: 30
+Info (12128): Elaborating entity "calc_partial_product" for hierarchy "tx:U_TX|chaos_gen:U_chaos_gen|logistic_map:U_logistic_map|booth_mul:U_booth_mul|calc_partial_product:gen_partial_products[0].U_partial_product" File: G:/Projects/DCSK/DCSK/DCSK/hdl/booth/booth_mul.sv Line: 50
+Warning (10230): Verilog HDL assignment warning at calc_partial_product.sv(55): truncated value with size 32 to match size of target (16) File: G:/Projects/DCSK/DCSK/DCSK/hdl/booth/calc_partial_product.sv Line: 55
+Info (12128): Elaborating entity "chaos_xpander" for hierarchy "tx:U_TX|chaos_gen:U_chaos_gen|chaos_xpander:U_chaos_xpander" File: G:/Projects/DCSK/DCSK/DCSK/hdl/tx/chaos_gen/chaos_gen.sv Line: 36
+Info (12128): Elaborating entity "piso" for hierarchy "tx:U_TX|chaos_gen:U_chaos_gen|piso:U_chaos_piso" File: G:/Projects/DCSK/DCSK/DCSK/hdl/tx/chaos_gen/chaos_gen.sv Line: 49
+Warning (10259): Verilog HDL error at piso.sv(30): constant value overflow File: G:/Projects/DCSK/DCSK/DCSK/hdl/misc/piso.sv Line: 30
+Warning (10230): Verilog HDL assignment warning at piso.sv(30): truncated value with size 32 to match size of target (8) File: G:/Projects/DCSK/DCSK/DCSK/hdl/misc/piso.sv Line: 30
+Warning (10230): Verilog HDL assignment warning at piso.sv(34): truncated value with size 32 to match size of target (8) File: G:/Projects/DCSK/DCSK/DCSK/hdl/misc/piso.sv Line: 34
+Warning (10259): Verilog HDL error at piso.sv(38): constant value overflow File: G:/Projects/DCSK/DCSK/DCSK/hdl/misc/piso.sv Line: 38
+Info (12128): Elaborating entity "chip_bit_ctr" for hierarchy "tx:U_TX|chip_bit_ctr:U_chip_bit_ctr" File: G:/Projects/DCSK/DCSK/DCSK/hdl/tx/tx.sv Line: 71
+Info (12128): Elaborating entity "piso" for hierarchy "tx:U_TX|piso:U_msg_buffer" File: G:/Projects/DCSK/DCSK/DCSK/hdl/tx/tx.sv Line: 82
+Warning (10259): Verilog HDL error at piso.sv(30): constant value overflow File: G:/Projects/DCSK/DCSK/DCSK/hdl/misc/piso.sv Line: 30
+Warning (10230): Verilog HDL assignment warning at piso.sv(30): truncated value with size 32 to match size of target (5) File: G:/Projects/DCSK/DCSK/DCSK/hdl/misc/piso.sv Line: 30
+Warning (10230): Verilog HDL assignment warning at piso.sv(34): truncated value with size 32 to match size of target (5) File: G:/Projects/DCSK/DCSK/DCSK/hdl/misc/piso.sv Line: 34
+Warning (10259): Verilog HDL error at piso.sv(38): constant value overflow File: G:/Projects/DCSK/DCSK/DCSK/hdl/misc/piso.sv Line: 38
+Info (12128): Elaborating entity "modulator" for hierarchy "tx:U_TX|modulator:U_modulator" File: G:/Projects/DCSK/DCSK/DCSK/hdl/tx/tx.sv Line: 93
+Info (12128): Elaborating entity "Demod_Top" for hierarchy "Demod_Top:U_RX" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 27
+Info (12128): Elaborating entity "Demod_DP" for hierarchy "Demod_Top:U_RX|Demod_DP:Demod" File: G:/Projects/DCSK/DCSK/DCSK/hdl/rx/Demod_Top.sv Line: 48
+Info (12128): Elaborating entity "FSM" for hierarchy "Demod_Top:U_RX|FSM:FSM" File: G:/Projects/DCSK/DCSK/DCSK/hdl/rx/Demod_Top.sv Line: 65
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "tx_if.o_is_sending" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13035): Inserted always-enabled tri-state buffer between "tx_if.o_tx" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[0]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[1]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[2]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[3]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[4]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[5]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[6]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[7]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[8]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[9]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[10]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[11]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[12]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[13]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[14]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[15]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[16]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[17]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[18]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[19]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[20]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[21]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[22]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[23]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[24]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[25]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[26]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[27]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[28]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[29]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[30]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13035): Inserted always-enabled tri-state buffer between "Out_Data[31]" and its non-tri-state driver. File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "tx_if.i_sf[0]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_sf[1]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_load_seed" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_seed[0]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_seed[1]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_seed[2]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_seed[3]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_seed[4]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_seed[5]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_seed[6]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_seed[7]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_send" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[0]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[1]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[2]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[3]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[4]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[5]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[6]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[7]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[8]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[9]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[10]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[11]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[12]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[13]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[14]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[15]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[16]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[17]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[18]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[19]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[20]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[21]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[22]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[23]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[24]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[25]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[26]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[27]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[28]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[29]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[30]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_msg[31]" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_arst_n" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13040): bidirectional pin "tx_if.i_clk" has no driver File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "tx_if.o_is_sending~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13010): Node "tx_if.o_tx~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 16
+    Warning (13010): Node "Out_Data[0]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[1]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[2]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[3]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[4]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[5]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[6]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[7]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[8]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[9]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[10]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[11]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[12]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[13]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[14]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[15]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[16]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[17]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[18]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[19]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[20]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[21]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[22]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[23]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[24]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[25]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[26]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[27]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[28]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[29]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[30]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+    Warning (13010): Node "Out_Data[31]~synth" File: G:/Projects/DCSK/DCSK/DCSK/hdl/dcsk_modem.sv Line: 22
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file G:/Projects/DCSK/DCSK/DCSK/modem_synth/output_files/dcsk_modem.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 798 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21060): Implemented 80 bidirectional pins
+    Info (21061): Implemented 711 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 127 warnings
+    Info: Peak virtual memory: 4898 megabytes
+    Info: Processing ended: Thu Dec 14 01:41:47 2023
+    Info: Elapsed time: 00:00:30
+    Info: Total CPU time (on all processors): 00:00:34
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in G:/Projects/DCSK/DCSK/DCSK/modem_synth/output_files/dcsk_modem.map.smsg.
+
+
